@@ -213,7 +213,7 @@ Esistono comunque alcune variabili particolari su awk di cui tenere conto:
 - `ARGV` e `ARGC`, cioè la lista degli argomenti passati e il numero, ricordandosi sempre che il primo argomento (numero 0) è `awk` stesso!
 - l'array `ENVIRON[]`, che ha come chiavi i nomi delle variabili di sistema, e valore ovviamente legato ad esse.
 - `FILENAME`, indica il nome del file che sta analizzando
-- `FS` indica il separatore dei campi, di default lo spazio, di conseguenza esiste la variabile `NFS` che indica il numero di parti separate da FS, quindi normalmente il numero di parole!
+- `FS` indica il separatore dei campi, di default lo spazio, di conseguenza esiste la variabile `NF` che indica il numero di parti separate da FS, quindi normalmente il numero di parole!
 - `NR` è il numero di riga, impostando una limitazione come filtro iniziale su questo valore potete dire quali righe prelevare (ad esempio >3 significa oltre la terza riga), questo valore non è relativo al numero di file, se esistono due file di due righe, la terza riga è la prima del secondo file!
 - `FNR` è come sopra, ma contando relativamente ad ogni singolo file analizzato!
 
