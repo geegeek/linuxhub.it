@@ -39,7 +39,7 @@ Nello specifico è presente una tabella riassuntiva [qui](https://tomcat.apache.
 
 ### Java8
 
-Per versioni di Java 8 ed inferiori si può utilizzare sia [Tomcat8](https://archive.apache.org/dist/tomcat/tomcat-8/) che [Tomcat9](https://archive.apache.org/dist/tomcat/tomcat-9/).  
+Per versioni di Java 8 ed inferiori si può utilizzare sia [Tomcat8](https://archive.apache.org/dist/tomcat/tomcat-8/) che [Tomcat9](https://archive.apache.org/dist/tomcat/tomcat-9/).
 
 Nello specifico Tomcat8 può essere utilizzato con linguaggi che seguono le specifiche di JEE 7, quindi Java 7 e Java 8.
 
@@ -53,7 +53,7 @@ wget 'https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat
 tar -xvzf apache-tomcat-8.5.100.tar.gz
 ```
 
-> NOTA BENE:  
+> NOTA BENE:
 >
 > La versione 8 di Tomcat è ormai senza supporto (da Marzo 2024), e potrebbe avere delle vulnerabilità di sicurezza.
 
@@ -103,7 +103,7 @@ Prima di tutto si può fare una panoramica sulle cartelle:
 
 Ogni cartella all'interno di webapps rappresenta un *possibile endpoint* del server (a meno di configurazioni particolari).
 
-Normalmente al suo interno si hanno le seguenti cartelle: 
+Normalmente al suo interno si hanno le seguenti cartelle:
 
 - docs: contiene la documentazione di Apache.
 - examples: Alcuni esempi per applicativi.
@@ -146,7 +146,7 @@ Supponendo di dover fare il mapping di una particolare cartella di **webapps** c
 dove `myapp` è una delle cartelle nella cartella di `webapps`.
 
 
-Altra configurazione molto frequente è quella per una resource JNDI (o un datasource) all'interno dell'applicativo: 
+Altra configurazione molto frequente è quella per una resource JNDI (o un datasource) all'interno dell'applicativo:
 
 ```xml
 <GlobalNamingResources>
@@ -160,7 +160,7 @@ Altra configurazione molto frequente è quella per una resource JNDI (o un datas
 </GlobalNamingResources>
 ```
 
-Nell'engine va aggiunto il riferimento alla resource: 
+Nell'engine va aggiunto il riferimento alla resource:
 
 ```xml
 <Engine name="Catalina" defaultHost="localhost">
@@ -175,7 +175,7 @@ Nell'engine va aggiunto il riferimento alla resource:
 </Engine>
 ```
 
-Il risultato finale è: 
+Il risultato finale è:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -210,7 +210,7 @@ Il risultato finale è:
 </Server>
 ```
 
-> Attenzione:  
+> Attenzione:
 >
 > Ci sono vari modi per configurare in maniera corretta il file xml, fare sempre riferimento alle documentazioni del proprio progetto.
 
@@ -218,7 +218,7 @@ Il risultato finale è:
 
 Il file web.xml è uno dei file fondamentali per l'esecuzione degli applicativi, fornisce informazioni sui punti di ingresso dell'applicazione, la filter chain di sicurezza, i listener e servizi di back-office.
 
-Un esempio potrebbe essere: 
+Un esempio potrebbe essere:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -232,7 +232,7 @@ Un esempio potrebbe essere:
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.example.HelloServlet</servlet-class>
     </servlet>
-    
+
     <!-- Mappatura del servlet a un URL -->
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
@@ -350,5 +350,5 @@ Per avviare Tomcat in modalità debug bisogna attuare due passaggi, il primo è 
 export JPDA_OPTS="-agentlib:jdwp=transport=dt_socket,address=<PORTA>,server=y,suspend=<y o n>"
 ```
 
-Al posto di `<PORTA>` ci si può mettere un numero qualunque sopra il `1024`, di default è `8000`. Quello rappresenta la porta di ascolto per la connessione in debug.  
+Al posto di `<PORTA>` ci si può mettere un numero qualunque sopra il `1024`, di default è `8000`. Quello rappresenta la porta di ascolto per la connessione in debug.
 Al posto di `<y o n>` ci si può mettere `y` se si vuole che il server non parta fino a che un debugger non si attacca. Altrimenti `n` per un comportamento normale in cui il server resta aperto all'ascolto del debug ma nel frattempo opera tranquillamente anche senza un debugger attaccato.

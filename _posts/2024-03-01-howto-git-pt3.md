@@ -1,6 +1,6 @@
 ---
 class: post
-title: "#howto - Guida all'utilizzo di GIT, parte 3: remote e branch"
+title: "#howto - Guida all'utilizzo di Git, parte 3: remote e branch"
 date: 2024-03-01 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -13,8 +13,8 @@ tags:
   - git
 ---
 
-[&larr; Articolo precedente, parte 2: operazioni base](https://linuxhub.it/articles/howto-git-pt2/)  
-[&rarr; Articolo successivo, parte 4: Approfondimento branch](https://linuxhub.it/articles/howto-git-pt4/)  
+[&larr; Articolo precedente, parte 2: operazioni base](https://linuxhub.it/articles/howto-git-pt2/)
+[&rarr; Articolo successivo, parte 4: Approfondimento branch](https://linuxhub.it/articles/howto-git-pt4/)
 
 Quando si parla di *software di versioning*, `Git` è sicuramente il primo programma che ci viene in mente. Rappresenta l'alternativa più diffusa a sistemi come `svn`, utilizzata anche in ambito enterprise.
 
@@ -39,7 +39,7 @@ Una delle peculiarità dei software per il versioning dei progetti è la "*sincr
 
 È infatti questa caratteristica a renderlo uno strumento perfetto per lavorare in team su un progetto, permettendo di gestire anche eventuali conflitti.
 
-Si è già definito un **repository** Git come una cartella che contiene le informazioni per ricostruire tutto lo storico delle modifiche di un progetto, tale cartella è interamente locata nel progetto sotto il nome `.git` oppure, se minimale (`bare`) ha una cartella dedicata con il nome del progetto.  
+Si è già definito un **repository** Git come una cartella che contiene le informazioni per ricostruire tutto lo storico delle modifiche di un progetto, tale cartella è interamente locata nel progetto sotto il nome `.git` oppure, se minimale (`bare`) ha una cartella dedicata con il nome del progetto.
 *Si può sincronizzare* un progetto Git con un repository Git esterno solo se `bare` (altrimenti alcune operazioni potrebbero non funzionare), ma al di la di questo vincolo, non ci sono ulteriori limitazioni.
 
 ### Sincronizzazioni in remoto, sincronizzazioni in locale
@@ -50,7 +50,7 @@ Quando si parla di repository esterno si parla principalmente di una cartella es
 - tramite protocollo ssh su un server
 - tramite URL in un'altra cartella del nostro file system
 
-Si possono avere più repository esterni sincronizzati con un progetto, rendendo così possibile scaricare il codice da un repository X e inviarlo ad un repository Y. 
+Si possono avere più repository esterni sincronizzati con un progetto, rendendo così possibile scaricare il codice da un repository X e inviarlo ad un repository Y.
 Per questo motivo ognuno di essi deve avere un nome associato (di solito il primo si chiama *origin*).
 
 ## Configurazione di un repository esterno
@@ -141,7 +141,7 @@ Se si hanno più repository è consigliato anche inserire un "upstream" principa
 git push --set-upstream [nomerepository] [nomebranch]
 ```
 
-Il flag `--set-upstream` vale sia per push che per pull, e va inserito solo la prima volta, in seguito Git, riconoscendo il tracking remoto, per ogni operazione di push o pull in cui **non si specificano** ulteriori parametri darà per scontati quelli indicati per il tracking.  
+Il flag `--set-upstream` vale sia per push che per pull, e va inserito solo la prima volta, in seguito Git, riconoscendo il tracking remoto, per ogni operazione di push o pull in cui **non si specificano** ulteriori parametri darà per scontati quelli indicati per il tracking.
 
 Ad esempio scrivendo:
 
@@ -153,7 +153,7 @@ git push
 
 Il secondo push sotto intenderà come parametri `origin` e `main`.
 
-Così facendo, **branch** e repository sono sempre selezionati in maniera predefinita se non specificati.  
+Così facendo, **branch** e repository sono sempre selezionati in maniera predefinita se non specificati.
 
 Per modificare il tracking si può utilizzare anche la seguente operazione:
 
@@ -171,7 +171,7 @@ git remote add origin https://github.com/NOMEUSER/NOMEREPOSITORY
 git remote add locale /percorso/a/Repo/locale
 ```
 
-Ovviamente ci si aspetta che i progetti siano coerenti da una sorgente ad un altra. Perché però utilizzare questa funzione? 
+Ovviamente ci si aspetta che i progetti siano coerenti da una sorgente ad un altra. Perché però utilizzare questa funzione?
 
 Uno dei casi più comuni è quello di creare una copia (anche detta **fork** su alcune piattaforme) di un progetto di qualcun'altro per apportare delle proprie modifiche personali.
 In questo modo si può controllare lo stato del progetto originale, eventualmente aggiornare di pari passo alle sue modifiche, ma mantenere una certa divergenza rispetto le proprie esigenze.
@@ -180,7 +180,7 @@ Un altro caso comune è quello della mancanza di permessi su un certo progetto: 
 
 ## Branch
 
-Si è visto più volte il termine **branch**, ma ancora probabilmente non è chiaro il concetto che c'è dietro. Cos'è un branch?  
+Si è visto più volte il termine **branch**, ma ancora probabilmente non è chiaro il concetto che c'è dietro. Cos'è un branch?
 Un branch in Git è una ramificazione del progetto principale, che consente agli sviluppatori di lavorare su diverse funzionalità o correzioni di bug in modo isolato.
 Si può pensare ad un branch come una copia separata del progetto, dove le modifiche possono essere apportate senza influenzare il ramo principale o gli altri rami.
 Questo approccio permette agli sviluppatori di sperimentare e lavorare in modo collaborativo in modo sicuro, senza compromettere la stabilità del codice principale oppure entrare in conflitto con modifiche concorrenti del progetto.

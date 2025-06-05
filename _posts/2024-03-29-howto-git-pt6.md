@@ -1,6 +1,6 @@
 ---
 class: post
-title: "#howto - Guida all'utilizzo di GIT, parte 6: stash, gitkeep e assume-unchanged"
+title: "#howto - Guida all'utilizzo di Git, parte 6: stash, gitkeep e assume-unchanged"
 date: 2024-03-29 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -13,8 +13,8 @@ tags:
   - git
 ---
 
-[&larr; Articolo precedente, parte 5: ignorare](https://linuxhub.it/articles/howto-git-pt5/)  
-[&rarr; Articolo successivo, parte 7: cherry-pick e squash](https://linuxhub.it/articles/howto-git-pt7/)  
+[&larr; Articolo precedente, parte 5: ignorare](https://linuxhub.it/articles/howto-git-pt5/)
+[&rarr; Articolo successivo, parte 7: cherry-pick e squash](https://linuxhub.it/articles/howto-git-pt7/)
 
 Quando si parla di *software di versioning*, `Git` è sicuramente il primo programma che ci viene in mente. Rappresenta l'alternativa più diffusa a sistemi come `svn`, utilizzata anche in ambito enterprise.
 
@@ -51,12 +51,12 @@ git update-index --no-assume-unchanged /percorso/file
 
 ### Unable to mark
 
-Il file per essere assegnato come "*unchanged*" deve esistere nel repository, ovvero deve esserci stata almeno una commit precedente in cui è stato aggiunto.  
+Il file per essere assegnato come "*unchanged*" deve esistere nel repository, ovvero deve esserci stata almeno una commit precedente in cui è stato aggiunto.
 In poche parole un nuovo file, appena creato, non si potrà ignorare con questo metodo.
 
 ## Git exclude
 
-Un altro metodo per ignorare i files con GIT è il file "*exclude*", si tratta di un altro metodo che non necessita di cambiare il `.gitignore` e che rimane in locale, nel proprio progetto.
+Un altro metodo per ignorare i files con Git è il file "*exclude*", si tratta di un altro metodo che non necessita di cambiare il `.gitignore` e che rimane in locale, nel proprio progetto.
 
 Il file in questione si trova nel percorso `.git/info/exclude` a partire sempre dalla root del progetto.
 
@@ -120,7 +120,7 @@ Questo genere di file (detti **untracked**) vanno aggiunti con il parametro `--i
 git stash --ignore-untracked
 ```
 
-Per aggiungere eventuali nomi di files, aggiungere il parametro `--` ed i nomi alla fine: 
+Per aggiungere eventuali nomi di files, aggiungere il parametro `--` ed i nomi alla fine:
 
 ```bash
 git stash --ignore-untracked -- nomefile
@@ -208,7 +208,7 @@ Si può eliminare un singolo stato di stash con l'operazione *drop*:
 git stash drop 'stash@{NUMERO}'
 ```
 
-Se non si indica un particolare elemento (troncando il comando alla parola `drop`) viene eliminato l'ultimo elemento dello stack.  
+Se non si indica un particolare elemento (troncando il comando alla parola `drop`) viene eliminato l'ultimo elemento dello stack.
 
 Oppure si può ripulire tutta la pila con l'operazione **clear**:
 

@@ -1,6 +1,6 @@
 ---
 class: post
-title: "#howto - Guida all'utilizzo di GIT, parte 5: ignorare"
+title: "#howto - Guida all'utilizzo di Git, parte 5: ignorare"
 date: 2024-03-15 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -13,8 +13,8 @@ tags:
   - git
 ---
 
-[&larr; Articolo precedente, parte 4: remote e branch](https://linuxhub.it/articles/howto-git-pt4/)  
-[&rarr; Articolo successivo, parte 6: stash, gitkeep e assume-unchanged](https://linuxhub.it/articles/howto-git-pt6/)  
+[&larr; Articolo precedente, parte 4: remote e branch](https://linuxhub.it/articles/howto-git-pt4/)
+[&rarr; Articolo successivo, parte 6: stash, gitkeep e assume-unchanged](https://linuxhub.it/articles/howto-git-pt6/)
 
 Quando si parla di *software di versioning*, `Git` è sicuramente il primo programma che ci viene in mente. Rappresenta l'alternativa più diffusa a sistemi come `svn`, utilizzata anche in ambito enterprise.
 
@@ -64,8 +64,8 @@ Ecco una lista completa:
 
 ## gitignore.io
 
-Un sito utilizzatissimo per la gestione del gitignore è [Gitignore.io](https://www.toptal.com/developers/gitignore/), inserendo una serie di parole chiave genererà per voi un gitignore.  
-Ad esempio usando le parole chiave: "java" e "maven" si avrà: 
+Un sito utilizzatissimo per la gestione del gitignore è [Gitignore.io](https://www.toptal.com/developers/gitignore/), inserendo una serie di parole chiave genererà per voi un gitignore.
+Ad esempio usando le parole chiave: "java" e "maven" si avrà:
 
 ```bash
 # Created by https://www.toptal.com/developers/gitignore/api/java,maven
@@ -124,7 +124,7 @@ buildNumber.properties
 
 Un altro progetto molto interessante è git-ignore, un utility da terminale che si può [trovare a questo link Github](https://github.com/janniks/git-ignore).
 
-Questo progettino scritto in rust amplia le funzionalità di Git generando da linea di comando il gitignore.  
+Questo progettino scritto in rust amplia le funzionalità di Git generando da linea di comando il gitignore.
 
 Per utilizzarlo innanzitutto bisogna avere **Rust**, si proceda con l'installazione.
 
@@ -174,7 +174,7 @@ cargo build
 
 il file che vi si genera nella cartella target/debug chiamato `git-ignore` è il binario da usare.
 
-Va trasferito in una cartella coperta da variabile d'ambiente PATH, ad esempio `/usr/bin`:  
+Va trasferito in una cartella coperta da variabile d'ambiente PATH, ad esempio `/usr/bin`:
 
 ```bash
 cp target/debug/git-ignore /usr/bin/git-ignore
@@ -195,7 +195,7 @@ git ignore
 Il software si scaricherà i template dal sito (bisogna avere una connessione attiva) darà la possibilità di scegliere il template direttamente da terminale, appendendo il risultato ad un attuale `.gitignore` pre-esistente oppure creandone uno nuovo.
 
 > Nota:
-> 
+>
 > La ricerca si aggiorna in tempo reale, alla pressione dei tasti appariranno i risultati, con un invio si selezionerà il template sotto cursore. Per terminare, dare un invio senza scrivere nulla.
 
 ## Troubleshoot: Rimuovere un file precedentemente ignorato

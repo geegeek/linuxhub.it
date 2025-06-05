@@ -1,24 +1,24 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 5 - funzioni' 
+title: "#howtodev - JavaScript parte 5 - funzioni"
 date: 2023-05-26 08:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: gaetanovirg
 coauthor_github: gaetanovirg
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
 
-[&larr; Articolo precedente: variabili complesse e blocchi](https://linuxhub.it/articles/howtodev-javascript-pt4)  
+[&larr; Articolo precedente: variabili complesse e blocchi](https://linuxhub.it/articles/howtodev-javascript-pt4)
 
-[&rarr; Articolo successivo: parametri REST](https://linuxhub.it/articles/howtodev-javascript-pt6)  
+[&rarr; Articolo successivo: parametri REST](https://linuxhub.it/articles/howtodev-javascript-pt6)
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.
 
 Vediamo ora cosa sono le funzioni e come si scrivono.
 
@@ -37,7 +37,7 @@ Per la comprensione di questo articolo è necessaria la lettura di uno dei prece
 
 - [indentazione e cicli](https://linuxhub.it/articles/howtodev-javascript-pt3)
 
-Ma si consiglia e ci saranno riferimenti anche agli articoli successivi. É consigliato leggere tutti gli articoli precedenti. Se si è nuovi di JavaScript, è meglio iniziare dal primo: 
+Ma si consiglia e ci saranno riferimenti anche agli articoli successivi. É consigliato leggere tutti gli articoli precedenti. Se si è nuovi di JavaScript, è meglio iniziare dal primo:
 
 - [introduzione e variabili](https://linuxhub.it/articles/howtodev-javascript-pt1)
 
@@ -47,7 +47,7 @@ Si pensi di poter raggruppare una serie di istruzioni e potergli dare un nome, e
 
 ### Creare una funzione
 
-Esistono in realtà diversi metodi per creare una funzione, il modo più "semplice" ed immediato, condiviso da parecchi linguaggi di programmazione, è quella di creare un blocco di codice preceduto da: 
+Esistono in realtà diversi metodi per creare una funzione, il modo più "semplice" ed immediato, condiviso da parecchi linguaggi di programmazione, è quella di creare un blocco di codice preceduto da:
 
 - la parola chiave `function`.
 - il nome della funzione.
@@ -118,7 +118,7 @@ function versione() {
 	console.log("Licenza: GPLv3")
 }
 
-versione(); 
+versione();
 const scelta="v"
 
 if(scelta==="v"){
@@ -153,9 +153,9 @@ function funzione() {
 - Si può ritornare solo un valore, per ritornare più valori si può "imbrogliare" utilizzando un vettore o un oggetto.
 - La return non è obbligatoria e non è obbligatorio neanche inserire un valore al suo interno.
 
-### Assegnare il valore di ritorno 
+### Assegnare il valore di ritorno
 
-Per prelevare il valore di una funzione va poi assegnata la funzione ad una variabile. Per una funzione siffatta: 
+Per prelevare il valore di una funzione va poi assegnata la funzione ad una variabile. Per una funzione siffatta:
 
 ```javascript
 function funzione() {
@@ -164,7 +164,7 @@ function funzione() {
 }
 ```
 
-Si può quindi assegnare il valore dopo averla chiamata così: 
+Si può quindi assegnare il valore dopo averla chiamata così:
 
 ```javascript
 let variabile=funzione();
@@ -174,7 +174,7 @@ let variabile=funzione();
 
 ### I parametri
 
-A volte è necessario portare dei valori dall'esterno all'interno della funzione, poterli manipolare e quindi dare risultati diversi in base al valore di quei parametri. 
+A volte è necessario portare dei valori dall'esterno all'interno della funzione, poterli manipolare e quindi dare risultati diversi in base al valore di quei parametri.
 
 Per farlo, bisogna usare i **parametri**, ovvero variabili che si possono inserire all'interno parentesi tonde dopo il nome della funzione, separati da virgola:
 
@@ -203,14 +203,14 @@ function sommatoria (numeri){
 		risultato+=i
 	}
 
-	return risultato; 
+	return risultato;
 }
 
 console.log("La sommatoria dei primi  8 numeri é: " + sommatoria(8))
 console.log("La sommatoria dei primi 10 numeri é: " + sommatoria(10))
 ```
 
-L'output sarà: 
+L'output sarà:
 
 ```plain
 La sommatoria dei primi  8 numeri é: 36
@@ -226,7 +226,7 @@ function sommatoria (numeri){
 		risultato+=i
 	}
 
-	return risultato; 
+	return risultato;
 }
 
 let sommatoria8 = sommatoria(8)
@@ -236,7 +236,7 @@ console.log("La sommatoria dei primi  8 numeri é: " + sommatoria8)
 console.log("La sommatoria dei primi 10 numeri é: " + sommatoria10)
 ```
 
-Notare anche come i parametri siamo stati assegnati direttamente senza utilizzare una variabile, sarebbe stato possibile assegnare prima le variabili e poi richiamare i metodi, in questo modo: 
+Notare anche come i parametri siamo stati assegnati direttamente senza utilizzare una variabile, sarebbe stato possibile assegnare prima le variabili e poi richiamare i metodi, in questo modo:
 
 ```javascript
 function sommatoria (numeri){
@@ -245,7 +245,7 @@ function sommatoria (numeri){
 		risultato+=i
 	}
 
-	return risultato; 
+	return risultato;
 }
 
 let parametro8  = 8
@@ -262,13 +262,13 @@ In ultimo, notare come il nome del parametro (numeri) e le due variabili create 
 
 ## Le funzioni viste come variabili
 
-Bisogna stare molto attenti a richiamare una funzione con le parentesi tonde e non senza, quando si vuole eseguire il codice della funzione, per chiarezza: 
+Bisogna stare molto attenti a richiamare una funzione con le parentesi tonde e non senza, quando si vuole eseguire il codice della funzione, per chiarezza:
 
 ```javascript
 funzione()
 ```
 
-e non: 
+e non:
 
 ```javascript
 funzione
@@ -322,9 +322,9 @@ ed eseguire in un momento successivo come fosse una normalissima funzione:
 funzione(/*parametri reali*/)
 ```
 
-Oppure definire ed eseguire in un colpo solo: 
+Oppure definire ed eseguire in un colpo solo:
 
-```javascript 
+```javascript
 (function (/*parametri, funzione*/) {
 	/*corpo della funzione */
 
@@ -336,11 +336,11 @@ Facendo un esempio concreto, si supponga di voler creare una funzione anonima ed
 
 ```javascript
 console.log("sommatoria di 10="+(function (numeri){
-	if(numeri<0) return 0; 
-	let somma=0; 
+	if(numeri<0) return 0;
+	let somma=0;
 
-	for(let i=0;i<=numeri;i++) somma+=i; 
-	return somma; 
+	for(let i=0;i<=numeri;i++) somma+=i;
+	return somma;
 })(10))
 ```
 
@@ -354,23 +354,23 @@ sommatoria di 10=55
 
 La sintassi delle funzioni lambda introduce in genere un concetto noto come "programmazione funzionale". In realtà oramai è un concetto abusato anche nella normale programmazione imperativa, e si tratta ormai essenzialmente di "zucchero sintattico", ovvero un modo per rendere piacevole agli occhi una particolare porzione di codice.
 
-Detto ciò, le funzioni lambda non sono altro che funzioni anonime con una sintassi ridotta ai minimi termini. Normalmente con questa forma: 
+Detto ciò, le funzioni lambda non sono altro che funzioni anonime con una sintassi ridotta ai minimi termini. Normalmente con questa forma:
 
-```javascript 
+```javascript
 (/*parametri, funzione*/) => {
 	/*istruzioni*/
 }
 ```
 
-Facendo un esempio concreto, si può inizializzare una variabile con una funzione lambda e poi utilizzarla per il calcolo della sommatoria di n numeri, n compreso, così: 
+Facendo un esempio concreto, si può inizializzare una variabile con una funzione lambda e poi utilizzarla per il calcolo della sommatoria di n numeri, n compreso, così:
 
 ```javascript
 let sommatoria=(numeri)=>{
-	if(numeri<0) return 0; 
-	let somma=0; 
+	if(numeri<0) return 0;
+	let somma=0;
 
-	for(let i=0;i<=numeri;i++) somma+=i; 
-	return somma; 
+	for(let i=0;i<=numeri;i++) somma+=i;
+	return somma;
 }
 
 console.log("sommatoria di 10="+sommatoria(10))
@@ -428,11 +428,11 @@ Il caso della sommatoria del precedente paragrafo ad esempio preleva un solo par
 
 ```javascript
 let sommatoria=numeri=>{
-	if(numeri<0) return 0; 
-	let somma=0; 
+	if(numeri<0) return 0;
+	let somma=0;
 
-	for(let i=0;i<=numeri;i++) somma+=i; 
-	return somma; 
+	for(let i=0;i<=numeri;i++) somma+=i;
+	return somma;
 }
 
 console.log("sommatoria di 10="+sommatoria(10))
@@ -469,7 +469,7 @@ Questa è la forma minimale.
 
 Le funzioni possono richiamarsi a vicenda, nello specifico è possibile anche passarle come parametri. In tal caso spesso prendono il nome di "funzioni di callback".
 
-Per spiegare bene il concetto è tanto meglio un caso pratico, ad esempio *l'ordinamento lessico-grafico*. 
+Per spiegare bene il concetto è tanto meglio un caso pratico, ad esempio *l'ordinamento lessico-grafico*.
 
 In JavaScript confrontando due stringhe si ottiene l'ordinamento lessico-grafico, per cui ad esempio la stringa "Abracadabra" viene prima di "Zebra".
 
@@ -509,7 +509,7 @@ Non è cambiato nulla, il risultato rimane lo stesso ed il codice è solo un po'
 
 Ora invece di avere due stringhe, si supponga di averne un vettore, e di voler scrivere la stringa che viene prima di tutte le altre.
 
-Può sembrare complesso, ma dividendo in step: 
+Può sembrare complesso, ma dividendo in step:
 
 - Serve una funzione che tra due stringhe restituisca true se una delle due è il minimo, quella scritta sopra va bene.
 - Serve una funzione che, dato un metodo, cerca il minimo.
@@ -525,11 +525,11 @@ function stampaMinimo(vettore,metodo){
 			minimo=i
 		}
 	}
-	return minimo; 
+	return minimo;
 }
 ```
 
-Quello che è successo è che, utilizzando "metodo" come variabile non è necessario scrivere "come verrà fatto il controllo", si applica la funzione passata che farà il controllo. Ora è possibile comporre il tutto: 
+Quello che è successo è che, utilizzando "metodo" come variabile non è necessario scrivere "come verrà fatto il controllo", si applica la funzione passata che farà il controllo. Ora è possibile comporre il tutto:
 
 ```javascript
 function ordinamento(stringa1, stringa2) {
@@ -543,7 +543,7 @@ function stampaMinimo(vettore,metodo){
 			minimo=i
 		}
 	}
-	return minimo; 
+	return minimo;
 }
 
 
@@ -552,13 +552,13 @@ let vettore=["Abra","Cadabra","Zebra","Mario"]
 console.log("La stringa "+stampaMinimo(vettore,ordinamento)+" è la più piccola")
 ```
 
-L'output sarà: 
+L'output sarà:
 
 ```plain
 La stringa Abra è la più piccola
 ```
 
-Se ancora non si vede il vantaggio di tutto questo, si provi a pensare un ulteriore miglioramento, stampare la stringa maggiore e la stringa minore. Quello che va cambiato è veramente poco, va solo richiamata la funziona "stampaMinimo" passando un metodo di ordinamento "contrario", che nell'esempio specifico verrà fatto con una lambda: 
+Se ancora non si vede il vantaggio di tutto questo, si provi a pensare un ulteriore miglioramento, stampare la stringa maggiore e la stringa minore. Quello che va cambiato è veramente poco, va solo richiamata la funziona "stampaMinimo" passando un metodo di ordinamento "contrario", che nell'esempio specifico verrà fatto con una lambda:
 
 ```javascript
 function ordinamento(stringa1, stringa2) {
@@ -571,7 +571,7 @@ function stampaMinimo(vettore,metodo){
 			minimo=i
 		}
 	}
-	return minimo; 
+	return minimo;
 }
 
 
@@ -594,7 +594,7 @@ function stampaMinimo(vettore,metodo){
 			minimo=i
 		}
 	}
-	return minimo; 
+	return minimo;
 }
 
 

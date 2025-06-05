@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howtodev - Sintassi EMMET parte 1 : elementi HTML' 
+title: "#howtodev - Sintassi EMMET parte 1 : elementi HTML"
 date: 2023-10-06 08:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -8,7 +8,7 @@ author_github: PsykeDady
 coauthor: Michael Messaggi
 coauthor_github: MichaelMessaggi
 published: true
-tags: 
+tags:
 - css
 - html
 - emmet
@@ -80,7 +80,7 @@ Ovviamente è possibile comunque scriverli per intero, funzioneranno ugualmente.
 
 ### Intestazioni
 
-È possibile generare l'intestazione HTML per intero, scrivendo: 
+È possibile generare l'intestazione HTML per intero, scrivendo:
 
 ```html
 doc
@@ -109,7 +109,7 @@ Si ottiene:
 
 ### Commenti
 
-Si può generare un tag commento con l'abbreviazione: 
+Si può generare un tag commento con l'abbreviazione:
 
 ```html
 c
@@ -163,9 +163,9 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam explicabo, recusa
 
 ## Attributi
 
-Alcune abbreviazioni possiedono degli attributi necessari alla loro configurazione. 
+Alcune abbreviazioni possiedono degli attributi necessari alla loro configurazione.
 
-Questo si può fare scrivendo dopo il carattere `:` alcune parole chiave (spesso coincidenti con il valore degli attributi). 
+Questo si può fare scrivendo dopo il carattere `:` alcune parole chiave (spesso coincidenti con il valore degli attributi).
 
 Di seguito alcuni esempi:
 
@@ -196,7 +196,7 @@ Di seguito alcuni esempi:
 
 ## Tag e ID
 
-Gli ID sono indispensabili per selezionare tramite Javascript degli elementi e quindi poterli manipolare tramite script, oltre che per lo styling. 
+Gli ID sono indispensabili per selezionare tramite Javascript degli elementi e quindi poterli manipolare tramite script, oltre che per lo styling.
 
 Per accoppiare velocemente degli ID basta scriverli dopo il nome del tag e dopo un carattere `#`. Ad esempio:
 
@@ -212,7 +212,7 @@ Si trasforma in:
 
 ## Tag e classi
 
-Le classi sono utili ad applicare lo styling ad una serie di elementi che hanno qualcosa in comune. 
+Le classi sono utili ad applicare lo styling ad una serie di elementi che hanno qualcosa in comune.
 
 Per utilizzare le classi con EMMET basta scrivere il nome della classe dopo un tag, preceduta da un punto. Ad esempio:
 
@@ -262,7 +262,7 @@ Nel taso però siano tag vuoti *di una tabella* vanno a generare `tr` e `td`. Sc
 table>.riga>.dato
 ```
 
-Si espande in: 
+Si espande in:
 
 ```html
 <table>
@@ -276,7 +276,7 @@ La stessa cosa accade con `ul` (che espande i tag vuoti al suo interno con `li`)
 
 ## Attributi custom
 
-Si può specificare qualsiasi tipo di attributo utilizzando la parentesi quadra dopo un tag. 
+Si può specificare qualsiasi tipo di attributo utilizzando la parentesi quadra dopo un tag.
 
 Ad esempio per specificare il colore blu del testo come attributo style di un div si può usare:
 
@@ -290,7 +290,7 @@ Il risultato sarà:
 <div style="color:blue"></div>
 ```
 
-Questo è uno dei pochi casi in cui è consentito usare il carattere *spazio*, infatti si possono specificare **più attributi** separandoli tra di loro tramite spazio. 
+Questo è uno dei pochi casi in cui è consentito usare il carattere *spazio*, infatti si possono specificare **più attributi** separandoli tra di loro tramite spazio.
 
 Ad esempio, per impostare sia lo *stile* che il testo *alternativo* di un'immagine si può scrivere:
 

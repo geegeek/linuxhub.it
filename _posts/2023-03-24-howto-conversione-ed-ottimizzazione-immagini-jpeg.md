@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Conversione ed ottimizzazione immagini: JPEG'
+title: "#howto - Conversione ed ottimizzazione immagini: JPEG"
 date: 2023-03-24 08:00
 layout: post
 author: Midblyte

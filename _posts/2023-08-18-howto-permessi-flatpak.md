@@ -1,11 +1,11 @@
 ---
 class: post
-title: '#howto - gestire i permessi di Flatpak'
+title: "#howto - gestire i permessi di Flatpak"
 date: 2023-08-18 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
-coauthor: Michael Messaggi 
+coauthor: Michael Messaggi
 coauthor_github: MichaelMessaggi
 published: true
 tags:
@@ -35,7 +35,7 @@ I permessi possono essere gestiti tramite command line, tramite il client stesso
 
 ### Leggere i permessi
 
-Innanzitutto per vedere i permessi attualmente usati da un applicazione basta digitare: 
+Innanzitutto per vedere i permessi attualmente usati da un applicazione basta digitare:
 
 ```bash
 flatpak info --show-permissions id.applicazione
@@ -44,7 +44,7 @@ flatpak info --show-permissions id.applicazione
 Ad esempio per vedere i permessi di gedit digitare:
 
 ```bash
-flatpak info --show-permissions org.gnome.gedit 
+flatpak info --show-permissions org.gnome.gedit
 ```
 
 L'output dovrebbe somigliare a questo:
@@ -71,12 +71,12 @@ flatpak override opzioni... id.applicazione
 
 Si possono sovrascrivere le impostazioni a livello globale, con l'opzione `--system` (è comunque l'opzione di *default*) oppure a livello utente con l'opzione `--user`.
 
-La documentazione del comando `override` è disponibile [sul sito ufficiale con tanto di esempi](https://docs.flatpak.org/en/latest/flatpak-command-reference.html?highlight=override#flatpak-override). 
+La documentazione del comando `override` è disponibile [sul sito ufficiale con tanto di esempi](https://docs.flatpak.org/en/latest/flatpak-command-reference.html?highlight=override#flatpak-override).
 
-Alcune possibilità tra quelle che più possono servirvi sono: 
+Alcune possibilità tra quelle che più possono servirvi sono:
 
 - `--share=SUBSYSTEM`, dove il SUBSYSTEM può essere `network` o `ipc`, serve per condividere un sottosistema con l'host. Il contrario è dato dall'opzione `--unshare`
-- `--socket=SOCKET` espone un socket all'applicazione, l'opzione opposta sarebbe `--nosocket`. I socket disponibili sono: 
+- `--socket=SOCKET` espone un socket all'applicazione, l'opzione opposta sarebbe `--nosocket`. I socket disponibili sono:
   - `x11`
   - `wayland`
   - `fallback-x11`
@@ -91,13 +91,13 @@ Alcune possibilità tra quelle che più possono servirvi sono:
   - `kvm`
   - `shm`
   - `all`, espone tutti i dispositivi, utile se non è elencato tra quelli di sopra.
-- `--allow=FEATURE` consente specifiche "feature", la documentazione sulle feature si può trovare nella [pagine delle build](https://docs.flatpak.org/en/latest/flatpak-command-reference.html?highlight=override#flatpak-build-finish), l'operazione opposta è `--disable`, le feature sono: 
+- `--allow=FEATURE` consente specifiche "feature", la documentazione sulle feature si può trovare nella [pagine delle build](https://docs.flatpak.org/en/latest/flatpak-command-reference.html?highlight=override#flatpak-build-finish), l'operazione opposta è `--disable`, le feature sono:
   - `devel`
   - `multiarch`
   - `bluetooth`
   - `canbus`
   - `per-app-dev-shm`
-- `--filesystem=FILESYSTEM` permette all'applicazione di leggere ulteriori cartelle e path del sistema, per toglierli invece si usa `--nofilesystem`. Si può **inserire un path a piacere**, i path relativi verranno tradotti a partire *dalla home utente*. Tuttavia esistono anche delle opzioni predefinite: 
+- `--filesystem=FILESYSTEM` permette all'applicazione di leggere ulteriori cartelle e path del sistema, per toglierli invece si usa `--nofilesystem`. Si può **inserire un path a piacere**, i path relativi verranno tradotti a partire *dalla home utente*. Tuttavia esistono anche delle opzioni predefinite:
   - `home`
   - `host`
   - `host-os`
@@ -118,9 +118,9 @@ Se un opzione prevede la possibilità di prendere più valori per un opzione (ad
 
 ## Una UI per gestire i permessi: Flatseal
 
-Un alternativa molto comoda alla command line è sicuramente l'utilizzo di **Flatseal**, un applicativo che permette di avere tutti i permessi per tutte le app a portata di click. 
+Un alternativa molto comoda alla command line è sicuramente l'utilizzo di **Flatseal**, un applicativo che permette di avere tutti i permessi per tutte le app a portata di click.
 
-Si può installare da Flatpak stesso così: 
+Si può installare da Flatpak stesso così:
 
 ```bash
 flatpak install com.github.tchx84.Flatseal

@@ -14,8 +14,8 @@ tags:
 - uml
 ---
 
-[Articolo precedente: Introduzione e Flowcharts &larr;](https://linuxhub.it/articles/howtodev-mermaidjs-pt1)  
-[Articolo successivo: Class Diagrams &rarr;](https://linuxhub.it/articles/howtodev-mermaidjs-pt3)  
+[Articolo precedente: Introduzione e Flowcharts &larr;](https://linuxhub.it/articles/howtodev-mermaidjs-pt1)
+[Articolo successivo: Class Diagrams &rarr;](https://linuxhub.it/articles/howtodev-mermaidjs-pt3)
 
 MermaidJS è una libreria Javascript per la creazione di diagrammi tramite linguaggio di formattazione. È integrato in alcuni software ed è facile da utilizzare.
 
@@ -76,7 +76,7 @@ A seguito di uno scambio, va esplicitato un messaggio (che si posizionerà sopra
 sequenceDiagram
     participant NomeAttore
     participant NomeAttore2
-    NomeAttore ->> NomeAttore2: 
+    NomeAttore ->> NomeAttore2:
 ```
 
 Da notare che, se un partecipante non è esplicitamente dichiarato, viene comunque creato dopo aver creato uno scambio di messaggi asincroni. La sintassi:
@@ -101,7 +101,7 @@ In questo caso va dichiarato esplicitamente, il valore di default ricade sempre 
 
 ### Vari tipi di messaggi
 
-Mermaid supporta vari tipi di messaggi ovviamente: 
+Mermaid supporta vari tipi di messaggi ovviamente:
 
 - `->` Chiamata sincrona
 - `-->` Chiamata asincrona
@@ -169,7 +169,7 @@ sequenceDiagram
 
 ### Le note
 
-Si possono creare delle note, ovvero riquadri che spiegano in maniera approfondita delle zone di diagramma.  
+Si possono creare delle note, ovvero riquadri che spiegano in maniera approfondita delle zone di diagramma.
 Le note possono essere a lato del diagramma:
 
 ```yaml
@@ -202,7 +202,7 @@ sequenceDiagram
 
 ### Raggruppamento
 
-Si possono raggruppare in box i vari partecipanti, e colorare i box in maniere differenti: 
+Si possono raggruppare in box i vari partecipanti, e colorare i box in maniere differenti:
 
 ```yaml
 sequenceDiagram

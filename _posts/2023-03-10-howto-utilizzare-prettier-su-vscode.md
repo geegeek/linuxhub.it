@@ -1,14 +1,14 @@
 ---
 class: post
-title: '#howto - Utilizzare Prettier su VSCode' 
+title: "#howto - Utilizzare Prettier su VSCode"
 date: 2023-03-10 08:00
-layout: post 
+layout: post
 author: Floppy
 author_github: raspFloppy
 coauthor: Davide Galati (in arte PsykeDady)
 coauthor_github: PsykeDady
 published: true
-tags: 
+tags:
 - json
 - vscode
 ---
@@ -19,7 +19,7 @@ Fare questo lavoro a mano non é di certo divertente, soprattutto quando le line
 
 ## Cos'è Prettier
 
-Prettier è un code formatter, ovvero un tool che formatta il codice in maniera automatica, la sua peculiarità consiste nell'essere personalizzabile da un file **JSON**.  
+Prettier è un code formatter, ovvero un tool che formatta il codice in maniera automatica, la sua peculiarità consiste nell'essere personalizzabile da un file **JSON**.
 È compatibile con molti editor e in questa guida vedremo come utilizzarlo su Visual Studio Code.
 
 
@@ -43,11 +43,11 @@ Ora apriamo un qualsiasi nostro progetto e creiamo un file **JSON** chiamato `.p
 >
 > Prettier può essere in anche scritto in altri formati come `YAML` e `TOML`.
 
-Tutte le opzioni verranno indicate come singolo valore in un json, ma si possono usare insieme concatenandole con delle virgole uno con l'altro: 
+Tutte le opzioni verranno indicate come singolo valore in un json, ma si possono usare insieme concatenandole con delle virgole uno con l'altro:
 
 ```json
 {
-    etichetta1:"valore1",   
+    etichetta1:"valore1",
     etichetta2:valore2,
     etichetta3:"valore3"
 }
@@ -66,7 +66,7 @@ Perfetto partiamo con qualche configurazione base, i tab di indentazione, per i 
 Adesso salviamo i nostri file sorgenti vedremo che in automatico verranno indentati di 4 tab.
 
 
-### Virgolette singole o doppie 
+### Virgolette singole o doppie
 
 Se usiamo linguaggi come `Javascript` e `Python` non c'è differenza tra doppi apici e singoli apici e potrebbe capitare di usare un pò uno e un pò un'altro rendendo il codice poco carino risolviamo questo con l'opzione:
 
@@ -87,7 +87,7 @@ Ancora ci sono linguaggi che non richiedono il punto e virgola alla fine di ogni
 ```
 Se vogliamo usare i punti e virgola, altrimenti lasciamo il valore a `false`.
 
-### Altro 
+### Altro
 
 Ci sono molte altre impostazioni che possono essere settate, come lo spazio tra le parentesi, la lunghezza massima di una riga, la lunghezza massima di una riga di commento, ecc. ecc. per una lista completa delle opzioni andate su [questo link](https://prettier.io/docs/en/options.html).
 

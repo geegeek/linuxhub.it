@@ -1,6 +1,6 @@
 ---
 class: post
-title: "#howto - Guida all'utilizzo di GIT, parte 4: Approfondimento branch"
+title: "#howto - Guida all'utilizzo di Git, parte 4: Approfondimento branch"
 date: 2024-03-08 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -13,8 +13,8 @@ tags:
   - git
 ---
 
-[&larr; Articolo precedente, parte 3: remote e branch](https://linuxhub.it/articles/howto-git-pt3/)  
-[&rarr; Articolo successivo, parte 5: remote e branch](https://linuxhub.it/articles/howto-git-pt5/)  
+[&larr; Articolo precedente, parte 3: remote e branch](https://linuxhub.it/articles/howto-git-pt3/)
+[&rarr; Articolo successivo, parte 5: remote e branch](https://linuxhub.it/articles/howto-git-pt5/)
 
 Quando si parla di *software di versioning*, `Git` è sicuramente il primo programma che ci viene in mente. Rappresenta l'alternativa più diffusa a sistemi come `svn`, utilizzata anche in ambito enterprise.
 
@@ -32,7 +32,7 @@ Questo articolo affronterà i seguenti argomenti:
 
 ## Branch Strategy
 
-Come già spiegato in precedenza, GIT permette di creare rami paralleli in cui poter gestire contemporaneamente varie versioni del progetto.
+Come già spiegato in precedenza, Git permette di creare rami paralleli in cui poter gestire contemporaneamente varie versioni del progetto.
 
 Il primo passo verso la strutturazione di un buon progetto è **delinearne i branch**.
 
@@ -71,7 +71,7 @@ Esistono delle convenzioni comuni per i nomi dei branch, in genere:
 
 I path dei branches che iniziano con `hotfix/`, `support/` e `release/` normalmente terminano con il numero di versione del progetto, la domanda potrebbe essere: come si costruisce il numero di una versione?
 
-Normalmente il numero di versione di un progetto è diviso in tre campi, separati da un punto `MAJOR.MINOR.HOTFIX`, è presto detto il significato di questi tre termini: 
+Normalmente il numero di versione di un progetto è diviso in tre campi, separati da un punto `MAJOR.MINOR.HOTFIX`, è presto detto il significato di questi tre termini:
 
 - MAJOR, è il primo campo, e rappresenta tutte le versioni dette "break changing", ovvero tra una MAJOR ed un altra ci si aspetta non ci sia retrocompatibilità perché cambiano dei punti cardine del progetto.
 - MINOR, è il secondo campo e rappresenta tutte le versioni che son compatibili tra di loro all'interno della stessa MAJOR ma in cui ci son cambiamenti migliorativi (spesso nuove features o correzioni di bug minori)
@@ -111,7 +111,7 @@ Ad operazione finita, il branch corrente si sarà *spostato* sul branch di rebas
 
 Potrebbe succedere che l'operazione di rebase si **interrompa a causa di un conflitto**. Il concetto di conflitto è molto semplice: se vi sono due modifiche sullo stesso file git tenta di fare una "fusione" dei due file in maniera intelligente, tuttavia se le modifiche son avvenute nella stessa parte del codice invece di procedere, git interrompe l'operazione e delega all'utente le scelte da fare su come unire i due files.
 
-In caso di conflitto durante un merge esce il messaggio di errore: 
+In caso di conflitto durante un merge esce il messaggio di errore:
 
 ```
 CONFLITTO (contenuto): conflitto di merge in percorso/file
@@ -136,11 +136,11 @@ La quarta riga nell'esempio di cui sopra è andata in conflitto, la prima zona (
 
 Per gestire il conflitto bisogna decidere quale delle due parti tenere e, eventualmente, effettuare ulteriori modifiche. Eliminare quindi i caratteri in eccesso (`<`, `=` e `>`).
 
-Una volta gestito il conflitto, si aggiunge allo stage e si committa: 
+Una volta gestito il conflitto, si aggiunge allo stage e si committa:
 
 ```bash
-git add percorso/file/conflitto 
-git commit 
+git add percorso/file/conflitto
+git commit
 ```
 
 Quindi si può continuare con la rebase:
@@ -157,7 +157,7 @@ git rebase --abort
 
 ## Merge
 
-Una volta che si stacca un branch e si modifica, è una pratica molto comune quella di "riunirlo" in un secondo momento.  
+Una volta che si stacca un branch e si modifica, è una pratica molto comune quella di "riunirlo" in un secondo momento.
 
 Questa pratica è detta "**merge**" e si effettua come segue:
 

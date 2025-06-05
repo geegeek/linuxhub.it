@@ -13,7 +13,7 @@ tags:
 - awk
 ---
 
-[&rarr; Articolo successivo, parte 2: costrutti e for](https://linuxhub.it/articles/howto-usare-awk-pt2/)  
+[&rarr; Articolo successivo, parte 2: costrutti e for](https://linuxhub.it/articles/howto-usare-awk-pt2/)
 
 AWK è un **linguaggio di programmazione** nato dalla necessità di manipolare piccole porzioni di testo in diversi file con poche righe di codice, sfruttando direttamente l'interattività della console.
 
@@ -62,7 +62,7 @@ BEGIN{codice iniziale}
 
 {codice ripetuto ogni riga}
 
-END{codice finale} 
+END{codice finale}
 ```
 
 Dove:
@@ -82,7 +82,7 @@ BEGIN{codice iniziale}
 
 {altro codice ripetuto ogni riga}
 
-END{codice finale} 
+END{codice finale}
 ```
 
 ### Stampa righe
@@ -107,7 +107,7 @@ Fortunatissimo per verità,
 fortunatissimo per verità
 ```
 
-Il metodo `print` stampa i parametri in ingresso, che si possono indicare sia separati da spazio che da virgole ma tra parentesi.  
+Il metodo `print` stampa i parametri in ingresso, che si possono indicare sia separati da spazio che da virgole ma tra parentesi.
 Il parametro `$0` indica l'intera riga in ingresso, se si sostituisce lo **0** con numeri da **1 in su** si prenderanno invece le varie parole di quella riga. Ad esempio per stampare la prima parola di ogni riga si può scrivere:
 
 ```bash
@@ -201,7 +201,7 @@ echo 'Oh, bravo Figaro!
 Bravo, bravissimo! Bravo!
 Fortunatissimo per verità! Bravo!
 Fortunatissimo per verità,
-fortunatissimo per verità!' | awk '{c=c""$0} END{print c}'  
+fortunatissimo per verità!' | awk '{c=c""$0} END{print c}'
 ```
 
 Sarebbe stata corretta, ed è anche più sicura da utilizzare in caso di concatenamento di più variabili
@@ -230,7 +230,7 @@ comando | awk 'END{print NR}'
 
 ## Blocchi condizionali
 
-Davanti un blocco di codice di awk si può anteporre una condizione. La condizione può essere di diversi tipi.  
+Davanti un blocco di codice di awk si può anteporre una condizione. La condizione può essere di diversi tipi.
 Questo rappresenta un ottimo modo per filtrare le varie righe in ingresso.
 
 Ecco come si presenta un blocco di questo genere:
@@ -239,7 +239,7 @@ Ecco come si presenta un blocco di questo genere:
 comando | awk 'CONDIZIONE{blocco codice...}'
 ```
 
-Ad esempio si vedano tutte le stringhe che iniziano per "Fortunatissimo" 
+Ad esempio si vedano tutte le stringhe che iniziano per "Fortunatissimo"
 
 ```bash
 echo 'Oh, bravo Figaro!
@@ -291,7 +291,7 @@ Ecco un elenco di condizioni e connettori utilizzabili:
 È possibile eventualmente indicare un pattern a cui deve rispondere la riga
 
 ```bash
-awk '/pattern/' file.txt 
+awk '/pattern/' file.txt
 ```
 
 Si possono utilizzare tutte le normali regole delle regexp, per cui è stato dedicato [un intero articolo a parte](https://linuxhub.it/articles/howtodev-sfruttare-le-espressioni-regolari-in-vari-linguaggi/).

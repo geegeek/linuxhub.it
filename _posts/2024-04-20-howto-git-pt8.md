@@ -1,6 +1,6 @@
 ---
 class: post
-title: "#howto - Guida all'utilizzo di GIT, parte 8: diff e patch."
+title: "#howto - Guida all'utilizzo di Git, parte 8: diff e patch."
 date: 2024-04-20 14:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -13,8 +13,8 @@ tags:
   - git
 ---
 
-[&larr; Articolo precedente, parte 7: cherry-pick e squash](https://linuxhub.it/articles/howto-git-pt7/)  
-[&rarr; Articolo successivo, parte 9: studiare la storia delle modifiche.](https://linuxhub.it/articles/howto-git-pt9/)  
+[&larr; Articolo precedente, parte 7: cherry-pick e squash](https://linuxhub.it/articles/howto-git-pt7/)
+[&rarr; Articolo successivo, parte 9: studiare la storia delle modifiche.](https://linuxhub.it/articles/howto-git-pt9/)
 
 Quando si parla di *software di versioning*, `Git` è sicuramente il primo programma che ci viene in mente. Rappresenta l'alternativa più diffusa a sistemi come `svn`, utilizzata anche in ambito enterprise.
 
@@ -96,7 +96,7 @@ Una volta eseguito il comando di `add` i file spariscono dalla visuale di "diff"
 
 Per confrontare i file tra staging area e working, bisogna usare l'opzione `--cached`:
 
-```bash 
+```bash
 git diff --cached
 ```
 
@@ -124,7 +124,7 @@ git apply /percorso/file.patch
 
 Anche il comando `am` applica una patch, **ma deve essere generata** con una particolare metodologia chiamata `format-patch`.
 
-Rispetto alla classica *diff*, questo metodo memorizza anche il nome dell'utente che ha applicato la modifica, la data ed una serie di altre informazioni.  
+Rispetto alla classica *diff*, questo metodo memorizza anche il nome dell'utente che ha applicato la modifica, la data ed una serie di altre informazioni.
 I parametri di `format-patch` sono gli stessi di una *diff*, ad esempio per creare una patch che descrive i cambiamenti del branch di feature rispetto al branch di main del file chiamato "ciao" si potrà scrivere:
 
 ```bash
@@ -151,7 +151,7 @@ index 0000000..d50aa63
 +++ b/ciao
 @@ -0,0 +1 @@
 +adsad
--- 
+--
 2.44.0
 ```
 

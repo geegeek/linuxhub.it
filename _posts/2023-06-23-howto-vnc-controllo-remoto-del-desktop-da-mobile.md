@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - VNC: controllo remoto del desktop da mobile - Parte 2'
+title: "#howto - VNC: controllo remoto del desktop da mobile - Parte 2"
 date: 2023-06-23 07:00
 layout: post
 author: Midblyte

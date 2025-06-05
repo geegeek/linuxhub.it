@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Rigenerazione Automatica delle Chiavi SSH per VM Debian/ubuntu Clonate'
+title: "#howto - Rigenerazione Automatica delle Chiavi SSH per VM Debian/ubuntu Clonate"
 date: 2024-11-02 07:00
 layout: post
 author: Luigi Smiraglio
@@ -82,7 +82,7 @@ Configura `cloud-init` per eliminare e rigenerare le chiavi SSH al primo avvio d
 ```yaml
 #########################################################
 #cloud-config OFF (datasource_list)
-# cloud-init per rigenerare le chiavi SSH al primo avvio della macchina template 
+# cloud-init per rigenerare le chiavi SSH al primo avvio della macchina template
 #########################################################
 
 # Evita la ricerca di sorgenti dati cloud

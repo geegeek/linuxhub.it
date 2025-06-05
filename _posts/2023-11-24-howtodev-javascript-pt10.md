@@ -1,21 +1,21 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 10 - Riferimenti in memoria' 
+title: "#howtodev - JavaScript parte 10 - Riferimenti in memoria"
 date: 2023-11-24 06:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: Michael Messaggi
 coauthor_github: MichaelMessaggi
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
-[&larr; Articolo precedente: Classi](https://linuxhub.it/articles/howtodev-javascript-pt9)  
+[&larr; Articolo precedente: Classi](https://linuxhub.it/articles/howtodev-javascript-pt9)
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.
 
 Vediamo ora cosa si intende per riferimento in memoria.
 
@@ -38,14 +38,14 @@ Si consiglia comunque una lettura di tutte le lezioni.
 
 ## Variabili primitive, complesse, classi e rappresentazione in memoria
 
-Nel percorso affrontato fin ora si è visto come instanziare ed utilizzare vari tipi di dato in JavaScript, variabili primitive e non, oggetti e classi; se per un essere umano leggere questo genere di dati è intuitivo (a patto di saper leggere e scrivere) risulta valida la domanda: "come fa una macchina a comprendere questi dati? Come li conserva e come li legge?". 
+Nel percorso affrontato fin ora si è visto come instanziare ed utilizzare vari tipi di dato in JavaScript, variabili primitive e non, oggetti e classi; se per un essere umano leggere questo genere di dati è intuitivo (a patto di saper leggere e scrivere) risulta valida la domanda: "come fa una macchina a comprendere questi dati? Come li conserva e come li legge?".
 La risposta non è semplice e si ricorrerà ad alcune "*semplificazioni*" allo scopo di non appesantire troppo la lettura.
 
 ### Rappresentazione binaria e celle di memoria
 
 Il calcolatore memorizza tutti i dati utilizzando ovviamente la notazione binaria e sono raggruppati in sequenze da 8 bit (un **byte**).
 
-A queste sequenze di numeri vengono poi dati dei significati secondo questo schema: 
+A queste sequenze di numeri vengono poi dati dei significati secondo questo schema:
 
 - Un singolo carattere è decodificato, in JavaScript, con coppie di byte (2 byte=16 bit), [come specificato nella documentazione di Mozilla](https://developer.mozilla.org/en-US/docs/Glossary/Code_unit). Questo perché JavaScript utilizza la codifica UTF-16; il concetto di codifica è complesso e non verrà trattato, si può pensare a UTF-16 come una lista di numeri a 16 bit a cui ognuno è stato associato un simbolo. [Qui si può trovare la lista](https://www.fileformat.info/info/charset/UTF-16/list.htm).
 - Un booleano è associato ad un 1 bit. Se 0 è false, se 1 è true.
@@ -58,7 +58,7 @@ Un oggetto di Javascript è rappresentato da un blocco di dati che non è omogen
 
 La RAM è la così detta "memoria volatile", non perché ha le ali come gli assorbenti ovviamente, ma nel senso che è di "poca durata" e nello specifico fintanto che il calcolatore è acceso.
 
-Ed è qui che vengono memorizzati i dati che ogni software utilizza durante il momento di attività, ogni variabile, semplice o complessa che sia.  
+Ed è qui che vengono memorizzati i dati che ogni software utilizza durante il momento di attività, ogni variabile, semplice o complessa che sia.
 Nello specifico, ad ogni programma il sistema operativo riserva uno spazio in ram (generalmente isolato dagli altri programmi, da qui il concetto di *memoria virtuale*).
 
 Ma non è tutto: la ram è "virtualmente" divisa in due parti:
@@ -68,7 +68,7 @@ Ma non è tutto: la ram è "virtualmente" divisa in due parti:
 
 ## Riferimenti in memoria
 
-Una variabile primitiva è generalmente conservata nello stack, per gli oggetti complessi invece il discorso è **diverso**. 
+Una variabile primitiva è generalmente conservata nello stack, per gli oggetti complessi invece il discorso è **diverso**.
 Nello Stack viene memorizzato l'indirizzo in memoria che risiede nell'HEAP, questo indirizzo è chiamato **puntatore**.
 Si può dire che il vero valore di un oggetto complesso sia il **puntatore**, ovvero un numero, che dice dove si possono trovare i suoi dati.
 
@@ -96,7 +96,7 @@ Il risultato è questo:.
 La console identifica che `p` non è un oggetto primitivo e stampa quindi a schermo non il suo valore ma la sua natura.
 In altri linguaggi la stampa a schermo mostrerebbe anche l'indirizzo in memoria, purtroppo in JavaScript non è possibile.
 
-Il concetto è comunque presente e ci si può sperimentare. Ad esempio con **i confronti**, si provi a creare due oggetti diversi ma con lo stesso contenuto: 
+Il concetto è comunque presente e ci si può sperimentare. Ad esempio con **i confronti**, si provi a creare due oggetti diversi ma con lo stesso contenuto:
 
 ```javascript
 class Punto {
@@ -107,7 +107,7 @@ class Punto {
 p = new Punto();
 p.x=1; p.y=0;
 
-c = new Punto(); 
+c = new Punto();
 c.x=1; c.y=0;
 ```
 
@@ -148,7 +148,7 @@ In questo caso il risultato sarà `uguali`, infatti assegnando esplicitamente un
 
 ### Lavorare con i puntatori
 
-Quali sono le conseguenze di aver assegnato un puntatore? 
+Quali sono le conseguenze di aver assegnato un puntatore?
 Quali le differenze ad assegnare semplicemente un oggetto con gli stessi valori?
 
 Per rispondere a queste domande si possono fare dei piccoli esempi. Riprendendo l'esempio di cui sopra:
@@ -256,7 +256,7 @@ class Punto {
 
         deepEquals(p){
                 if ( p==null || ! (p instanceof Punto)) return false; //verifica che p sia diverso da null e che sia anche p un Punto
-                
+
                 return this.x===p.x && this.y===p.y;
         }
 }
@@ -280,10 +280,10 @@ uguali!
 
 ### Confronti deep tramite JSON
 
-Il formato JSON (JavaScript Object Notation) è un formato testuale in cui ogni oggetto viene racchiuso tra parentesi graffe, al suo interno ogni nome di attributo viene messo tra virgolette e seguito dal carattere `:` e quindi dal valore, ogni attributo viene separato da un altro con una virgola. 
+Il formato JSON (JavaScript Object Notation) è un formato testuale in cui ogni oggetto viene racchiuso tra parentesi graffe, al suo interno ogni nome di attributo viene messo tra virgolette e seguito dal carattere `:` e quindi dal valore, ogni attributo viene separato da un altro con una virgola.
 Se un attributo è a sua volta un oggetto si può creare un altro JSON al suo interno, se è una lista (o array) va rinchiuso tra parentesi quadre.
 
-Se si considera l'oggetto Punto siffatto: 
+Se si considera l'oggetto Punto siffatto:
 
 ```javascript
 class Punto {
@@ -295,17 +295,17 @@ p = new Punto();
 p.x=1; p.y=0;
 ```
 
-Il suo JSON sarà: 
+Il suo JSON sarà:
 
 ```json
 {
-	x:1, 
+	x:1,
 	y:0
 }
 ```
 
 In JavaScript il JSON si può utilizzare per i confronti tra oggetti.
-Per trasformare un oggetto in JSON basta utilizzare la direttiva `JSON.stringify(nomevariabile)`: 
+Per trasformare un oggetto in JSON basta utilizzare la direttiva `JSON.stringify(nomevariabile)`:
 
 ```javascript
 class Punto {
@@ -336,7 +336,7 @@ class Punto {
 let p = new Punto();
 p.x=1; p.y=0;
 
-let c = new Punto(); 
+let c = new Punto();
 c.x=1; c.y=0;
 
 let jsonP=JSON.stringify(p)

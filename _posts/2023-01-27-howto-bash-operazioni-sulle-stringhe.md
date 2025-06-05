@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Bash: operazioni sulle stringhe'
+title: "#howto - Bash: operazioni sulle stringhe"
 date: 2023-01-27 08:00
 layout: post
 author: Midblyte
@@ -138,7 +138,7 @@ Se possibile, ritorna `${variabile}` senza la parte iniziale "prefisso", altrime
 
 Se non si è pratici, si può consultare l'articolo [velocizzarsi nel terminale parte 2](https://linuxhub.it/articles/howto-velocizzarsi-terminale-pt2/).
 
-La rimozione avviene in modo che il **pattern** "prefisso" tolga quanti più caratteri possibili.  
+La rimozione avviene in modo che il **pattern** "prefisso" tolga quanti più caratteri possibili.
 
 #### Sostituzione corta e sostituzione lunga del prefisso
 
@@ -147,7 +147,7 @@ Per comprendere meglio la differenza tra questa versione e quella corta si può 
 ```bash
 variabile="file_file_ciao"
 
- echo ${variabile#fi*_} 
+ echo ${variabile#fi*_}
 # l'output sarà "file_ciao"
 
  echo ${variabile##fi*_}
@@ -194,7 +194,7 @@ echo ${variabile%%.*}
 
 ### Sostituzione inversa
 
-Su Bash, si tratta di un'operazione non valida.  
+Su Bash, si tratta di un'operazione non valida.
 Su Zsh, ritorna una stringa vuota ("") se `${variabile}` corrisponde esattamente a "val", altrimenti si comporta come `${variabile}`.
 
 ```bash
@@ -217,7 +217,7 @@ Ritorna una parte di `${variabile}`, dalla posizione "offset" fino alla fine (l'
 ${variabile: -offset}
 ```
 
-> **Nota**:  
+> **Nota**:
 >
 > tra i due punti (`:`) e il segno meno (`-`) deve esserci **sempre** almeno uno spazio affinché la shell non interpreti il formato come `${variabile:-val}` (il quale viene considerato un caso diverso, già trattato in precedenza).
 

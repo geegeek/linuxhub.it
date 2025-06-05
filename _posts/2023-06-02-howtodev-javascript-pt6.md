@@ -1,25 +1,25 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 6 - parametri REST' 
+title: "#howtodev - JavaScript parte 6 - parametri REST"
 date: 2023-06-02 08:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: Michael Messaggi
 coauthor_github: MichaelMessaggi
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
-[&larr; Articolo precedente: funzioni](https://linuxhub.it/articles/howtodev-javascript-pt5)  
+[&larr; Articolo precedente: funzioni](https://linuxhub.it/articles/howtodev-javascript-pt5)
 
-[&rarr; Articolo successivo: funzioni note](https://linuxhub.it/articles/howtodev-javascript-pt7)  
+[&rarr; Articolo successivo: funzioni note](https://linuxhub.it/articles/howtodev-javascript-pt7)
 
 [&larr; Articolo SPREAD vs REST](https://linuxhub.it/articles/howtodev-javascript-rest-vs-spread/)
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.
 
 Vediamo ora alcune delle funzioni più utilizzate già messe a disposizione da JavaScript.
 
@@ -47,7 +47,7 @@ Quando non si può sapere in anticipo quanti parametri verranno utilizzati in in
 
 ### Come si utilizzano i parametri REST
 
-Per utilizzarli, basta scrivere nell'intestazione del metodo tre caratteri punto prima del nome della variabile: 
+Per utilizzarli, basta scrivere nell'intestazione del metodo tre caratteri punto prima del nome della variabile:
 
 ```javascript
 function testREST(...parametri){
@@ -55,7 +55,7 @@ function testREST(...parametri){
 }
 ```
 
-All'interno di quella funzione è adesso possibile utilizzare la variabile "parametri" come se fosse un vettore, al suo interno ci saranno tutte le variabili passate in input al metodo. 
+All'interno di quella funzione è adesso possibile utilizzare la variabile "parametri" come se fosse un vettore, al suo interno ci saranno tutte le variabili passate in input al metodo.
 
 Ad esempio si può pensare di stamparne il valore
 
@@ -67,7 +67,7 @@ function testREST (...parametri){
 }
 ```
 
-Si può ora richiamare passando un *numero arbitrario* di parametri: 
+Si può ora richiamare passando un *numero arbitrario* di parametri:
 
 ```javascript
 function testREST (...parametri){
@@ -79,7 +79,7 @@ function testREST (...parametri){
 testREST("ciao",3,"AAAAA",13.3)
 ```
 
-Il risultato sarà la stampa di tutti i parametri: 
+Il risultato sarà la stampa di tutti i parametri:
 
 ```plain
 ciao
@@ -90,9 +90,9 @@ AAAAA
 
 ### REST e altri parametri
 
-Potrebbe essere non scontato immaginare che oltre i parametri REST possano esserci, a patto di seguire alcune regole, altri parametri. Questo potrebbe essere utile per identificare un determinato parametro da una lista. 
+Potrebbe essere non scontato immaginare che oltre i parametri REST possano esserci, a patto di seguire alcune regole, altri parametri. Questo potrebbe essere utile per identificare un determinato parametro da una lista.
 
-Ad esempio, immaginando di fare un carrello della spesa, potrebbe essere intelligente calcolare il conto separando il nome del proprietario del carrello: 
+Ad esempio, immaginando di fare un carrello della spesa, potrebbe essere intelligente calcolare il conto separando il nome del proprietario del carrello:
 
 ```javascript
 function contoCarrello (proprietario, ...carrello){
@@ -106,9 +106,9 @@ function contoCarrello (proprietario, ...carrello){
 ```
 
 
-Per testarlo si può poi scrivere: 
+Per testarlo si può poi scrivere:
 
-```javascript 
+```javascript
 function contoCarrello (proprietario, ...carrello){
 	let somma=0;
 	for (let prodotto of carrello){
@@ -129,14 +129,14 @@ Il conto del signor Davide è di 27.78 euro
 
 ### Regole di implementazione REST parameters
 
-Quali sono le regole per poter mettere più parametri oltre i REST? in realtà son semplici: 
+Quali sono le regole per poter mettere più parametri oltre i REST? in realtà son semplici:
 
 - Il parametro REST deve essere sempre l'ultimo parametro.
 - Ci può essere solo un parametro REST
 
 Queste due regole servono a JavaScript per tracciare una linea di confine tra parametri REST e non.
 
-Un esempio **errato** di implementazione alla luce di tutto ciò potrebbe essere quello di scrivere il proprietario del carrello alla fine del carrello stesso: 
+Un esempio **errato** di implementazione alla luce di tutto ciò potrebbe essere quello di scrivere il proprietario del carrello alla fine del carrello stesso:
 
 ```javascript
 function contoCarrello ( ...carrello,proprietario){
@@ -149,7 +149,7 @@ function contoCarrello ( ...carrello,proprietario){
 }
 ```
 
-Questa scrittura porterebbe infatti ad un errore di questo genere: 
+Questa scrittura porterebbe infatti ad un errore di questo genere:
 
 ```plain
 SyntaxError: Rest parameter must be last formal parameter
@@ -157,7 +157,7 @@ SyntaxError: Rest parameter must be last formal parameter
 
 ### REST o vettore
 
-Creare un parametro REST o mettere come ultimo parametro un vettore è la stessa cosa dal punto di vista funzionale, l'esempio del conto potrebbe essere rivisto come segue: 
+Creare un parametro REST o mettere come ultimo parametro un vettore è la stessa cosa dal punto di vista funzionale, l'esempio del conto potrebbe essere rivisto come segue:
 
 ```javascript
 function contoCarrello (proprietario, carrello){
@@ -172,10 +172,10 @@ function contoCarrello (proprietario, carrello){
 contoCarrello("Davide",[3,0.99,2.99,12,5,3.80])
 ```
 
-Il risultato è lo stesso, tuttavia richiamando il metodo è stato necessario utilizzare le parentesi quadre, allo scopo di racchiudere il vettore da utilizzare come parametro. 
+Il risultato è lo stesso, tuttavia richiamando il metodo è stato necessario utilizzare le parentesi quadre, allo scopo di racchiudere il vettore da utilizzare come parametro.
 
-La sintassi è più restrittiva e meno elegante, ma funziona. 
+La sintassi è più restrittiva e meno elegante, ma funziona.
 
 > **ATTENZIONE**:
-> 
+>
 > Al contrario di quello che succede in altri linguaggi, se la firma del metodo contiene un parametro REST, non è conveniente passare un vettore intero come parametro in input, JavaScript non lo muta in una lista di parametri ma penserà che l'intero vettore è solo uno dei parametri REST.

@@ -1,25 +1,25 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 3 - indentazione e cicli' 
+title: "#howtodev - JavaScript parte 3 - indentazione e cicli"
 date: 2023-03-03 08:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: Midblyte
 coauthor_github: Midblyte
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
-[&larr; Articolo precedente: variabili complesse e blocchi](https://linuxhub.it/articles/howtodev-javascript-pt2)  
+[&larr; Articolo precedente: variabili complesse e blocchi](https://linuxhub.it/articles/howtodev-javascript-pt2)
 
-[&rarr; Articolo successivo: variabili array](https://linuxhub.it/articles/howtodev-javascript-pt4)  
+[&rarr; Articolo successivo: variabili array](https://linuxhub.it/articles/howtodev-javascript-pt4)
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e anche ormai di molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e anche ormai di molte applicazioni lato desktop.
 
-Vediamo ora come funzionano i cicli e come si indenta il codice.  
+Vediamo ora come funzionano i cicli e come si indenta il codice.
 
 ## Obiettivi
 
@@ -46,7 +46,7 @@ Inoltre è consigliata una conoscenza di:
 
 ## Stile del codice e indentazione
 
-Anche l'occhio vuole la sua parte, e non solo per una questione estetica.  
+Anche l'occhio vuole la sua parte, e non solo per una questione estetica.
 
 Saper organizzare il codice "visivamente" è importante per la leggibilità e quindi per poter riprendere sempre il suo sviluppo comprendendo già a colpo d'occhio le varie parti che lo compongono.
 
@@ -60,11 +60,11 @@ Si sarà sicuramente notato che l'esempio fatto con il blocco di istruzione:
 
 ```javascript
 {
-	let i = 0; 
+	let i = 0;
 	console.log("qui la i esiste e vale i="+i)
 }
 
-// qui la i ancora non esiste, va re-inizializzata: 
+// qui la i ancora non esiste, va re-inizializzata:
 let i=1
 console.log("valore della i="+i)
 
@@ -92,11 +92,11 @@ Ma su questo non vi è una regola ben precisa.
 
 Anche una variabile inizializzata su più righe, come può essere *un oggetto*, oppure tramite l'uso dell'*if ternario*, è pratica comune indentarla per fare capire quando inizia e quando finisce quella costruzione. Anche in questo caso si saranno notati i due esempi dell'articolo precedente.
 
-Ad esempio, per l'oggetto: 
+Ad esempio, per l'oggetto:
 
 ```javascript
 let oggetto={
-	etichetta:"Punto 1", 
+	etichetta:"Punto 1",
 	coordinataX:0,
 	coordinataY:3
 }
@@ -138,7 +138,7 @@ Nel secondo caso:
 ```javascript
 if(condizione)
 {
-	istruzioni; 
+	istruzioni;
 }
 ```
 
@@ -156,7 +156,7 @@ I cicli son 3:
 
 Per una corretta interpretazione di questo ciclo, potrebbe essere utile tradurlo con il termine "*fintanto che*". Infatti il while ripete l'istruzione o il blocco di istruzioni al suo interno "*fintanto che*" la sua condizione è true.
 
-Per essere chiari, la dinamica di esecuzione di un ciclo di while è rappresentata dai seguenti passi: 
+Per essere chiari, la dinamica di esecuzione di un ciclo di while è rappresentata dai seguenti passi:
 
 1. Valutazione della condizione.
 2. condizione vera:
@@ -169,7 +169,7 @@ La costruzione di un while è introdotta dalla parola chiave e la condizione tra
 
 ```javascript
 while(condizione)
-	istruzione dentro il while; 
+	istruzione dentro il while;
 
 istruzione fuori il while
 ```
@@ -180,8 +180,8 @@ Ovviamente l'istruzione di un while, si sarà già intuito, può benissimo esser
 
 ```javascript
 while(condizione) {
-	istruzione dentro il while; 
-	altra istruzione dentro il while; 
+	istruzione dentro il while;
+	altra istruzione dentro il while;
 }
 
 istruzione fuori il while
@@ -191,10 +191,10 @@ Le istruzioni all'interno del while (che siano 1 o più) *vanno indentate* per c
 
 #### while: esempio d'uso
 
-Chiediamo a JavaScript di calcolare per noi la sommatoria dei primi *n numeri*. Prima di farlo seguiamo un filo logico (come lista puntata) che possa poi essere trasformato facilmente in codice: 
+Chiediamo a JavaScript di calcolare per noi la sommatoria dei primi *n numeri*. Prima di farlo seguiamo un filo logico (come lista puntata) che possa poi essere trasformato facilmente in codice:
 
 - Serve una variabile dove memorizzare la sommatoria.
-- Essendo poi sommata ad ogni n, serve inizializzare tale variabile con il valore "*neutro*" rispetto la somma, ovvero con lo 0. 
+- Essendo poi sommata ad ogni n, serve inizializzare tale variabile con il valore "*neutro*" rispetto la somma, ovvero con lo 0.
 - Serve una variabile che tenga conto di quale è la "n" corrente, ovvero assuma il valore prima di 0, poi di 1, di 2 etc... fino ad n. Chiameremo questa variabile "indice di iterazione".
 - La condizione del nostro while riguarda appunto l'indice di iterazione, che sarà vera *fintanto che* l'indice non raggiunge e supera n.
 
@@ -229,7 +229,7 @@ Il **do-while** è una variante del while che *esegue prima di valutare la condi
 
 Per essere chiari rispetta questo flusso di operazioni:
 
-1. esegue istruzione while 
+1. esegue istruzione while
 2. controlla la condizione
    - 2.1 se vera ritorna a punto 1
    - 2.2 se falsa esce
@@ -237,8 +237,8 @@ Per essere chiari rispetta questo flusso di operazioni:
 La costruzione di un do-while è introdotta dalla parola chiave e *subito dopo* l'istruzione, segue la parola `while` e la condizione tra parentesi tonde `(` e `)`:
 
 ```javascript
-do 
-	istruzione dentro il while; 
+do
+	istruzione dentro il while;
 while(condizione)
 
 istruzione fuori il do-while
@@ -246,10 +246,10 @@ istruzione fuori il do-while
 
 Anche in questo caso si può usare un blocco di istruzioni:
 
-```javascript 
+```javascript
 do {
-	istruzione dentro il while; 
-	altra istruzione dentro il while; 
+	istruzione dentro il while;
+	altra istruzione dentro il while;
 }
 while(condizione)
 
@@ -275,7 +275,7 @@ Anche qui, prima di iniziare, stiliamo un ragionamento sotto forma di elenco pun
 - Serve una variabile per il numero da rappresentare, chiamiamola "numero".
 - Serve una variabile dove memorizzare i resti singoli, chiamiamola "resto".
 - La condizione del while deve essere che "numero" si deve mantenere Maggiore o uguale di 1.
-- Le istruzioni del while devono essere le seguenti: 
+- Le istruzioni del while devono essere le seguenti:
   - Prendi il resto tra "numero" e due, memorizzalo in "resto".
   - Aggiorna "numero" con il risultato della divisione tra "numero" stesso e due. In questo punto vi è una criticità, evitare le divisioni *non intere*.
   - Aggiorniamo "risultato" con il resto. Siccome deve essere rappresentato all'inverso, *concateniamo il risultato al resto* e non viceversa.
@@ -286,7 +286,7 @@ Il resto della divisione è letteralmente quel numero che, *se tolto dal numero 
 
 Vediamo l'algoritmo per intero:
 
-```javascript 
+```javascript
 let risultato=""
 let numero=0
 let resto=0
@@ -308,7 +308,7 @@ Per prelevare la parte intera di un numero decimale si sarebbe potuto anche util
 numero=~~(numero/2)
 ```
 
-Applicandola due volte su un numero intero il risultato non cambia (la negazione di una negazione non altera il risultato), ma applicata ad un numero decimale *toglie la parte decimale* perché tutte le operazione binarie di javascript si applicano *solo alle cifre intere*.  
+Applicandola due volte su un numero intero il risultato non cambia (la negazione di una negazione non altera il risultato), ma applicata ad un numero decimale *toglie la parte decimale* perché tutte le operazione binarie di javascript si applicano *solo alle cifre intere*.
 
 Un'altra versione dell'algoritmo più "elegante" sarebbe quindi stata:
 
@@ -321,7 +321,7 @@ console.log("la rappresentazione binaria di "+numero+" e' ")
 
 do {
 	resto=numero%2 // se numero è dispari, sarà 1
-	numero=~~(numero/2) 
+	numero=~~(numero/2)
 	risultato=resto+""+risultato
 }while(numero>=1)
 
@@ -348,7 +348,7 @@ Come si può notare ci son due fasi che, negli altri cicli, non erano presenti:
 - inizializzazione.
 - aggiornamento.
 
-Queste due informazioni vengono inserite nel costrutto. Vediamo come si compone: 
+Queste due informazioni vengono inserite nel costrutto. Vediamo come si compone:
 
 ```javascript
 for(istruzione inizializzazione; condizione; istruzione aggiornamento)
@@ -357,7 +357,7 @@ for(istruzione inizializzazione; condizione; istruzione aggiornamento)
 istruzione fuori for
 ```
 
-Ad esempio si può pensare di eseguire un istruzione per 10 volte inizializzando una variabile con 0, facendola aumentare di uno alla volta e impostando la condizione a true solo fintanto che il valore è minore di 10: 
+Ad esempio si può pensare di eseguire un istruzione per 10 volte inizializzando una variabile con 0, facendola aumentare di uno alla volta e impostando la condizione a true solo fintanto che il valore è minore di 10:
 
 ```javascript
 for(let i=0; i<10; i++)
@@ -369,7 +369,7 @@ istruzione fuori for
 Una specifica importante è che in realtà l'istruzione di inizializzazione, la condizione e l'aggiornamento *non devono essere per forza collegate tra di loro*. Ovviamente bisogna stare attenti a tirare fuori cose coerenti, altrimenti l'utilizzo di questo costrutto perde senso. Ecco un esempio "*incoerente*":
 
 ```javascript
-let i=0; 
+let i=0;
 for(let stringa=""; i<10; stringa=stringa+i)
 	i++;
 
@@ -382,9 +382,9 @@ Ovviamente, anche in questo caso, sottolineo come il blocco di istruzioni sia po
 
 ```javascript
 for(istruzione inizializzazione; condizione; istruzione aggiornamento){
-	istruzione interna 1; 
-	istruzione interna 2; 
-	istruzione interna 3; 
+	istruzione interna 1;
+	istruzione interna 2;
+	istruzione interna 3;
 }
 
 istruzione fuori for
@@ -394,7 +394,7 @@ istruzione fuori for
 
 Per l'esempio con il for, riscriviamo la sommatoria già vista nell'esempio del while:
 
-```javascript 
+```javascript
 let risultato=0 // memorizza il risultato
 let n=10 // il massimo a cui deve arrivare l'iterazione
 

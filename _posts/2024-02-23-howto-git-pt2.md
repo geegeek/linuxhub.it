@@ -13,14 +13,14 @@ tags:
   - git
 ---
 
-[&larr; Articolo precedente, parte 1: introduzione](https://linuxhub.it/articles/howto-git-pt1/)  
+[&larr; Articolo precedente, parte 1: introduzione](https://linuxhub.it/articles/howto-git-pt1/)
 [&rarr; Articolo successivo, parte 3: remote e branch](https://linuxhub.it/articles/howto-git-pt3/)
 
 Quando si parla di *software di versioning*, `git` è sicuramente il primo programma che ci viene in mente. Rappresenta l'alternativa più diffusa a sistemi come `svn`, utilizzata anche in ambito enterprise.
 
 È anche uno dei primi scogli che dipendenti alle prime armi affrontano in azienda.
 
-Ecco quindi una guida passo passo a GIT, parte 2: operazioni base.
+Ecco quindi una guida passo passo a Git, parte 2: operazioni base.
 
 ## Obiettivi
 
@@ -38,11 +38,11 @@ Questo articolo affronterà i seguenti argomenti:
 
 ## Configurazione utente
 
-GIT obbliga l'utente a "identificarsi" prima di memorizzare le modifiche.
+Git obbliga l'utente a "identificarsi" prima di memorizzare le modifiche.
 
 Il motivo è intuitivo, dovendo ricostruire la storia delle modifiche ad un progetto è lapalissiano che debba anche sapere chi e quando ha fatto una modifica.
 
-Le configurazioni dell'utente possono essere globali o localizzate progetto per progetto, per cambiare *globalmente* il nome utente su GIT scrivere: 
+Le configurazioni dell'utente possono essere globali o localizzate progetto per progetto, per cambiare *globalmente* il nome utente su Git scrivere:
 
 ```bash
 git config --global user.name "Nome Utente"
@@ -56,7 +56,7 @@ git config --global user.email "indirizzo@email.com"
 
 > **NOTA BENE**:
 >
-  > Le configurazioni utente di git non hanno nulla a che fare con gli account dei provider online di GIT (GITHUB, GITLAB, Bitbucket...), servono solo ad identificare chi ha fatto un commit.
+  > Le configurazioni utente di git non hanno nulla a che fare con gli account dei provider online di Git (GitHUB, GitLAB, Bitbucket...), servono solo ad identificare chi ha fatto un commit.
 
 Configurazioni utente e account online possono essere differenti senza alcun problema
 
@@ -115,7 +115,7 @@ Come prima, il parametro `--global` è utilizzato solo se si vuole applicare la 
 
 ## Controllare lo stato delle modifiche
 
-Si può controllare lo stato delle modifiche in atto con: 
+Si può controllare lo stato delle modifiche in atto con:
 
 ```bash
 git status
@@ -138,7 +138,7 @@ git rm -rf percorso/cartella/o/file
 ```bash
 git checkout -- percorso/nomefile
 
-# OPPURE 
+# OPPURE
 
 git restore percorso/nomefile
 ```
@@ -189,7 +189,7 @@ La prossima fase è quella di registrare i cambiamenti sul repository locale. Qu
 
 La commit deve essere accompagnata da *un breve messaggio che spiega il contenuto delle modifiche*.
 
-Questi messaggi potranno poi essere letti in un momento successivo, perciò è importante che abbiano un senso e che aiutino a capire come si è evoluta la storia di un progetto (in genere sono accompagnati ad un codice che identifica un task).  
+Questi messaggi potranno poi essere letti in un momento successivo, perciò è importante che abbiano un senso e che aiutino a capire come si è evoluta la storia di un progetto (in genere sono accompagnati ad un codice che identifica un task).
 
 Durante questa fase è importante aver configurato **il nome e l'email dell'utente**.
 
@@ -199,7 +199,7 @@ Per creare un commit la struttura del comando deve essere simile alla seguente:
 git commit -m "messaggio di commit"
 ```
 
-Si può fare il commit di alcuni files piuttosto che altri, scrivendoli uno dopo l'altro separati da uno spazio nel comando: 
+Si può fare il commit di alcuni files piuttosto che altri, scrivendoli uno dopo l'altro separati da uno spazio nel comando:
 
 ```bash
 git commit -m "messaggio di commit" file1 percorso/file2 cartella2 ...etc...

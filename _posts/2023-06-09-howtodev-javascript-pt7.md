@@ -1,23 +1,23 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 7 - Funzioni note' 
+title: "#howtodev - JavaScript parte 7 - Funzioni note"
 date: 2023-06-09 08:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: Michael Messaggi
 coauthor_github: MichaelMessaggi
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
-[&larr; Articolo precedente: parametri REST](https://linuxhub.it/articles/howtodev-javascript-pt6)  
+[&larr; Articolo precedente: parametri REST](https://linuxhub.it/articles/howtodev-javascript-pt6)
 
-[&rarr; Articolo successivo: Parametri opzionali e di default](https://linuxhub.it/articles/howtodev-javascript-pt8)  
+[&rarr; Articolo successivo: Parametri opzionali e di default](https://linuxhub.it/articles/howtodev-javascript-pt8)
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.
 
 Vediamo ora qualche esempio di funzione tra quelle fornite da JavaScript stesso.
 
@@ -31,7 +31,7 @@ Lista degli obiettivi che a fine articolo il lettore consegue:
 
 ## Prerequisiti
 
-Per la comprensione di questo articolo è necessaria la lettura dei seguenti articoli: 
+Per la comprensione di questo articolo è necessaria la lettura dei seguenti articoli:
 
 - [Funzioni](https://linuxhub.it/articles/howtodev-javascript-pt5)
 - [Parametri REST](https://linuxhub.it/articles/howtodev-javascript-pt6)
@@ -65,7 +65,7 @@ Da come risultato:
 133
 ```
 
-Ovviamente funziona anche nel caso di numeri negativi.  
+Ovviamente funziona anche nel caso di numeri negativi.
 Nel caso in cui la stringa inserita *non contenesse* un numero il risultato sarebbe invece `NaN`:
 
 ```javascript
@@ -124,14 +124,14 @@ ciao
 
 Ovvero la stringa all'interno viene trasformata in istruzione JavaScript vera e propria e quindi eseguita.
 
-Se l'istruzione eseguita (l'ultima, se sono più istruzioni) crea una variabile che resta inutilizzata, questa può essere poi assegnata dal programma che usa `eval`. Per fare un esempio reale: 
+Se l'istruzione eseguita (l'ultima, se sono più istruzioni) crea una variabile che resta inutilizzata, questa può essere poi assegnata dal programma che usa `eval`. Per fare un esempio reale:
 
 ```javascript
 let somma=eval("2+2")
 console.log(somma)
 ```
 
-Il risultato sarà: 
+Il risultato sarà:
 
 ```javascript
 4
@@ -168,7 +168,7 @@ Il mio nome è Davide
 
 In realtà potrebbe essere interessante sapere che la console.log è una funzione con parametri REST, che stampa, separando per spazi, tutte le variabili che si passano come parametro.
 
-Lo stesso esempio di cui sopra si può quindi riscrivere come segue: 
+Lo stesso esempio di cui sopra si può quindi riscrivere come segue:
 
 ```javascript
 let nome="Davide"
@@ -176,7 +176,7 @@ let nome="Davide"
 console.log("Il mio nome è", nome)
 ```
 
-Notare come, dopo il carattere è, sia sparito anche lo spazio, viene infatti inserito dall'interprete come già detto prima. Vediamo il risultato: 
+Notare come, dopo il carattere è, sia sparito anche lo spazio, viene infatti inserito dall'interprete come già detto prima. Vediamo il risultato:
 
 ```plain
 Il mio nome è Davide
@@ -200,7 +200,7 @@ Il mio nome è Davide Galati e sono uno Sviluppatore
 
 ### Parametri REST vs concatenazione
 
-È necessario specificare che non è propriamente vero che non cambi nulla tra l'utilizzo dei parametri REST e la concatenazione di stringhe. Infatti alcune variabili più complesse, come possono esserlo array e oggetti di javascript, verranno messi a schermo utilizzando formati diversi. 
+È necessario specificare che non è propriamente vero che non cambi nulla tra l'utilizzo dei parametri REST e la concatenazione di stringhe. Infatti alcune variabili più complesse, come possono esserlo array e oggetti di javascript, verranno messi a schermo utilizzando formati diversi.
 
 Su terminali compatibili, è possibile anche vedere il risultato di colori diversi.
 
@@ -240,21 +240,21 @@ lista di skills: [ 'java', 'javascript', 'typescript' ]
 
 #### Oggetti
 
-Alcuni elementi, come gli oggetti, non possono proprio essere stampati tramite concatenazione, e necessitano invece di essere stampati come parametri REST a se stanti. 
+Alcuni elementi, come gli oggetti, non possono proprio essere stampati tramite concatenazione, e necessitano invece di essere stampati come parametri REST a se stanti.
 
-Supponendo di avere un oggetto di informazioni e volendolo stampare per intero, si potrebbe pensare di scrivere: 
+Supponendo di avere un oggetto di informazioni e volendolo stampare per intero, si potrebbe pensare di scrivere:
 
 ```javascript
 let info={
 	name:"Davide",
-	cognome:"Galati", 
+	cognome:"Galati",
 	professione:"Sviluppatore"
 }
 
 console.log("info:"+info)
 ```
 
-Tuttavia il risultato sarebbe deludente, nel particolare risulterebbe: 
+Tuttavia il risultato sarebbe deludente, nel particolare risulterebbe:
 
 ```plain
 info:[object Object]
@@ -266,14 +266,14 @@ Per stamparlo correttamente invece, si può utilizzare il parametro REST:
 
 let info={
 	name:"Davide",
-	cognome:"Galati", 
+	cognome:"Galati",
 	professione:"Sviluppatore"
 }
 
 console.log("info:",info)
 ```
 
-Il quale risultato sarebbe: 
+Il quale risultato sarebbe:
 
 ```plain
 info: { name: 'Davide', cognome: 'Galati', professione: 'Sviluppatore' }
@@ -283,7 +283,7 @@ info: { name: 'Davide', cognome: 'Galati', professione: 'Sviluppatore' }
 
 Ogni vettore ha la possibilità implicità di utilizzare alcune funzioni che scorrono i suoi elementi per creare nuovi vettori o attuare altre azioni.
 
-La maggior parte dei metodi hanno in ingresso gli stessi parametri, i metodi in questione sono: 
+La maggior parte dei metodi hanno in ingresso gli stessi parametri, i metodi in questione sono:
 
 - forEach: esegue delle istruzioni per ogni elemento del vettore, non restituisce nulla.
 - map: per ogni elemento del vettore ne crea un altro, restituisce un vettore della stessa dimensione ma con gli elementi potenzialmente diversi.
@@ -297,16 +297,16 @@ Ogni metodo si richiama scrivendo un carattere `.` dopo una variabiabile array e
 
 ### Metodo forEach
 
-Il `forEach` è la funzione lambda più semplice, equivale a scrivere delle istruzioni in un ciclo di for senza creare un nuovo array. 
+Il `forEach` è la funzione lambda più semplice, equivale a scrivere delle istruzioni in un ciclo di for senza creare un nuovo array.
 
-La sintassi per eseguirlo è la seguente: 
+La sintassi per eseguirlo è la seguente:
 
 ```javascript
 let array = [/*elementi, dentro, l'array*/ ]
 
 array.forEach( (elementocorrente,indicecorrente,array)=> {
-	// istruzioni 
-}) 
+	// istruzioni
+})
 ```
 
 La funzione richiesta come parametro a sua volta prende come parametri:
@@ -317,7 +317,7 @@ La funzione richiesta come parametro a sua volta prende come parametri:
 
 Questi parametri saranno poi passati automaticamente da JavaScript. La funzione può specificare *anche meno parametri*, ad esempio solo l'elemento corrente, o elemento ed indice, l'importante è che si rispetti l'ordine: il primo elemento che javascript passerà sarà l'elemento, dopo l'indice e quindi l'array.
 
-Si veda ad esempio un metodo per elencare una lista di persone, ognuna preceduta da un indice numerico: 
+Si veda ad esempio un metodo per elencare una lista di persone, ognuna preceduta da un indice numerico:
 
 ```javascript
 let array=["Davide","Francesco","Caterina","Rebecca"]
@@ -381,7 +381,7 @@ for (let i=0; i<array.length; i++) {
 
 ### Metodo map
 
-Il metodo `map` serve a generare un nuovo vettore partendo dagli elementi di quello iniziale e trasformandoli. Si intende: la trasformazione può anche non esserci, esistono casi in cui si utilizza il map per effettuare una copia dell'array, non è errato ma non è neanche il suo utilizzo "ottimale". 
+Il metodo `map` serve a generare un nuovo vettore partendo dagli elementi di quello iniziale e trasformandoli. Si intende: la trasformazione può anche non esserci, esistono casi in cui si utilizza il map per effettuare una copia dell'array, non è errato ma non è neanche il suo utilizzo "ottimale".
 
 Quello che va compreso è che map si applica su un array e ne genera uno con **lo stesso numero di elementi**.
 
@@ -391,7 +391,7 @@ Si implementa come segue:
 let array = [/*elementi, dentro, l'array*/ ]
 
 let nuovoarray=array.map( (elementocorrente,indicecorrente,array)=> {
-	// istruzioni 
+	// istruzioni
 	return /*nuovo valore*/;
 })
 ```
@@ -415,13 +415,13 @@ let nuovoarray=array.map(stringa=>parseInt(stringa))
 console.log(nuovoarray)
 ```
 
-Il risultato sarà: 
+Il risultato sarà:
 
 ```plain
 [ 1, 50, 23, 123, 54, 6 ]
 ```
 
-Questo map equivale a scrivere un for siffatto: 
+Questo map equivale a scrivere un for siffatto:
 
 ```javascript
 let array=["1","50","23","123","54","6"]
@@ -446,7 +446,7 @@ Per utilizzarlo si scrive:
 let array = [/*elementi, dentro, l'array*/ ]
 
 let nuovoarray=array.filter( (elementocorrente,indicecorrente,array)=> {
-	// istruzioni 
+	// istruzioni
 	return /*true o false*/;
 })
 ```
@@ -472,11 +472,11 @@ let nuovoArray= array.filter(stringa=>
 console.log(nuovoArray)
 ```
 
-> **NOTA**: 
+> **NOTA**:
 >
 > Si ricordi che il confronto tra due stringhe viene fatto in ordine lessicografico, quindi la "a" è minore di tutte le parole che iniziano con "a", e la "b" è maggiore di tutte le parole che iniziano con "a". Stesso discorso per le lettere Maiuscole
 
-IL risultato sarà: 
+IL risultato sarà:
 
 ```plain
 [ 'aceto', 'Assisi' ]
@@ -509,7 +509,7 @@ Il metodo `reduce` è forse la più particolare e complessa tra le varie funzion
 
 Non c'è un solo modo di utilizzare questa funzione è tanto potente quanto controintuitiva.
 
-Come parametro riceve una funzione ed un valore: 
+Come parametro riceve una funzione ed un valore:
 
 - La funzione, per ogni elemento, lo trasforma e lo aggrega ad un valore che poi restituisce alla fine.
 - L'elemento funziona da "valore iniziale dell'accumulatore", se non presente, viene prelevato il primo elemento del vettore.
@@ -517,7 +517,7 @@ Come parametro riceve una funzione ed un valore:
 La funzione richiesta come parametro a sua volta prende come parametri:
 
 - Il valore accumulato, che rappresenterà anche il valore restituito alla fine. Lo chiameremo "*accumulatore*". Se non presente, viene preso il primo elemento dell'array.
-- L'elemento corrente, il primo elemento dell'array viene saltato se non viene specificato il secondo parametro del reduce. 
+- L'elemento corrente, il primo elemento dell'array viene saltato se non viene specificato il secondo parametro del reduce.
 - L'indice dell'elemento corrente
 - L'array
 
@@ -529,7 +529,7 @@ Per utilizzarlo si scrive:
 let array = [/*elementi, dentro, l'array*/ ]
 
 let nuovoarray=array.reduce( (accumulatore,elementocorrente,indicecorrente,array)=> {
-	// istruzioni 
+	// istruzioni
 	return /*valore accumulatore*/;
 }, valoreinizialeaccumulatore)
 ```
@@ -564,12 +564,12 @@ il risultato in entrambi i casi è:
 0
 ```
 
-Il reduce è molto più complesso da rendere senza utilizzare la funzione apposita ma usando il `for`, poiché in realtà dipende anche da quale obiettivo si vuole raggiungere con il reduce. In questo specifico caso si potrebbe dire che equivale a scrivere: 
+Il reduce è molto più complesso da rendere senza utilizzare la funzione apposita ma usando il `for`, poiché in realtà dipende anche da quale obiettivo si vuole raggiungere con il reduce. In questo specifico caso si potrebbe dire che equivale a scrivere:
 
 ```javascript
 let array=[4,3,2,1,10]
 
-let accumulatore=0 
+let accumulatore=0
 
 for (let elementocorrente of array){
 	accumulatore+=elementocorrente
@@ -580,27 +580,27 @@ console.log(accumulatore)
 
 ### Metodo sort
 
-Il metodo `sort` non crea un nuovo vettore, è l'unico dei metodi elencati che modifica il vettore di partenza. Infatti effettua un ordinamento sui valori utilizzando la funzione che si passa tra i parametri. La funzione interna a sua volta preleva due parametri: 
+Il metodo `sort` non crea un nuovo vettore, è l'unico dei metodi elencati che modifica il vettore di partenza. Infatti effettua un ordinamento sui valori utilizzando la funzione che si passa tra i parametri. La funzione interna a sua volta preleva due parametri:
 
 - elemento1
 - elemento2
 
 Questa funzione deve restituire un **numero positivo** se *elemento1 è più grande di elemento2*, un **numero negativo** se **elemento2 è più grande di elemento1**, `0` se uguali.
 
-Per utilizzarlo si scrive: 
+Per utilizzarlo si scrive:
 
 ```javascript
 let array = [/*elementi, dentro, l'array*/ ]
 
 let nuovoarray=array.sort( (elemento1,elemento2)=> {
-	// istruzioni 
+	// istruzioni
 	return /*un numero > 0 se elemento1 è maggiore di elemento2*/;
 })
 ```
 
 Se non si specifica la funzione di confronto, **viene utilizzato quello lessicografico**.
 
-Si può fare il seguente esempio: 
+Si può fare il seguente esempio:
 
 ```javascript
 let array=[4,3,2,1,10]
@@ -611,7 +611,7 @@ array.sort((x,y)=>x-y) //x-y da 0 se sono uguali, >0 se x maggiore sennò y
 console.log(array)
 ```
 
-Che come risultato darà: 
+Che come risultato darà:
 
 ```plain
 [ 1, 2, 3, 4, 10 ]

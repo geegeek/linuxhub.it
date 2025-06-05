@@ -31,7 +31,7 @@ Si può trovare [la pagina del progetto su Github](https://github.com/philipl/mp
 
 ### Ubuntu e derivate
 
-Per installarlo su Ubuntu e derivate digitare dal terminale: 
+Per installarlo su Ubuntu e derivate digitare dal terminale:
 
 ```bash
 apt install mplayer
@@ -53,7 +53,7 @@ dnf install mplayer mencoder
 
 ### ArchLinux
 
-Per installarlo su ArchLinux digitare dal terminale: 
+Per installarlo su ArchLinux digitare dal terminale:
 
 ```bash
 pacman -S mplayer
@@ -61,13 +61,13 @@ pacman -S mplayer
 
 ## Utilizzo
 
-Un utilizzo di base è semplicemente quello di avviarlo passando come parametro il nome del file da avviare: 
+Un utilizzo di base è semplicemente quello di avviarlo passando come parametro il nome del file da avviare:
 
 ```bash
 mplayer percorso/filemultimediale
 ```
 
-Quindi si può controllare il flusso tramite vari comandi: 
+Quindi si può controllare il flusso tramite vari comandi:
 
 - Con le frecce direzionali **&larr;** e **&rarr;** si può mandare indietro/avanti di 10 secondi la traccia.
 - Con le frecce direzionali **&uarr;** e **&darr;** si può mandare indietro/avanti di 1 minuto la traccia.
@@ -84,13 +84,13 @@ Quindi si può controllare il flusso tramite vari comandi:
 
 ### Riproduzione di più file
 
-Per riprodurre più file contemporaneamente (creando eventualmente delle playlist) è possibile semplicemente concatenarli separandoli da spazi a linea di comando: 
+Per riprodurre più file contemporaneamente (creando eventualmente delle playlist) è possibile semplicemente concatenarli separandoli da spazi a linea di comando:
 
 ```bash
 mplayer percorso/filemultimediale1 percorso/filemultimediale2
 ```
 
-È possibile ovviamente utilizzare i caratteri di espansione (Leggi l'articolo su [come velocizzarsi nell'uso del terminale pt2](https://linuxhub.it/articles/howto-velocizzarsi-terminale-pt2/)) per selezionare più file contemporaneamente scrivendo poco. Ad esempio per avviare tutti i file mp3 in una determinata cartella: 
+È possibile ovviamente utilizzare i caratteri di espansione (Leggi l'articolo su [come velocizzarsi nell'uso del terminale pt2](https://linuxhub.it/articles/howto-velocizzarsi-terminale-pt2/)) per selezionare più file contemporaneamente scrivendo poco. Ad esempio per avviare tutti i file mp3 in una determinata cartella:
 
 ```bash
 mplayer *mp3
@@ -105,8 +105,8 @@ MPlayer è tanto "semplice" quanto potente, il suo utilizzo è scontato ed intui
 - **-alang/-slang** seleziona la lingua dell'audio/sottotitoli del DVD (utilizzando il codice a due caratteri del paese)
 - **-ss numero** va alla posizione specificata (in secondi o "hh:mm:ss")
 - **-nosound** non riproduce l'audio
-- **-fs** riproduzione a schermo intero 
-- **-x numero -y numero** imposta la risoluzione dello schermo, quest'opzione scala anche il video quindi assicuratevi di mettere la giusta proporzione 
+- **-fs** riproduzione a schermo intero
+- **-x numero -y numero** imposta la risoluzione dello schermo, quest'opzione scala anche il video quindi assicuratevi di mettere la giusta proporzione
 - **-sub file** specifica il file dei sottotitoli da utilizzare (vedi anche -subfps, -subdelay)
 - **-playlist file** specifica il file della playlist
 - **-vid x -aid y** seleziona il flusso video (x) e audio (y) da riprodurre
@@ -116,7 +116,7 @@ MPlayer è tanto "semplice" quanto potente, il suo utilizzo è scontato ed intui
 - **-cache numero** utile per riproduzioni in streaming, imposta una cache in Kb
 - **-cache-min numero** imposta la dimensione minima della cache (in percentuale) prima di riprodurre il file
 
-In ogni caso è possibile sempre richiamare l'help con: 
+In ogni caso è possibile sempre richiamare l'help con:
 
 ```bash
 mplayer --help
@@ -134,7 +134,7 @@ Che contiene tutte le opzioni.
 
 Ecco qualche esempio di utilizzo:
 
-Per far partire un file da 1 minuto e 30 secondi dall'inizio scriviamo: 
+Per far partire un file da 1 minuto e 30 secondi dall'inizio scriviamo:
 
 ```bash
 mplayer -ss "00:01:30" percorso/file

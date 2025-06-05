@@ -15,7 +15,7 @@ tags:
 - hadoop
 ---
 
-Ultimamente per lavoro mi è capitato di dover utilizzare Scala, Spark e Hadoop. 
+Ultimamente per lavoro mi è capitato di dover utilizzare Scala, Spark e Hadoop.
 Se per configurare le prime due tecnologie il processo è stato abbastanza automatico, l'ultimo ha invece dato qualche rogna...
 
 ## Hadoop e HDFS
@@ -59,7 +59,7 @@ In caso di versioni diverse, basta cambiare il numero di versione nel link.
 
 ### Decompressione e installazione
 
-Una volta effettuato il download basta decomprimere il file `tar.gz` scaricato con l'apposito comando: 
+Una volta effettuato il download basta decomprimere il file `tar.gz` scaricato con l'apposito comando:
 
 ```bash
 tar -xvzf hadoop*tar.gz
@@ -75,7 +75,7 @@ cp -r hadoop* /opt/hadoop
 
 ## Aggiornare il PATH e le variabili d'ambiente
 
-È quindi arrivato il momento di aggiornare le variabili d'ambiente. 
+È quindi arrivato il momento di aggiornare le variabili d'ambiente.
 Per aggiornarle è necessario modificare uno dei [file di avvio della nostra shell](https://linuxhub.it/articles/2023-09-08-howto-file-avvio-shell).
 
 Ad esempio se si utilizza bash, si può pensare di modificare il file **$HOME/.bashrc**:
@@ -105,7 +105,7 @@ Ma è una pratica **che non consiglio**.
 
 ## Test e avvio di Spark Shell
 
-Per testare che tutto funzioni correttamente, aprire il terminale e quindi: 
+Per testare che tutto funzioni correttamente, aprire il terminale e quindi:
 
 ```bash
 spark-shell
@@ -120,7 +120,7 @@ WARN NativeCodeLoader: Unable to load native-hadoop library for your platform...
 Allora **qualcosa è andato storto**, riprovare i vari step. Inoltre digitare:
 
 ```bash
-hadoop version 
+hadoop version
 ```
 
 Per verificare che la versione corrisponda.

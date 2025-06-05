@@ -15,8 +15,8 @@ tags:
 - shebang
 ---
 
-Bash non è solamente il nome della shell più conosciuta e utilizzata, ma anche il nome del linguaggio in cui molti script sono scritti.  
-Uno dei vantaggi fondamentali forniti da Bash è quello della portabilità: salvo alcune eccezioni, lo si ritrova installato su ogni moderno sistema Linux.  
+Bash non è solamente il nome della shell più conosciuta e utilizzata, ma anche il nome del linguaggio in cui molti script sono scritti.
+Uno dei vantaggi fondamentali forniti da Bash è quello della portabilità: salvo alcune eccezioni, lo si ritrova installato su ogni moderno sistema Linux.
 
 Tuttavia, la portabilità a volte arriva con un costo non indifferente: la comodità di sviluppare in quel linguaggio, una più frequente complessità e la difficoltà a scrivere codice per compiere operazioni spesso molto banali in altri linguaggi di programmazione.
 
@@ -27,7 +27,7 @@ Questa situazione rende Bash idoneo per script molto semplici, ma non così tant
 Esiste un'alternativa?
 
 > Nota bene:
->  
+>
 > Per una panoramica su come fare calcoli in bash leggi anche: [#howto - Fare calcoli con Linux: Bash e non solo](https://linuxhub.it/articles/howto-fare-calcoli-con-linux/).
 
 ## Una breve premessa
@@ -155,7 +155,7 @@ rpm -i scriptisto*.rpm
 
 ## Archlinux
 
-Si può invece trovare scriptisto su AUR per quanto riguarda archlinux : 
+Si può invece trovare scriptisto su AUR per quanto riguarda archlinux :
 
 ```bash
 git clone https://aur.archlinux.org/scriptisto.git

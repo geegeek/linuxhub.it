@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - XDG Ninja: per una Home ordinata'
+title: "#howto - XDG Ninja: per una Home ordinata"
 date: 2023-05-19 07:00
 layout: post
 author: Midblyte

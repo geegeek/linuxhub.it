@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - i file di avvio delle shell'
+title: "#howto - i file di avvio delle shell"
 date: 2023-09-08 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -19,7 +19,7 @@ tags:
 - fish
 ---
 
-Quando aprite un terminale vengono sempre eseguite alcune istruzioni prima che vi venga data la possibilità di scrivere.  
+Quando aprite un terminale vengono sempre eseguite alcune istruzioni prima che vi venga data la possibilità di scrivere.
 Queste operazioni sono descritte e distribuite in vari file, che fanno da "file di avvio" delle shell.
 
 Vediamo quali sono e come modificarli.
@@ -29,7 +29,7 @@ Vediamo quali sono e come modificarli.
 Il file profile viene eseguito alla login dell'utente, rappresenta un file un po' un punto di ingresso dove poter impostare le proprie variabili d'utente ad esempio oppure dove preparare l'ambiente per la propria shell. Normalmente questo file viene legato alla shell `bash`, tuttavia è giusto sapere che è *il punto di partenza per diverse* shell.
 
 > **NOTA BENE**:
-> 
+>
 > Il file profile viene detto file di avvio delle "Login shell". È possibile avviare alcune shell in questa modalità forzandola con il parametro `-l`. Ad esempio per bash: `bash -l`.
 
 Il file si trova nel percorso `/etc/profile`.
@@ -71,7 +71,7 @@ Come descritto nella [wiki di archlinux](https://wiki.archlinux.org/title/bash) 
 - `.bash_login`
 - `.profile`
 
-Cambiando shell *è possibile che questo file venga sostituito*, è meglio sempre leggere la documentazione. 
+Cambiando shell *è possibile che questo file venga sostituito*, è meglio sempre leggere la documentazione.
 Nel caso di ZSH è probabile sia rappresentato da `/home/nomeutente/.zprofile`.
 
 ## Bash
@@ -119,7 +119,7 @@ ZSH usa i seguenti file di avvio:
 - `/home/nomeutente/.zprofile` per *la login shell locale*.
 - `/home/nomeutente/.zshrc` per *la shell interattiva locale*.
 
-Le modalità in cui vengono usate son le stesse di cui sopra: 
+Le modalità in cui vengono usate son le stesse di cui sopra:
 
 - I file di *login shell* (`zprofile`) vengono eseguiti solo alla login dell'utente oppure se si avvia la shell con il parametro `zsh -l`
 - I file di *shell interattiva* (`zshrc`) vengono eseguiti ogni volta che si apre una shell.
@@ -150,7 +150,7 @@ SETUVAR NOMEVARIABILE:valorevariabile
 
 ### Login interattiva su FISH
 
-Per identificare, in uno dei file di configurazione, *la shell interattiva* su FISH basta inserire le proprie istruzioni all'interno di questo blocco if 
+Per identificare, in uno dei file di configurazione, *la shell interattiva* su FISH basta inserire le proprie istruzioni all'interno di questo blocco if
 
 ```fish
 if status is-interactive
@@ -168,7 +168,7 @@ if status is-login
 endh
 ```
 
-Per avviare una shell di login con fish in maniera forzata si può digitare: 
+Per avviare una shell di login con fish in maniera forzata si può digitare:
 
 ```bash
 fish -l
