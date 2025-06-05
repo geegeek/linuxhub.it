@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - installare software da archivio'
+title: "#howto - installare software da archivio"
 date: 2023-09-01 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -138,7 +138,7 @@ Generalmente si preferisce creare una cartella locale con tutti gli eseguibili p
 mkdir $HOME/.local/bin
 ```
 
-È possibile ora proseguire facendo il collegamento simbolico con l'eseguibile del software appena scaricato: 
+È possibile ora proseguire facendo il collegamento simbolico con l'eseguibile del software appena scaricato:
 
 ```bash
 ln -s $HOME/.CartellaSoftware/eseguibile $HOME/.local/bin
@@ -154,7 +154,7 @@ Apriamo il file di [startup della shell](https://linuxhub.it/articles/howto-file
 - Per zsh si trova in `$HOME/.zshrc`
 - Per fish si trova in `$HOME/.config/fish/config.fish`, ma la sintassi sarà differente da quella scritta qua sotto.
 
-In un punto a piacere del file (magari verso la fine) è necessario scrivere: 
+In un punto a piacere del file (magari verso la fine) è necessario scrivere:
 
 ```bash
 export PATH=$PATH:$HOME/.local/bin
@@ -164,7 +164,7 @@ export PATH=$PATH:$HOME/.local/bin
 
 ### Creare un launcher per l'utente
 
-Come già spiegato in precedenza, il launcher è quel file che permette sia di avviare a doppio click i software che di essere facilmente trovato ed indicizzato nel menù di sistema. Si crei quindi un file con estensione `.desktop` con un contenuto simile a questo: 
+Come già spiegato in precedenza, il launcher è quel file che permette sia di avviare a doppio click i software che di essere facilmente trovato ed indicizzato nel menù di sistema. Si crei quindi un file con estensione `.desktop` con un contenuto simile a questo:
 
 ```properties
 [Desktop Entry]

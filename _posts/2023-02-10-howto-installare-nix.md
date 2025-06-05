@@ -2,15 +2,15 @@
 class: post
 title: "#howto - Installare Nix"
 date: 2023-02-10 08:00
-layout: post 
+layout: post
 author: Floppy
 author_github: raspFloppy
 coauthor: Davide Galati (in arte PsykeDady)
 coauthor_github: PsykeDady
 published: true
-tags:  
-- ubuntu 
-- archlinux 
+tags:
+- ubuntu
+- archlinux
 - fedora
 - bash
 - nix
@@ -22,12 +22,12 @@ Ci sono poi package manager che fanno questo e molto altro, oggi parliamo di `Ni
 
 ## Introduzione
 
-Nix è il package manager sviluppato dagli sviluppatori di NixOS, anche se forse sarebbe meglio dire che *NixOS è una distribuzione basata su Nix*.  
+Nix è il package manager sviluppato dagli sviluppatori di NixOS, anche se forse sarebbe meglio dire che *NixOS è una distribuzione basata su Nix*.
 
 Comunque sia, Nix è un package manager che oltre a garantire l'isolamenti dei pacchetti come `flatpak` e avere un repository con più di 80,000 pacchetti ha anche un sistema di **versionamento** e **rollback** dei pacchetti che ci permette di installare versioni precedenti di pacchetti per esempio quando un aggiornamento rompe qualcosa.
 
-La particolarità di Nix però sta nel fatto che ha differenza dei package manager classici, Nix non installa pacchetti ma **ambienti**.  
-Viene infatti utilizzato un sistema di **derivazione** che permette di creare ambienti **riproducibili** con le dipendenze necessarie per eseguire un programma attraverso istruzioni scritte in Nix Language, un linguaggio funzionale scritto apposta per Nix.  
+La particolarità di Nix però sta nel fatto che ha differenza dei package manager classici, Nix non installa pacchetti ma **ambienti**.
+Viene infatti utilizzato un sistema di **derivazione** che permette di creare ambienti **riproducibili** con le dipendenze necessarie per eseguire un programma attraverso istruzioni scritte in Nix Language, un linguaggio funzionale scritto apposta per Nix.
 
 Questa caratteristica ci permette di installare gli stessi pacchetti su qualsiasi macchina con Nix installato, senza dover installare le dipendenze del pacchetto. Ed essendo Nix compatibile anche con Mac OS e Windows possiamo avere lo stesso pacchetto anche su altri sistemi operativi.
 
@@ -47,7 +47,7 @@ sh <(curl -L https://nixos.org/nix/install) --daemon
 sh <(curl -L https://nixos.org/nix/install) --no-daemon
 ```
 
-### Note e consigli 
+### Note e consigli
 
 Sul sito ufficiale consigliano di utilizzare l'installazione multi-utente in quanto:
 

@@ -4,11 +4,11 @@ title: "#pausacaffé - Linuxhub in ferie per l'estate 2023"
 date: 2023-07-07 08:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
-author_github: PsykeDady 
+author_github: PsykeDady
 coauthor: linuxhub
 coauthor_github: linuxhubit
 published: true
-tags: 
+tags:
 - ferie
 - luglio
 ---
@@ -17,7 +17,7 @@ E anche quest'anno la redazione di Linux/hub va in ferie per l'estate!
 
 ## L'anno 2023
 
-È stato un anno un po' duro per la redazione di Linux/hub ma ce l'abbiamo fatta, siamo arrivati all'estate. Volevo quindi ringraziare e augurare un buon periodo di riposo allo staff: 
+È stato un anno un po' duro per la redazione di Linux/hub ma ce l'abbiamo fatta, siamo arrivati all'estate. Volevo quindi ringraziare e augurare un buon periodo di riposo allo staff:
 
 - MidBlyte (editore)
 - Michael Messaggi (redattore)
@@ -31,7 +31,7 @@ Ringrazio Floppy, che è stato in redazione con noi diverso tempo e ha lasciato 
 
 ## Consigli di lettura
 
-Non ci crediamo che avete letto tutti i nostri articoli, quindi perché non approfittate del momento per recuperare qualche vecchio articolo? Ecco i consigli dell'estate! 
+Non ci crediamo che avete letto tutti i nostri articoli, quindi perché non approfittate del momento per recuperare qualche vecchio articolo? Ecco i consigli dell'estate!
 
 ### Per gli utenti più semplici
 
@@ -50,6 +50,6 @@ Non ci crediamo che avete letto tutti i nostri articoli, quindi perché non appr
 
 ### Conclusioni
 
-La normale programmazione dovrebbe riprendere ad Agosto, nel frattempo abbiamo una vastissima lista di articoli, se vi interessa qualcosa connettetevi sul nostro sito, [linuxhub.it](https://linuxhub.it) e usate la nostra barra di ricerca per cercare l'argomento di vostro interesse. 
+La normale programmazione dovrebbe riprendere ad Agosto, nel frattempo abbiamo una vastissima lista di articoli, se vi interessa qualcosa connettetevi sul nostro sito, [linuxhub.it](https://linuxhub.it) e usate la nostra barra di ricerca per cercare l'argomento di vostro interesse.
 
 Volete dare un occhiata al nostro repository github? Il nostro è un progetto open source, chiunque può partecipare facendo una Pull Request e aggiungendo un articolo secondo quelle che sono [le nostre linee guida](https://linuxhub.it/articles/howto-scrivere-un-articolo-per-linuxhub/). Vi aspettiamo!

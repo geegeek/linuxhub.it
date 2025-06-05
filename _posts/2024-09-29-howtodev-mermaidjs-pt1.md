@@ -15,7 +15,7 @@ tags:
 ---
 
 
-[Articolo successivo: Sequence Diagrams &rarr;](https://linuxhub.it/articles/howtodev-mermaidjs-pt2)  
+[Articolo successivo: Sequence Diagrams &rarr;](https://linuxhub.it/articles/howtodev-mermaidjs-pt2)
 
 MermaidJS è una libreria Javascript per la creazione di diagrammi tramite linguaggio di formattazione. È integrato in alcuni software ed è facile da utilizzare.
 
@@ -61,7 +61,7 @@ npm install --global mermaid.cli
 Va poi utilizzato tramite la linea di comando. Per generare un diagramma basta scrivere:
 
 ```bash
-mmdc -i nomefileinput -o nomefileoutput.png 
+mmdc -i nomefileinput -o nomefileoutput.png
 ```
 
 Dove `nomefileinput` è il codice sorgente scritto con il markup di mermaidjs, `nomefileoutput` è il nome dell'immagine dove finirà il grafico.
@@ -143,7 +143,7 @@ flowchart LR
 `LR` rappresenta la direzione del grafico (ovvero **left to right** in questo caso), può essere sostituito da `TB`.
 Ogni combinazione di lettere (`BT` e `RL`). A seguire si possono effettuare i vari collegamenti tra i box.
 
- Per creare un box basta scriverne il nome: 
+ Per creare un box basta scriverne il nome:
 
 ```yaml
 flowchart LR
@@ -164,7 +164,7 @@ flowchart LR
     A[Un box qualunque] --> B
 ```
 
-Continuando si possono creare vere e proprie catene: 
+Continuando si possono creare vere e proprie catene:
 
 ```yaml
 flowchart LR
@@ -175,7 +175,7 @@ flowchart LR
 	F-->B
 ```
 
-Il risultato sarà  
+Il risultato sarà
 
 [![](https://mermaid.ink/img/pako:eNo1kD1vgzAQhv-KdTNBYINteaiUD2VKl1ZdWne4YNMggZ1QW02K-O81qXLTc6fn3uGdoPHGgoK29z_NCcdADi_akTTrjzdHjv5KLhH76C7RfpLV6olstNNhk2i7wDbB7gHrBfYJkgMZDHYcsDMpfVoiNYSTHawGldDYFmMfNGg3JxVj8K8314AKY7QZxLPBYHcdfo04gGqx_07XM7p374eHlFZQE1xBMclzIUpRVpLKWvIMbqBKVudMFrSqSi4ErymfM_i9_xc5LyRnjHMuGK1qWmZgTRf8-Pxfx72V-Q9oUFaD?type=png)](https://mermaid.live/edit#pako:eNo1kD1vgzAQhv-KdTNBYINteaiUD2VKl1ZdWne4YNMggZ1QW02K-O81qXLTc6fn3uGdoPHGgoK29z_NCcdADi_akTTrjzdHjv5KLhH76C7RfpLV6olstNNhk2i7wDbB7gHrBfYJkgMZDHYcsDMpfVoiNYSTHawGldDYFmMfNGg3JxVj8K8314AKY7QZxLPBYHcdfo04gGqx_07XM7p374eHlFZQE1xBMclzIUpRVpLKWvIMbqBKVudMFrSqSi4ErymfM_i9_xc5LyRnjHMuGK1qWmZgTRf8-Pxfx72V-Q9oUFaD)
 
@@ -233,7 +233,7 @@ flowchart TB
 
 #### Database
 
-Per indicare una sorgente dati si usa un icona cilindrica, che rappresenta appunto il database.  
+Per indicare una sorgente dati si usa un icona cilindrica, che rappresenta appunto il database.
 Allo scopo, scrivere il testo tra parentesi quadre e poi tonde `[()]`
 
 ```yaml
@@ -247,7 +247,7 @@ Mermaid supporta moltre altre forme, come il cerchio, trapezzoidi e altro: maggi
 
 ### Testo nel collegamento
 
-Si può inserire un testo nella freccia che collega un box ad un altro, per farlo scrivere del testo tra due segni `-` e altri due: 
+Si può inserire un testo nella freccia che collega un box ad un altro, per farlo scrivere del testo tra due segni `-` e altri due:
 
 ```yaml
 flowchart TB
@@ -269,7 +269,7 @@ flowchart LR
 	D-->A
 ```
 
-Per cambiare direzione nel sottografico la prima istruzione deve essere `direction` seguita dalla direzione: 
+Per cambiare direzione nel sottografico la prima istruzione deve essere `direction` seguita dalla direzione:
 
 ```yaml
 flowchart LR
@@ -296,7 +296,7 @@ Si può sistemare lo stile e aggiungere classi utilizzando la parola chiave `sty
 - `stroke-dasharray` serve a creare un bordo frastagliato, prende in ingresso due o più numeri, il primo indica la lunghezza del segmento il secondo la distanza tra un segmento ed un altro, se si continua con altri numeri si possono indicare lunghezze diverse.
 - `stroke-width` indica quanto ogni segmento è spesso.
 
-Ecco un esempio: 
+Ecco un esempio:
 
 ```yaml
 flowchart LR

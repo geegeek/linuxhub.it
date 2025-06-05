@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Gestire la cache su Linux'
+title: "#howto - Gestire la cache su Linux"
 date: 2023-08-04 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -51,7 +51,7 @@ Le cartelle da tenere d'occhio sono sicuramente:
 
 In realtà questa cartella può essere interamente eliminata, i software più ordinati inseriscono qui le loro cartella di cache aiutando i vari utenti a gestire più facilmente la loro eliminazione.
 
-Per vedere quali software stanno utilizzando questa cartella per memorizzare i loro file basta digitare: 
+Per vedere quali software stanno utilizzando questa cartella per memorizzare i loro file basta digitare:
 
 ```bash
 ls $HOME/.cache
@@ -63,7 +63,7 @@ Per eliminare interamente il contenuto di questa cartella si può scrivere:
 rm -r $HOME/.cache/*
 ```
 
-Per eliminare solo la cache di un software in particolare basta scrivere: 
+Per eliminare solo la cache di un software in particolare basta scrivere:
 
 ```bash
 rm -r $HOME/.cache/NOMECARTELLA
@@ -73,7 +73,7 @@ Ovviamente la cartella deve essere presente, basta utilizzare il comando `ls` di
 
 ### La cartella .config
 
-All'interno della cartella `$HOME/.config` i software conservano i loro file di configurazione. Spesso tra questi vengono inseriti degli elementi di cache. Si può iniziare dall'elencare i file all'interno della cartella config: 
+All'interno della cartella `$HOME/.config` i software conservano i loro file di configurazione. Spesso tra questi vengono inseriti degli elementi di cache. Si può iniziare dall'elencare i file all'interno della cartella config:
 
 ```bash
 ls .config
@@ -85,13 +85,13 @@ Supponendo di voler eliminare la cache di gedit ad esempio, all'interno di `.con
 rm -r $HOME/.config/gedit/cache/*
 ```
 
-Altresì la cache di Notepadqq si trova all'interno della cartella di `.config/Notepadqq`, ma suddiviso in cartella come `tabCache`, `backupCache`, quindi **non esiste un modo unificato di conservare la cache**, bisogna controllare quindi caso per caso. 
+Altresì la cache di Notepadqq si trova all'interno della cartella di `.config/Notepadqq`, ma suddiviso in cartella come `tabCache`, `backupCache`, quindi **non esiste un modo unificato di conservare la cache**, bisogna controllare quindi caso per caso.
 
 ### La cartella .var
 
 Se nel sistema è installato anche Flatpak è possibile trovare all'interno della *home* anche una cartella `.var`, al suo interno si può trovare una cartella `app` e quindi tutte le proprie installazioni *locali* di flatpak.
 
-Prendendo ad esempio il caso gedit, se installato tramite flatpak, è possibile trovare la sua cartella di cache nel percorso `$HOME/.var/app/org.gnome.gedit/cache`, la si può pulire scrivendo: 
+Prendendo ad esempio il caso gedit, se installato tramite flatpak, è possibile trovare la sua cartella di cache nel percorso `$HOME/.var/app/org.gnome.gedit/cache`, la si può pulire scrivendo:
 
 ```bash
 rm -rf $HOME/.var/app/org.gnome.gedit/cache/*
@@ -108,7 +108,7 @@ Alcuni software in particolare hanno delle cartelle dedicate:
 
 Nel sistema la cache normalmente si accumula in `/var/cache`, esiste [un articolo dedicato](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/ch05s05.html) della Linux Foundation al riguardo.
 
-Esistono 4 tipi di cartella: 
+Esistono 4 tipi di cartella:
 
 - `fonts` dove si accumulano le informazioni sui font di sistema.
 - `man` dove si accumulano le informazioni sulle pagine di manuali disponibili.
@@ -121,7 +121,7 @@ In generale, la cache dei gestori di pacchetti andrebbe gestita tramite il gesto
 
 ### Ubuntu e apt
 
-Per pulire la cache con apt basta digitare: 
+Per pulire la cache con apt basta digitare:
 
 ```bash
 apt clean
@@ -149,13 +149,13 @@ dnf clean all --verbose
 
 ### Archlinux e pacman
 
-Il comando di pulizia dei sistemi Archlinux con pacman è: 
+Il comando di pulizia dei sistemi Archlinux con pacman è:
 
 ```bash
 pacman -Sc
 ```
 
-Verranno fatte due domande poi a cui poter rispondere singolarmente per la pulizia delle singole cartelle: 
+Verranno fatte due domande poi a cui poter rispondere singolarmente per la pulizia delle singole cartelle:
 
 ```plain
 :: Vuoi rimuovere tutti gli altri pacchetti dalla cache? [S/n] S
@@ -180,24 +180,24 @@ La differenza tra i due è molto semplice, mentre il primo rimuove la cache di p
 
 Si è discusso dell'utilità dei Makefile di C nell'articolo su [come velocizzarsi nell'uso del terminale pt. 3](https://linuxhub.it/articles/howto-velocizzarsi-terminale-pt3/), facendo un breve riepilogo: è possibile utilizzare questi meccanismi per riprodurre più operazioni con un solo comando.
 
-Si supponga di voler creare un comando per pulire tutta la cache locale (sconsigliato) in un comando unico: 
+Si supponga di voler creare un comando per pulire tutta la cache locale (sconsigliato) in un comando unico:
 
 
 ```bash
 find . -type d -name "cache" -exec rm -rf {}/* \;
 ```
 
-Ora lo si può inserire nel makefile così: 
+Ora lo si può inserire nel makefile così:
 
 ```bash
-ccache: 
+ccache:
 	 find . -type d -name "cache" -exec echo rm {}/* \;
 ```
 
 Oppure pulire alcune singole cartelle come gedit e notepadqq:
 
 ```bash
-ccache: 
+ccache:
 	rm -r $HOME/.config/gedit/cache/*
 	rm -r $HOME/.config/Notepadqq/tabCache
 	rm -r $HOME/.config/Notepadqq/backupCache
@@ -213,13 +213,13 @@ make ccache
 
 Esistono alcune applicazioni che aiutano a gestire questo genere di file, eccone alcune open source:
 
-- [Stacer](https://github.com/oguzhaninan/Stacer) 
+- [Stacer](https://github.com/oguzhaninan/Stacer)
 - [Ubuntu Cleaner](https://github.com/gerardpuig/ubuntu-cleaner) (specifico per ubuntu e derivate)
 - [Bleachbit](https://github.com/bleachbit/bleachbit)
 
 #### Stacer
 
-Tutte le informazioni per installare Stacer sui vari sistemi sono presenti nel readme del [repository github](https://github.com/oguzhaninan/Stacer), ad esempio per Ubuntu avremo le seguenti istruzioni: 
+Tutte le informazioni per installare Stacer sui vari sistemi sono presenti nel readme del [repository github](https://github.com/oguzhaninan/Stacer), ad esempio per Ubuntu avremo le seguenti istruzioni:
 
 ```bash
 add-apt-repository ppa:oguzhaninan/stacer -y
@@ -227,7 +227,7 @@ apt-get update
 apt-get install stacer -y
 ```
 
-Per Archlinux sarà consigliato *l'utilizzo di AUR*, ad esempio tramite AUR-helper paru: 
+Per Archlinux sarà consigliato *l'utilizzo di AUR*, ad esempio tramite AUR-helper paru:
 
 ```bash
 paru -S stacer
@@ -241,7 +241,7 @@ e per fedora tramite `dnf`:
 
 #### Ubuntu Cleaner
 
-Ubuntu cleaner è specifico per sistemi ubuntu, anche qui l'installazione è semplice: 
+Ubuntu cleaner è specifico per sistemi ubuntu, anche qui l'installazione è semplice:
 
 ```bash
 apt install software-properties-common

@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - tldr: esempi pratici per i comandi'
+title: "#howto - tldr: esempi pratici per i comandi"
 date: 2023-08-11 07:00
 layout: post
 author: Midblyte

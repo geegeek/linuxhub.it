@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Installare i font su Linux'
+title: "#howto - Installare i font su Linux"
 date: 2023-09-29 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -44,7 +44,7 @@ mkdir FiraCode
 
 mv FiraCode.zip FiraCode
 
-cd FiraCode 
+cd FiraCode
 
 unzip FiraCode.zip #necessita il tool unzip
 ```
@@ -86,7 +86,7 @@ Essendo una convenzione, il sistema funzionerà anche qualora non fosse rispetta
 
 ## Installare manualmente i font
 
-Normalmente basta inserire in una delle cartelle di sopra i file dei font e aggiornare la cache con il comando 
+Normalmente basta inserire in una delle cartelle di sopra i file dei font e aggiornare la cache con il comando
 
 ```bash
 fc-cache
@@ -113,7 +113,7 @@ mkdir -p /usr/local/share/fonts/ttf # Per font TTF
 mkdir -p /usr/local/share/fonts/otf # Per font OTF
 ```
 
-Nel caso di FiraCode dopo aver scaricato il pacchetto zip e scompattato digitare: 
+Nel caso di FiraCode dopo aver scaricato il pacchetto zip e scompattato digitare:
 
 ```bash
 mv FiraCode /usr/local/share/fonts/ttf
@@ -127,12 +127,12 @@ mv FiraCode /usr/local/share/fonts/ttf
 Quindi dare il comando di aggiornamento della cache
 
 ```bash
-fc-cache -v 
+fc-cache -v
 ```
 
 il risultato dovrebbe essere il seguente:
 
-```plain 
+```plain
 /usr/local/share/fonts/ttf: caching, new cache contents: 0 fonts, 1 dirs
 /usr/local/share/fonts/ttf/FiraCode: caching, new cache contents: 18 fonts, 0 dirs
 ```
@@ -148,7 +148,7 @@ mkdir -p $HOME/.local/share/fonts/ttf # Per font TTF
 mkdir -p $HOME/.local/share/fonts/otf # Per font OTF
 ```
 
-Nel caso di FiraCode dopo aver scaricato il pacchetto zip e scompattato digitare: 
+Nel caso di FiraCode dopo aver scaricato il pacchetto zip e scompattato digitare:
 
 ```bash
 mv FiraCode $HOME/.local/share/fonts/ttf
@@ -161,7 +161,7 @@ mv FiraCode $HOME/.local/share/fonts/ttf
 Quindi dare il comando di aggiornamento della cache
 
 ```bash
-fc-cache -v 
+fc-cache -v
 ```
 
 il risultato dovrebbe essere il seguente:

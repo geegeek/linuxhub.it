@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - migliorare performance deck'
+title: "#howto - migliorare performance deck"
 date: 2023-08-25 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -20,7 +20,7 @@ Da possessore della Steam Deck posso tranquillamente dire che son pochi i proble
 
 ## Cosa ne penso di Steam Deck
 
-Abbiamo parlato di Steam Deck [in questo articolo](https://linuxhub.it/articles/pausacaffe-ennesima-recensione-steam-deck/), forse un po' datato ma rispecchia comunque la maggior parte delle cose che tutt'ora penso. Se proprio dovessi cambiare qualcosa direi che è stato migliorato l'aspetto desktop. Ma non è rivalutare la Steam Deck lo scopo di questo articolo. 
+Abbiamo parlato di Steam Deck [in questo articolo](https://linuxhub.it/articles/pausacaffe-ennesima-recensione-steam-deck/), forse un po' datato ma rispecchia comunque la maggior parte delle cose che tutt'ora penso. Se proprio dovessi cambiare qualcosa direi che è stato migliorato l'aspetto desktop. Ma non è rivalutare la Steam Deck lo scopo di questo articolo.
 
 Se invece avete una Steam Deck e siete interessati ad avere una maggiore libertà nel sistema, potreste trovare interessante l'articolo su [come installare Archlinux in una cartella](https://linuxhub.it/articles/howto-installare-arch-cartella/).
 
@@ -49,9 +49,9 @@ Una volta impostato uscire dal menù "*Advanced*" ed andare in *EXIT*. Seleziona
 
 ## CryoUtils
 
-Uno strumento molto utile per migliorare le performance della Steam Deck potrebbe essere "CryoUtilities". Questo tool, sviluppato da **CryoBute33**, è nato per raccogliere una serie di miglioramenti (tra cui quello della vram) per il pc Handled di Valve. 
+Uno strumento molto utile per migliorare le performance della Steam Deck potrebbe essere "CryoUtilities". Questo tool, sviluppato da **CryoBute33**, è nato per raccogliere una serie di miglioramenti (tra cui quello della vram) per il pc Handled di Valve.
 
-Si può trovare il repository completamente open source [su Github](https://github.com/CryoByte33/steam-deck-utilities/), quanto l'installazione basta avviare la Steam Deck in modalità Desktop, aprire *Konsole* e digitare: 
+Si può trovare il repository completamente open source [su Github](https://github.com/CryoByte33/steam-deck-utilities/), quanto l'installazione basta avviare la Steam Deck in modalità Desktop, aprire *Konsole* e digitare:
 
 ```bash
 curl https://raw.githubusercontent.com/CryoByte33/steam-deck-utilities/main/install.sh | bash -s --

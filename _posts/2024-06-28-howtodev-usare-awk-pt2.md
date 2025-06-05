@@ -13,7 +13,7 @@ tags:
 - awk
 ---
 
-[&larr; Articolo precedente, parte 1: Sintassi base](https://linuxhub.it/articles/howto-usare-awk-pt2/)  
+[&larr; Articolo precedente, parte 1: Sintassi base](https://linuxhub.it/articles/howto-usare-awk-pt2/)
 
 AWK è un **linguaggio di programmazione** nato dalla necessità di manipolare piccole porzioni di testo in diversi file con poche righe di codice, sfruttando direttamente l'interattività della console.
 
@@ -43,7 +43,7 @@ fortunatissimo per verità!' | awk '
     }'
 ```
 
-Nel codice viene creata ed inizializzata la variabile `vettore` insieme alla variabile `c`.  
+Nel codice viene creata ed inizializzata la variabile `vettore` insieme alla variabile `c`.
 La prima serve a memorizzare, per ogni singola riga letta, il numero di parole. Tramite la variabile `c` viene creato un "indice" che aumenta riga per riga.
 
 Alla fine come si può notare, si usano gli *indici da 0 a 5* per mostrare tutti i vari valori.
@@ -140,14 +140,14 @@ numero di "bravo": 4
 
 ### Split di una stringa nei vari caratteri
 
-Un altro esempio pratico potrebbe essere lo split di una stringa nei singoli caratteri e contare le occorrenze di alcuni.  
-Lo split di una stringa si fa attraverso una funzione chiamata `split`: 
+Un altro esempio pratico potrebbe essere lo split di una stringa nei singoli caratteri e contare le occorrenze di alcuni.
+Lo split di una stringa si fa attraverso una funzione chiamata `split`:
 
 ```bash
 split(stringa,vettorerisultante,divisore)
 ```
 
-Ad esempio: 
+Ad esempio:
 
 ```bash
 split($0,chars,"")
@@ -164,14 +164,14 @@ Fortunatissimo per verità! Bravo!
 Fortunatissimo per verità,
 fortunatissimo per verità!' | awk '
     {
-        split($0,chars,""); 
+        split($0,chars,"");
         for (i=1; i<=length($0); i++) {
-            if(chars[i]=="a"){ 
+            if(chars[i]=="a"){
                 ca++;
             }
         }
-    } 
-    END { print ("ci sono",ca,"a");} 
+    }
+    END { print ("ci sono",ca,"a");}
 '
 ```
 

@@ -1,23 +1,23 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 8 - Parametri opzionali e di default' 
+title: "#howtodev - JavaScript parte 8 - Parametri opzionali e di default"
 date: 2023-06-16 08:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: gaetanovirg	
 coauthor_github: gaetanovirg
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
-[&larr; Articolo precedente: Funzioni note](https://linuxhub.it/articles/howtodev-javascript-pt7)  
-[&rarr; Articolo successivo: Classi](https://linuxhub.it/articles/howtodev-javascript-pt9)  
+[&larr; Articolo precedente: Funzioni note](https://linuxhub.it/articles/howtodev-javascript-pt7)
+[&rarr; Articolo successivo: Classi](https://linuxhub.it/articles/howtodev-javascript-pt9)
 
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.
 
 In questo articolo tratteremo l'argomento dei parametri opzionali e di default.
 
@@ -48,7 +48,7 @@ function info(nome, cognome, soprannome) {
 }
 ```
 
-Ora lo possiamo richiamare ad esempio prima con nome e cognome, poi con tutti e tre i valori: 
+Ora lo possiamo richiamare ad esempio prima con nome e cognome, poi con tutti e tre i valori:
 
 ```javascript
 info ("Davide","Galati")
@@ -66,7 +66,7 @@ mi chiamo Davide Galati detto PsykeDady
 
 I parametri di default servono a sostituire la mancanza di valori nel caso in cui non ne sia stato specificato qualcuno,  l'assenza è sempre calcolata a partire dall'ultimo parametro.
 
-Per specificare il valore di default di un parametro, basta assegnarlo nell'intestazione del metodo: 
+Per specificare il valore di default di un parametro, basta assegnarlo nell'intestazione del metodo:
 
 ```javascript
 function funzione(parametro=valore){
@@ -80,7 +80,7 @@ Si supponga ad esempio un sommatore che:
 - se è stato specificato un solo parametro, restituisce la somma da 0 al parametro indicato
 - se entrambi i parmaetri sono stati specificati, fa la somma dal secondo al primo.
 
-Con i parametri di default il risultato sarebbe: 
+Con i parametri di default il risultato sarebbe:
 
 ```javascript
 function sommatoria(fine=0, inizio=0 ) {

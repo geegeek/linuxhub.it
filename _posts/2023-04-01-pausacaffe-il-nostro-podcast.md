@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#pausacaffé - Il nostro podcast!'
+title: "#pausacaffé - Il nostro podcast!"
 date: 2023-04-01 12:00
 layout: post
 author: Davide Galati (in arte PsykeDady)

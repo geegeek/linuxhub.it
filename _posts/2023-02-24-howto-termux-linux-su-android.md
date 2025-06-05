@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Termux: Linux su Android'
+title: "#howto - Termux: Linux su Android"
 date: 2023-02-24 08:00
 layout: post
 author: Midblyte
@@ -54,7 +54,7 @@ Naturalmente questa scelta comporta correre numerosi rischi che, se possibile, s
 
 Rispetto ad una qualsiasi, ordinaria distro Linux per desktop, Termux ha alcune ma importanti differenze:
 
-- **Termux non segue lo standard FHS** (Filesystem Hierarchy Standard): significa, ad esempio, che la cartella home (~) è /data/data/com.termux/files/home, ovvero non quella che si trova in /home. 
+- **Termux non segue lo standard FHS** (Filesystem Hierarchy Standard): significa, ad esempio, che la cartella home (~) è /data/data/com.termux/files/home, ovvero non quella che si trova in /home.
 - **Termux usa Bionic libc**, non Glibc, affinché ciascun pacchetto sia compatibile il più possibile con le librerie Android ed il suo kernel.
 - **Termux è monoutente**.
 

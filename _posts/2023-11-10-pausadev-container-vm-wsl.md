@@ -49,7 +49,7 @@ La virtualizzazione ha anche diversi punti critici, di cui:
 
 Alcune definizioni online:
 
-- [Wikipedia](https://it.wikipedia.org/wiki/Macchina_virtuale) 
+- [Wikipedia](https://it.wikipedia.org/wiki/Macchina_virtuale)
 - [VMWare](https://www.vmware.com/it/topics/glossary/content/virtual-machine.html)
 - [Google](https://cloud.google.com/learn/what-is-a-virtual-machine?hl=it)
 
@@ -100,7 +100,7 @@ Il container condivide il kernel con il sistema operativo ospitante, Linux non h
 
 Alcune definizioni online:
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Containerization_(computing)) 
+- [Wikipedia](https://en.wikipedia.org/wiki/Containerization_(computing))
 - [Docker](https://www.docker.com/resources/what-container/)
 - [Google](https://cloud.google.com/learn/what-are-containers?hl=it)
 - [Red Hat](https://www.redhat.com/en/topics/containers)
@@ -111,7 +111,7 @@ Circa nel 2016 nasceva la prima versione del **Windows Subsystem Linux**, ovvero
 
 Microsoft stessa spiega che bisognerebbe utilizzare WSL più che una VM poiché: *"usa meno risorse" di una macchina virtuale, è meglio integrato e ti lascia utilizzare Windows Apps così come strumenti Linux sullo stesso set di files se vuoi*.
 
-**WSL1** utilizzava *un kernel scritto ad hoc da Microsoft*, la strategia non si è rivelata però particolarmente compatibile ed anzi, introduceva delle forzature che non permettevano di installare qualunque distribuzione Linux si volesse sul proprio sistema.  
+**WSL1** utilizzava *un kernel scritto ad hoc da Microsoft*, la strategia non si è rivelata però particolarmente compatibile ed anzi, introduceva delle forzature che non permettevano di installare qualunque distribuzione Linux si volesse sul proprio sistema.
 È stata quindi introdotta l**a versione 2 di WSL (WSL2)** che utilizza un kernel Linux vero e proprio all'interno di una macchina virtuale gestita da Windows.
 
 Alcune fonti interessanti da leggere:

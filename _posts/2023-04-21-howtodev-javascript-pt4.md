@@ -1,24 +1,24 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 4 - Array' 
+title: "#howtodev - JavaScript parte 4 - Array"
 date: 2023-04-21 08:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: linuxhub
 coauthor_github: linuxhub
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
-[&larr; Articolo precedente: variabili complesse e blocchi](https://linuxhub.it/articles/howtodev-javascript-pt3)  
+[&larr; Articolo precedente: variabili complesse e blocchi](https://linuxhub.it/articles/howtodev-javascript-pt3)
 
-[&rarr; Articolo successivo: funzioni](https://linuxhub.it/articles/howtodev-javascript-pt5)  
+[&rarr; Articolo successivo: funzioni](https://linuxhub.it/articles/howtodev-javascript-pt5)
 
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e anche ormai di molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e anche ormai di molte applicazioni lato desktop.
 
 Vediamo cosa sono e come funzionano gli array.
 
@@ -50,7 +50,7 @@ Normalmente però, se non per necessità specifiche, si creano vettori che conte
 
 ## Usare gli array
 
-Gli array si possono creare, modificare e quindi scorrere e leggere. 
+Gli array si possono creare, modificare e quindi scorrere e leggere.
 
 ### Creare un array
 
@@ -94,15 +94,15 @@ console.log(vettore[2])
 
 Stamperà la parola "Mario".
 
-### Modificare un elemento dell'array 
+### Modificare un elemento dell'array
 
-Per modificare un elemento dell'array è sufficiente richiamare la specifica cella e cambiarne il valore, con la seguente sintassi: 
+Per modificare un elemento dell'array è sufficiente richiamare la specifica cella e cambiarne il valore, con la seguente sintassi:
 
 ```javascript
 nomearray[indice]=nuovovalore
 ```
 
-Ad esempio 
+Ad esempio
 
 ```javascript
 
@@ -124,7 +124,7 @@ Davide
 
 ### Aggiungere elementi
 
-L'array può essere allungato, per farlo basta "modificare" l'elemento successivo all'ultimo. Per essere chiari se il vettore è di lunghezza `N`, basta modificare l'elemento con indice `N` (**non** `N+1`) indicando il nuovo valore: 
+L'array può essere allungato, per farlo basta "modificare" l'elemento successivo all'ultimo. Per essere chiari se il vettore è di lunghezza `N`, basta modificare l'elemento con indice `N` (**non** `N+1`) indicando il nuovo valore:
 
 ```javascript
 vettore[N]=nuovovalore
@@ -157,10 +157,10 @@ Per sapere la lunghezza del vettore basta scrivere `.length` dopo il nome del ve
 ```javascript
 let vettore = [/*elementi,del,vettore*/]
 
-vettore.length 
+vettore.length
 ```
 
-Ad esempio: 
+Ad esempio:
 
 ```javascript
 let vettoreNumeri=[0,1,2,3,4,5,6,7,8,9]
@@ -217,9 +217,9 @@ Ora che si ha il contesto vediamo come unire questi tre passi. Prima con il cicl
 ```javascript
 let array=[/*elementi...*/]
 
-let indice=0; 
+let indice=0;
 
-let lunghezza=array.length; 
+let lunghezza=array.length;
 
 while(indice<lunghezza){
 	//iscrivere un istruzione che coinvolga l'i-esimo elemento dell'array
@@ -232,9 +232,9 @@ Ad esempio stampiamo a schermo una lista di nomi:
 ```javascript
 let nomi=["Davide","Mario","Luigi","Alfredo","Alba","Chiara"]
 
-let indice=0; 
+let indice=0;
 
-let lunghezza=nomi.length; 
+let lunghezza=nomi.length;
 
 while(indice <lunghezza){
 	console.log(nomi[indice])
@@ -256,7 +256,7 @@ Chiara
 
 #### for
 
-Il for, come si è visto nelle precedenti sezioni, è un ciclo while che inizializza un valore e lo aggiorna ogni iterazione controllandone il valore nella condizione, è ottimo quindi per scorrere un array e semplifica di molto la scrittura: 
+Il for, come si è visto nelle precedenti sezioni, è un ciclo while che inizializza un valore e lo aggiorna ogni iterazione controllandone il valore nella condizione, è ottimo quindi per scorrere un array e semplifica di molto la scrittura:
 
 ```javascript
 let array=[/*elementi...*/]
@@ -305,7 +305,7 @@ let array=["qwerty",123]
 
 Ha si delle profonde differenze, ma a livello di accesso avremo gli stessi elementi richiamati nello stesso modo:
 
-```javascript 
+```javascript
 console.log(oggetto[0]) // stamperà qwerty
 console.log(array[0])   // stamperà qwerty
 console.log(oggetto[1]) // stamperà 123
@@ -318,7 +318,7 @@ In realtà per gli array esistono delle struttura atte a semplificare di molto l
 
 ### for-of
 
-Il **for-of** è una struttura che preleva direttamente i valori del vettore. Si struttura come segue: 
+Il **for-of** è una struttura che preleva direttamente i valori del vettore. Si struttura come segue:
 
 ```javascript
 for (let valore of vettore){
@@ -326,7 +326,7 @@ for (let valore of vettore){
 }
 ```
 
-Ad esempio si può fare una lista puntata tipo spesa: 
+Ad esempio si può fare una lista puntata tipo spesa:
 
 ```javascript
 let array = ["Latte","Biscotti","Succo","Pane"]
@@ -336,7 +336,7 @@ for (let valore of array){
 }
 ```
 
-Il risultato sarà: 
+Il risultato sarà:
 
 ```plain
 - Latte
@@ -359,9 +359,9 @@ for (let indice in vettore){
 }
 ```
 
-Ad esempio si può fare una lista numerata tipo spesa: 
+Ad esempio si può fare una lista numerata tipo spesa:
 
-```javascript 
+```javascript
 let array = ["Latte","Biscotti","Succo","Pane"]
 
 for (let indice in array){
@@ -371,13 +371,13 @@ for (let indice in array){
 
 ## Errori
 
-Ci son alcuni errori da evitare quando si opera con gli array che son molto comuni soprattutto nelle fasi iniziali 
+Ci son alcuni errori da evitare quando si opera con gli array che son molto comuni soprattutto nelle fasi iniziali
 
 ### Stiamo attenti allo 0
 
-Come già detto, gli indici di un array partono sempre da zero. Questo pone spesso un dilemma nei novizi che è nello strutturare il for. 
+Come già detto, gli indici di un array partono sempre da zero. Questo pone spesso un dilemma nei novizi che è nello strutturare il for.
 
-Ad esempio: 
+Ad esempio:
 
 ```javascript
 for (let indice = 1; indice < array.length; indice++){
@@ -387,7 +387,7 @@ for (let indice = 1; indice < array.length; indice++){
 
 Questo for è **errato**, infatti l'indice inizia da 1, questo farà si che il primo elemento sarà saltato.
 
-Per aggiustarlo basta scrivere 0 anziché 1: 
+Per aggiustarlo basta scrivere 0 anziché 1:
 
 ```javascript
 for (let indice = 0; indice < array.length; indice++){
@@ -399,9 +399,9 @@ for (let indice = 0; indice < array.length; indice++){
 
 Sempre perché il conteggio inizia da zero, bisogna ricordarsi che in un array di N celle, l'elemento con indice N non esiste:
 
-**Gli indici partono da 0 e vanno a N-1**. 
+**Gli indici partono da 0 e vanno a N-1**.
 
-Una scrittura di questo genere: 
+Una scrittura di questo genere:
 
 
 ```javascript
@@ -412,17 +412,17 @@ Mostrerà un bel `undefined`.
 
 ### Minore, non minore uguale
 
-La condizione di uscita dell'indice nei for manuali è sempre "strettamente minore", per lo stesso motivo di prima. 
+La condizione di uscita dell'indice nei for manuali è sempre "strettamente minore", per lo stesso motivo di prima.
 
-Quindi una scrittura del genere è errata e produce un undefined: 
+Quindi una scrittura del genere è errata e produce un undefined:
 
-```javascript 
+```javascript
 for (let indice = 0; indice <= array.length; indice++){
 	console.log(array[indice])
 }
 ```
 
-L'unica scrittura corretta è la seguente: 
+L'unica scrittura corretta è la seguente:
 
 ```javascript
 for (let indice = 0; indice < array.length; indice++){
@@ -432,8 +432,8 @@ for (let indice = 0; indice < array.length; indice++){
 
 ### for of o for in
 
-Non scambiare mai il for of con il for in.  
-Se ad esempio si usa il for-of per avere accesso agli indici: 
+Non scambiare mai il for of con il for in.
+Se ad esempio si usa il for-of per avere accesso agli indici:
 
 ```javascript
 for (let i of array){

@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Pulire i file di configurazione dei software su Linux'
+title: "#howto - Pulire i file di configurazione dei software su Linux"
 date: 2023-09-22 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -20,7 +20,7 @@ Quando si intende eseguire la reinstallazione "pulita" di un programma, per riso
 Vediamo quindi in quali cartelle i programmi, solitamente, salvano le loro configurazioni.
 
 > *NOTA BENE*:
->  
+>
 > Non verrà mostrato come cancellare i file, per quello serve *intelligenza* (**mai cancellare senza sapere cosa si sta cancellando**) e il comando `rm` per i singoli file oppure `rm -rf` se si tratta di cartelle.
 
 ## Pulire la cache
@@ -56,7 +56,7 @@ Per verificarne il contenuto:
 ls -a $HOME/.config
 ```
 
-Ad esempio è possibile trovarci normalmente le configurazioni di Google Chrome: 
+Ad esempio è possibile trovarci normalmente le configurazioni di Google Chrome:
 
 ```bash
 ls -a $HOME/.config/google-chrome
@@ -82,7 +82,7 @@ La cartella `.local` rappresenta un po' uno specchio della cartella sotto radice
 ls -a $HOME/.local/share
 ```
 
-Per portare un esempio pratico, Steam ha al suo interno la libreria dei giochi (che tende a crescere rapidamente): 
+Per portare un esempio pratico, Steam ha al suo interno la libreria dei giochi (che tende a crescere rapidamente):
 
 ```bash
 ls $HOME/.local/share/Steam
@@ -106,7 +106,7 @@ Un esempio pratico ne è KDE. Il famoso IDE utilizza un sacco di file e cartelle
 
 Normalmente non è necessario toccare i file di configurazioni dei software che si installano con Flatpak, anche perché flatpak ne elimina ogni riferimento se disinstallate il software.
 
-Tuttavia per casi particolari potrebbe essere utile sapere che nella cartella `.var/app/`. Al suo interno si possono trovare le varie cartelle dei flatpak con tutto l'id, al loro interno a loro volta si trovano configurazioni e file di cache. Ad esempio se si installa il software Geany tramite flatpak e si analizza il contenuto della sua cartella si avranno queste cartelle: 
+Tuttavia per casi particolari potrebbe essere utile sapere che nella cartella `.var/app/`. Al suo interno si possono trovare le varie cartelle dei flatpak con tutto l'id, al loro interno a loro volta si trovano configurazioni e file di cache. Ad esempio se si installa il software Geany tramite flatpak e si analizza il contenuto della sua cartella si avranno queste cartelle:
 
 ```bash
 ls $HOME/.var/app/org.geany.Geany
@@ -133,7 +133,7 @@ La cartella etc rappresenta per eccellenza la cartella delle configurazioni, al 
 - I vari package manager (`/etc/apt.d`, `/etc/pacman.d`)
 - La shell ZSH (`/etc/zsh`)
 
-E così via... 
+E così via...
 
 **È in realtà raro** che un software *installato a posteriori* memorizzi qui i suoi file di configurazione, ma può succedere per l'appunto con alcuni software di sistema come nuovi emulatori di terminale o gestori di rete.
 
@@ -151,7 +151,7 @@ ls /etc/xdg/autostart
 
 ### La cartella usr share
 
-La cartella `/usr/share` rappresenta un po' la cartella delle applicazioni per eccellenza. Qui ci si può trovare un po' di tutto: 
+La cartella `/usr/share` rappresenta un po' la cartella delle applicazioni per eccellenza. Qui ci si può trovare un po' di tutto:
 
 - Eseguibili dei software (anche se sarebbe più corretto inserirli in `/usr/bin`)
 - Cartelle di icone
@@ -159,7 +159,7 @@ La cartella `/usr/share` rappresenta un po' la cartella delle applicazioni per e
 - **Configurazioni delle applicazioni**
 - etc...
 
-Vista la quantità di cartelle e files che normalmente popola questa cartella potrebbe essere consigliato utilizzare grep per cercare il software di interesse: 
+Vista la quantità di cartelle e files che normalmente popola questa cartella potrebbe essere consigliato utilizzare grep per cercare il software di interesse:
 
 ```bash
 ls /usr/share | grep nomesoftware
@@ -169,7 +169,7 @@ ls /usr/share | grep nomesoftware
 
 Anche `/usr/share` ha la sua cartella `applications` dentro il quale stanno gli avviatori che vengono poi visualizzati nel menu dei vari IDE.
 
-Per verificare basta digitare: 
+Per verificare basta digitare:
 
 ```bash
 ls /usr/share/applications

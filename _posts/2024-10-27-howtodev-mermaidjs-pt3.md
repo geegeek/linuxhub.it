@@ -14,7 +14,7 @@ tags:
 - uml
 ---
 
-[Articolo precedente: Sequence Diagrams &larr;](https://linuxhub.it/articles/howtodev-mermaidjs-pt2)  
+[Articolo precedente: Sequence Diagrams &larr;](https://linuxhub.it/articles/howtodev-mermaidjs-pt2)
 
 MermaidJS è una libreria Javascript per la creazione di diagrammi tramite linguaggio di formattazione. È integrato in alcuni software ed è facile da utilizzare.
 
@@ -108,7 +108,7 @@ classDiagram
 
 Apparirà un riquadro in cui, attributi e metodi, sono vuoti (le sezioni sono comunque visibili, ma vuote). Non si può purtroppo creare un riquadro senza le due sezioni di attributi e metodi, si possono solo lasciare vuote.
 
-Si può anche inserire un nome più lungo con spazi e caratteri non supportati normalmente usando le parentesi quadre: 
+Si può anche inserire un nome più lungo con spazi e caratteri non supportati normalmente usando le parentesi quadre:
 
 ```yaml
 ---
@@ -253,10 +253,10 @@ In mermaid:
 - `--` Linea continua semplice: ottima per collegare note o altro.
 
 ### Etichetta
-In alcune frecce può essere utile aggiungere etichette.  
+In alcune frecce può essere utile aggiungere etichette.
 Per aggiungerla basta scrivere dopo la relazione e il simbolo `:` un etichetta
 
-Ecco un esempio: 
+Ecco un esempio:
 
 ```yaml
 ---
@@ -282,7 +282,7 @@ classDiagram
     Veicolo --*"2..4" Ruote
 ```
 
-### Esempio completo 
+### Esempio completo
 
 Ecco un esempio completo:
 
@@ -343,7 +343,7 @@ classDiagram
     Bici --|> Veicolo
     Moto --|> Veicolo
     Macchina --|> Veicolo
-    
+
 ```
 
 ## Le note

@@ -59,7 +59,7 @@ tail /dev/zero
 
 ## earlyoom
 
-Questo progetto è nato per sopperire a varie mancanze e coprire alcuni malfunzionamenti di quelli che erano i tradizionali OOMD che utilizzavano le direttive del kernel per terminare i processi che esulavano dalla memoria. 
+Questo progetto è nato per sopperire a varie mancanze e coprire alcuni malfunzionamenti di quelli che erano i tradizionali OOMD che utilizzavano le direttive del kernel per terminare i processi che esulavano dalla memoria.
 Tutti i dettagli del progetto si possono trovare [al repository ufficiale su Github](https://github.com/rfjakob/earlyoom).
 
 ### Installare earlyoom su Ubuntu
@@ -100,7 +100,7 @@ make
 Quindi con i permessi di root:
 
 ```bash
-make install 
+make install
 ```
 
 Sulle istruzioni del repository ci sono altre istruzioni di compilazione anche per i sistemi che *non utilizzano systemd*.
@@ -188,7 +188,7 @@ earlyoom -h
 
 ### Test del corretto funzionamento
 
-Dopo aver dato `earlyoom` per controllare il flusso del software si puó aprire un altro terminale e scrivere: 
+Dopo aver dato `earlyoom` per controllare il flusso del software si puó aprire un altro terminale e scrivere:
 
 ```bash
 tail /dev/zero

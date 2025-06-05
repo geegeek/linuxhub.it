@@ -5,7 +5,7 @@ date: 2023-10-27 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
-coauthor: Michael Messaggi 
+coauthor: Michael Messaggi
 coauthor_github: MichaelMessaggi
 published: true
 tags:
@@ -16,8 +16,8 @@ tags:
 - rss
 ---
 
-Linux/hub ha i feed rss. Lo sapevate? Ora lo sapete.  
-Detto questo, leggere i feed dalla propria distribuzione Linux preferita non è assolutamente un problema.  
+Linux/hub ha i feed rss. Lo sapevate? Ora lo sapete.
+Detto questo, leggere i feed dalla propria distribuzione Linux preferita non è assolutamente un problema.
 Ci sono infatti diverse applicazioni che consentono di utilizzare i feed RSS dai propri siti preferiti.
 Ad esempio, TermFeed.
 
@@ -49,7 +49,7 @@ dnf install python3-pip
 
 ### Installazione su ArchLinux
 
-Per installare PIP su ArchLinux o sistemi che utilizzano pacman basta digitare: 
+Per installare PIP su ArchLinux o sistemi che utilizzano pacman basta digitare:
 
 ```bash
 pacman -S python-pipx
@@ -57,7 +57,7 @@ pacman -S python-pipx
 
 ### Installazione di TermFeed
 
-Una volta installato pip basta scrivere: 
+Una volta installato pip basta scrivere:
 
 ```bash
 pip install termfeed
@@ -117,7 +117,7 @@ feed -t Linux
 
 ### Cancellare una categoria (con tutti i feed dentro)
 
-Per eliminare una categoria si può scrivere: 
+Per eliminare una categoria si può scrivere:
 
 ```bash
 feed -D CATEGORIA
@@ -165,7 +165,7 @@ Per eliminare il feed di Linux/hub.
 
 ### Help
 
-Si può sempre consultare l'help ufficiale digitando: 
+Si può sempre consultare l'help ufficiale digitando:
 
 ```bash
 feed -h
@@ -173,7 +173,7 @@ feed -h
 
 ## Disinstallare tramite PIP
 
-Per disinstallare TermFeed tramite PIP scrivere: 
+Per disinstallare TermFeed tramite PIP scrivere:
 
 ```bash
 pip uninstall termfeed

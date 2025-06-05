@@ -135,7 +135,7 @@ systemctl enable getty@ttyN.service
 
 Per modificare i parametri di avvio si può creare un servizio systemd per un particolare getty:
 
-Creare una cartella nel sistema con il nome del getty da modificare: 
+Creare una cartella nel sistema con il nome del getty da modificare:
 
 ```bash
 mkdir /etc/systemd/system/getty@ttyNUMERO.service.d/
@@ -151,7 +151,7 @@ ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear - $TERM
 
 Sulla wiki di arch si hanno diversi [esempi tra i più ricercati in genere](https://wiki.archlinux.org/title/Getty#Prompt_only_the_password_for_a_default_user_in_virtual_console_login).
 
-Consiglio di provare le modifiche su tty a numerazione alta (TTY7 ad esempio) non gestiti dalla login.conf, e di provarli subito dopo scrivendo: 
+Consiglio di provare le modifiche su tty a numerazione alta (TTY7 ad esempio) non gestiti dalla login.conf, e di provarli subito dopo scrivendo:
 
 ```bash
 systemctl stop getty@ttyNUMERO.service
@@ -181,7 +181,7 @@ Si può abilitare il supporto per un tipo di font specifico, la lista dei font s
 ls /usr/share/kbd/consolefonts/
 ```
 
-Una volta selezionato un tipo in particolare si può scrivere nel file di configurazione assegnato a `FONT`, ad esempio per un font adatto eventualmente a schermi con alte risoluzioni potrebbe essere utile utilizzare il font `solar24x32`: 
+Una volta selezionato un tipo in particolare si può scrivere nel file di configurazione assegnato a `FONT`, ad esempio per un font adatto eventualmente a schermi con alte risoluzioni potrebbe essere utile utilizzare il font `solar24x32`:
 
 ```bash
 FONT=solar24x32

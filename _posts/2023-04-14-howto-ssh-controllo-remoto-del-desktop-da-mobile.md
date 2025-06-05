@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - SSH: controllo remoto del desktop da mobile - Parte 1'
+title: "#howto - SSH: controllo remoto del desktop da mobile - Parte 1"
 date: 2023-04-14 07:00
 layout: post
 author: Midblyte

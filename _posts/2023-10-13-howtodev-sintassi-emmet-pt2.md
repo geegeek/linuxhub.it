@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howtodev - Sintassi EMMET parte 2 : più elementi HTML' 
+title: "#howtodev - Sintassi EMMET parte 2 : più elementi HTML"
 date: 2023-10-13 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -8,7 +8,7 @@ author_github: PsykeDady
 coauthor: Michael Messaggi
 coauthor_github: MichaelMessaggi
 published: true
-tags: 
+tags:
 - css
 - html
 - emmet
@@ -16,7 +16,7 @@ tags:
 ---
 
 
-[Articolo precedente: elementi HTML &larr;](https://linuxhub.it/articles/howtodev-sintassi-emmet/)  
+[Articolo precedente: elementi HTML &larr;](https://linuxhub.it/articles/howtodev-sintassi-emmet/)
 
 
 
@@ -42,7 +42,7 @@ Inoltre è necessaria la conoscenza di
 
 ## Moltiplicare un tag
 
-Tramite l'uso del carattere `*` si può "moltiplicare" un tag. 
+Tramite l'uso del carattere `*` si può "moltiplicare" un tag.
 
 Ovvero creare più ripetizioni dello stesso elemento.
 
@@ -60,9 +60,9 @@ Il plugin sostituirà il seguente codice:
 
 ## Concatenare più tag
 
-Si possono mettere più tag uno dopo l'altro senza innestarli usando il carattere `+`. 
+Si possono mettere più tag uno dopo l'altro senza innestarli usando il carattere `+`.
 
-Ad esempio, scrivendo: 
+Ad esempio, scrivendo:
 
 ```html
 br+img+br
@@ -78,9 +78,9 @@ Si ottiene:
 
 Innestare componenti tra di loro è di certo la cosa più importante di HTML, in quanto la struttura dell'intera pagina non è solo lineare, ma è fatta di contenitori su contenitori.
 
-Per innestare gli elementi tramite EMMET si usa il carattere `>`. 
+Per innestare gli elementi tramite EMMET si usa il carattere `>`.
 
-Ad esempio scrivendo: 
+Ad esempio scrivendo:
 
 ```html
 ul>li
@@ -123,7 +123,7 @@ Ovvero con il carattere `^` si è risalito l'interno del primo `li` incontrato e
 
 ### Usare ^ senza avere una struttura innestata
 
-Il caso in cui si utilizza il carattere `^` senza avere una struttura innestata prima degenera nella concatenazione. Ovvero: 
+Il caso in cui si utilizza il carattere `^` senza avere una struttura innestata prima degenera nella concatenazione. Ovvero:
 
 ```html
 br^img^br
@@ -143,11 +143,11 @@ br+img+br
 
 ## Raggruppare le shortcut
 
-Si possono raggruppare le shortcut. Questo può servire ad applicare un ulteriore shortcut ma su un gruppo e non un solo elemento. 
+Si possono raggruppare le shortcut. Questo può servire ad applicare un ulteriore shortcut ma su un gruppo e non un solo elemento.
 
-Ad esempio si può applicare la moltiplicazione di un gruppo di elementi che possono poi essere innestati o concatenati. 
+Ad esempio si può applicare la moltiplicazione di un gruppo di elementi che possono poi essere innestati o concatenati.
 
-Scrivendo infatti: 
+Scrivendo infatti:
 
 ```html
 ul>(li>p{punto della lista}+img)*4
@@ -178,11 +178,11 @@ Si espande in:
 
 ## La numerazione
 
-A volte potrebbe essere necessario autogenerare degli elementi in serie che però siano numerati a loro volta. 
+A volte potrebbe essere necessario autogenerare degli elementi in serie che però siano numerati a loro volta.
 
 Utilizzando il carattere `$` questo sarà sostituito con il numero ordinale corrispondente all'elemento.
 
-Prendendo l'esempio precedente potrebbe essere necessario scrivere il numero del punto della lista; scrivendo: 
+Prendendo l'esempio precedente potrebbe essere necessario scrivere il numero del punto della lista; scrivendo:
 
 ```html
 ul>(li>p{punto n.$ della lista}+img)*4
@@ -211,7 +211,7 @@ Si espanderà in:
 </ul>
 ```
 
-Ovviamente funziona anche utilizzato in attributi, id o nomi di classe. 
+Ovviamente funziona anche utilizzato in attributi, id o nomi di classe.
 
 Inoltre Si possono utilizzare più `$` per creare padding di zeri. Ad esempio:
 
@@ -236,7 +236,7 @@ Si estenderà in:
 
 ### Ordine inverso
 
-Per ottenere l'ordine inverso basta aggiungere `@-` dopo il carattere `$`. 
+Per ottenere l'ordine inverso basta aggiungere `@-` dopo il carattere `$`.
 
 Riproponendo l'ultimo esempio:
 
@@ -265,13 +265,13 @@ Volendo un po' racchiudere quello che è stato descritto in questi due articoli,
 
 ### Bootstrap grid
 
-Si può creare la struttura completa per un grid layout di bootstrap scrivendo semplicemente `.container-fluid>.row>.col`, supponendo di voler creare ad esempio 5 colonne, di cui la prima deve contenere la navbar e l'ultima un div di classe footer si può scrivere: 
+Si può creare la struttura completa per un grid layout di bootstrap scrivendo semplicemente `.container-fluid>.row>.col`, supponendo di voler creare ad esempio 5 colonne, di cui la prima deve contenere la navbar e l'ultima un div di classe footer si può scrivere:
 
 ```html
 .container-fluid>.row>.col-12>nav{NAVBAR}^col-12{riga n.$}*3+col-12>.footer{Questo è il FOOTER}
 ```
 
-Il risultato sarà: 
+Il risultato sarà:
 
 ```html
 <div class="container-fluid">
@@ -291,7 +291,7 @@ Il risultato sarà:
 
 ### Tabella
 
-Si può creare molto facilmente una tabella. 
+Si può creare molto facilmente una tabella.
 
 Ad esempio si pensi una tabella con tre colonne, header e 5 righe.
 
@@ -301,7 +301,7 @@ Ogni cella deve avere un template che indica a che colonna si riferisce con il n
 table>tr.riga$>th{campo $}*3^(.righe#riga$>.dati{valoren.$}*3)*5
 ```
 
-Si espande in: 
+Si espande in:
 
 ```html
 <table>
@@ -340,9 +340,9 @@ Si espande in:
 
 ### Un sito intero in una linea
 
-Si può creare un intero sito in una sola linea di codice. 
+Si può creare un intero sito in una sola linea di codice.
 
-Immaginando una struttura NAV+BODY+FOOTER con la dichiarazione dell'ahtml si può scrivere: 
+Immaginando una struttura NAV+BODY+FOOTER con la dichiarazione dell'ahtml si può scrivere:
 
 ```html
 html:5>nav>(ul>li*3>a:link{link navigazione $})^h1{Titolo Della Pagina}+p{descrizione}+footer{footer e link abouts}>ul>li.small*5>a:link{link about $}

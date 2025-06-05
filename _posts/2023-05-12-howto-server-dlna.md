@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Creare un server con MiniDLNA'
+title: "#howto - Creare un server con MiniDLNA"
 date: 2023-05-12 08:00
 layout: post
 author: Davide Galati (in arte PsykeDady)

@@ -4,11 +4,11 @@ title: "#pausacaffé - Dicembre 2023"
 date: 2023-12-01 08:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
-author_github: PsykeDady 
+author_github: PsykeDady
 coauthor: linuxhub
 coauthor_github: linuxhubit
 published: true
-tags: 
+tags:
 - ferie
 - dicembre
 ---

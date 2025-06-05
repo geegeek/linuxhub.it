@@ -1,23 +1,23 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 9 - Classi' 
+title: "#howtodev - JavaScript parte 9 - Classi"
 date: 2023-06-30 08:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: gaetanovirg
 coauthor_github: gaetanovirg
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
-[&larr; Articolo precedente: Parametri opzionali e di default](https://linuxhub.it/articles/howtodev-javascript-pt8)  
-[&rarr; Articolo successivo: Puntamenti in memoria](https://linuxhub.it/articles/howtodev-javascript-pt10)  
+[&larr; Articolo precedente: Parametri opzionali e di default](https://linuxhub.it/articles/howtodev-javascript-pt8)
+[&rarr; Articolo successivo: Puntamenti in memoria](https://linuxhub.it/articles/howtodev-javascript-pt10)
 
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e di molte applicazioni lato desktop.
 
 Vediamo ora cosa sono le classi.
 
@@ -29,7 +29,7 @@ Lista degli obiettivi che a fine articolo il lettore consegue:
 
 ## Prerequisiti
 
-Per la comprensione di questo articolo è necessaria la lettura dei seguenti e dei precedenti articoli: 
+Per la comprensione di questo articolo è necessaria la lettura dei seguenti e dei precedenti articoli:
 
 - [Funzioni](https://linuxhub.it/articles/howtodev-javascript-pt5)
 - [Parametri opzionali e di default](https://linuxhub.it/articles/howtodev-javascript-pt8)
@@ -40,7 +40,7 @@ di cui [la prima parte](https://linuxhub.it/articles/howtodev-javascript-pt1).
 
 Se la classe non è acqua, l'acqua può essere una classe. Qualunque cosa nella programmazione può essere vista come una classe. Il concetto di "*classe*"  non è altro che **la costruzione di un nuovo tipo di variabile in maniera totalmente personalizzata**.
 
-La costruzione di una classe è preceduta, per l'appunto, dalla parolina chiave `class`, segue il nome della classe e quindi le parentesi graffe.  
+La costruzione di una classe è preceduta, per l'appunto, dalla parolina chiave `class`, segue il nome della classe e quindi le parentesi graffe.
 Generalmente ha anche una o più variabili al suo interno.
 Lo scopo di creare una classe coincide normalmente con quello di **raggruppare alcune variabili primitive** per poi *creare un nuovo "concetto"* che prima non era presente tra le risorse del linguaggio.
 
@@ -104,15 +104,15 @@ console.log(punto.y)
 
 I costruttori sono equiparabili a delle funzioni speciali, che servono a costruire gli oggetti. Sono quei blocchi di codice che vengono richiamati quando si usa la direttiva `new`, al suo interno possono ospitare diversi parametri che possono poi servire a costruire i vari attributi.
 
-Un costruttore è introdotto dalla parolina `constructor`, Richiamando il caso del Punto, si può creare un costruttore che prende come parametri in ingresso le coordinate:  
+Un costruttore è introdotto dalla parolina `constructor`, Richiamando il caso del Punto, si può creare un costruttore che prende come parametri in ingresso le coordinate:
 
 ```javascript
 class Punto {
 	x;
-	y; 
+	y;
 
 	constructor(x,y){
-		this.x=x; 
+		this.x=x;
 		this.y=y;
 	}
 }
@@ -120,7 +120,7 @@ class Punto {
 
 Si sarà notata la parolina `this`. Questa parolina è **necessaria** (in JavaScript è un obbligo a tutti gli effetti) per specificare che ci si sta riferendo non ad una *variabile qualsiasi* con quel nome, ma quella dell'oggetto in quell'istanza precisa. Va anteposta quindi ai nomi degli attributi quando si richiamano all'interno della classe stessa.
 
-Per utilizzarlo è possibile scrivere: 
+Per utilizzarlo è possibile scrivere:
 
 ```javascript
 let p=new Punto(2,3)
@@ -129,12 +129,12 @@ console.log(p.x)
 console.log(p.y)
 ```
 
-Questo codice equivale a scrivere: 
+Questo codice equivale a scrivere:
 
 ```javascript
 class Punto {
 	x;
-	y; 
+	y;
 }
 
 let p=new Punto()
@@ -150,21 +150,21 @@ Ma evita di specificare parametro per parametro la costruzione della classe (rel
 
 #### Un costruttore flessibile
 
-Avendo scritto: 
+Avendo scritto:
 
 ```javascript
 class Punto {
 	x;
-	y; 
+	y;
 
 	constructor(x,y){
-		this.x=x; 
+		this.x=x;
 		this.y=y;
 	}
 }
 ```
 
-I parametri in ingresso al costruttore diventano automaticamente "opzionali", ovvero in poche parole scrivendo: 
+I parametri in ingresso al costruttore diventano automaticamente "opzionali", ovvero in poche parole scrivendo:
 
 ```javascript
 let p=new Punto()
@@ -176,14 +176,14 @@ console.log(p.x)
 console.log(p.y)
 ```
 
-L'output che ne uscirà fuori sarà: 
+L'output che ne uscirà fuori sarà:
 
 ```javascript
 3
 2
 ```
 
-una combinazione valida é anche la seguente: 
+una combinazione valida é anche la seguente:
 
 ```javascript
 let p=new Punto(3)
@@ -198,15 +198,15 @@ L'output sarà lo stesso.
 
 ### I valori di default
 
-Se non si prevedono argomenti alcuni tra i parametri del costruttore ciò che ne viene fuori saranno degli `undefined`: 
+Se non si prevedono argomenti alcuni tra i parametri del costruttore ciò che ne viene fuori saranno degli `undefined`:
 
 ```javascript
 class Punto {
 	x;
-	y; 
+	y;
 
 	constructor(x,y){
-		this.x=x; 
+		this.x=x;
 		this.y=y;
 	}
 }
@@ -218,7 +218,7 @@ console.log(p.x)
 console.log(p.y)
 ```
 
-Il risultato sarà: 
+Il risultato sarà:
 
 ```plain
 undefined
@@ -236,12 +236,12 @@ Sono entrambi approcci validi, saranno quindi spiegati entrambi.
 
 #### Il valore di default nell'inizializzazione.
 
-Per usufruire del valore di inizializzazione direttamente a tempo di inizializzazione basta scrivere il nome della variabile seguito da `=valore`: 
+Per usufruire del valore di inizializzazione direttamente a tempo di inizializzazione basta scrivere il nome della variabile seguito da `=valore`:
 
 ```javascript
 class Punto {
 	x=0;
-	y=0; 
+	y=0;
 }
 
 let p=new Punto()
@@ -251,22 +251,22 @@ console.log(p.x)
 console.log(p.y)
 ```
 
-La console restituirà: 
+La console restituirà:
 
 ```plain
 0
 0
 ```
 
-Ora però è da notare **una cosa**, il costruttore non è presente. Che succede se si include il codice del costruttore con i parametri al suo interno? In questo modo: 
+Ora però è da notare **una cosa**, il costruttore non è presente. Che succede se si include il codice del costruttore con i parametri al suo interno? In questo modo:
 
 ```javascript
 class Punto {
 	x=0;
-	y=0; 
+	y=0;
 
 	constructor(x,y){
-		this.x=x; 
+		this.x=x;
 		this.y=y;
 	}
 }
@@ -285,12 +285,12 @@ undefined
 undefined
 ```
 
-Il motivo è in realtà semplice, avendo richiamato un costruttore **vuoto**, automaticamente i parametri al suo ingresso è come se fossero stati passati come "`undefined`", questo comportamento induce al **riassegnamento** di x ed yma in maniera errata. Per evitarlo vanno inseriti dei controlli: 
+Il motivo è in realtà semplice, avendo richiamato un costruttore **vuoto**, automaticamente i parametri al suo ingresso è come se fossero stati passati come "`undefined`", questo comportamento induce al **riassegnamento** di x ed yma in maniera errata. Per evitarlo vanno inseriti dei controlli:
 
 ```javascript
 class Punto {
 	x=0;
-	y=0; 
+	y=0;
 
 	constructor(x,y){
 		if(x){
@@ -313,7 +313,7 @@ Aggiungendo il controllo `if(nomeattributo)` è possibile verificare che sia div
 
 #### Il valore di default nel metodo
 
-Si può pensare di creare un costruttore con parametri di default. Per chi non avesse letto l'articolo precedente, un metodo con parametri di default è tale se i parametri sono assegnati nella sua intestazione. Nel caso del costruttore ad esempio si avrà: 
+Si può pensare di creare un costruttore con parametri di default. Per chi non avesse letto l'articolo precedente, un metodo con parametri di default è tale se i parametri sono assegnati nella sua intestazione. Nel caso del costruttore ad esempio si avrà:
 
 ```javascript
 class Punto {
@@ -326,7 +326,7 @@ class Punto {
 }
 ```
 
-Questa scrittura significa: *se il parametro è presente, usa il suo valore, altrimenti sostituisci 0*. Se quindi si utilizza la classe come segue: 
+Questa scrittura significa: *se il parametro è presente, usa il suo valore, altrimenti sostituisci 0*. Se quindi si utilizza la classe come segue:
 
 ```javascript
 let p=new Punto()
@@ -347,7 +347,7 @@ Il valore risultante sarà:
 
 Fin ora si è visto come inserire ed utilizzare variabili, dette *attributi*, all'interno di una classe.
 
-Si possono però inserire anche metodi, che poi possono essere invocati per modificare gli attributi o fornire altre utilità. A conti fatti il *costruttore* stesso è un metodo.  
+Si possono però inserire anche metodi, che poi possono essere invocati per modificare gli attributi o fornire altre utilità. A conti fatti il *costruttore* stesso è un metodo.
 Per farlo basta scriverlo all'interno della classe:
 
 ```javascript
@@ -389,7 +389,7 @@ class Punto {
 }
 ```
 
-Ecco come si utilizza: 
+Ecco come si utilizza:
 
 ```javascript
 let p=new Punto()
@@ -426,7 +426,7 @@ classe NomeClasse{
 
 ## Stampa
 
-Cosa succede se si stampa una variabile di classe con `console.log`? Se non si concatena a nessuna stringa si può notare che tutte le informazioni sono stampate e prelevate automaticamente: 
+Cosa succede se si stampa una variabile di classe con `console.log`? Se non si concatena a nessuna stringa si può notare che tutte le informazioni sono stampate e prelevate automaticamente:
 
 ```javascript
 class Punto {
@@ -443,13 +443,13 @@ let p=new Punto(2,3)
 console.log(p)
 ```
 
-Risultato: 
+Risultato:
 
 ```plain
 Punto { x: 2, y: 3 }
 ```
 
-Se si utilizza la forma con parametri REST del console log il risultato rimane lo stesso: 
+Se si utilizza la forma con parametri REST del console log il risultato rimane lo stesso:
 
 ```javascript
 class Punto {
@@ -466,7 +466,7 @@ let p=new Punto(2,3)
 console.log("p:",p)
 ```
 
-Ma se si volesse utilizzare una forma "personalizzata" oppure in concatenazione con una stringa il discorso cambia. 
+Ma se si volesse utilizzare una forma "personalizzata" oppure in concatenazione con una stringa il discorso cambia.
 
 ### Il metodo toString
 
@@ -488,7 +488,7 @@ let p=new Punto(2,3)
 console.log("p:"+p)
 ```
 
-Il risultato sarà: 
+Il risultato sarà:
 
 ```plain
 p:[object Object]
@@ -504,7 +504,7 @@ toString(){
 }
 ```
 
-Ad esempio con il punto si potrebbe pensare una cosa simile: 
+Ad esempio con il punto si potrebbe pensare una cosa simile:
 
 ```javascript
 class Punto {
@@ -529,7 +529,7 @@ let p=new Punto(2,3)
 console.log("p:"+p)
 ```
 
-Il risultato nella concatenazione con una stringa cambia così: 
+Il risultato nella concatenazione con una stringa cambia così:
 
 ```plain
 p:Coordinate 2,3

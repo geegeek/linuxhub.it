@@ -43,16 +43,16 @@ Questo strumento è come molti altri, disponibile senza particolari opzioni; bas
 per visualizzare l'output con tutti i blocchi di sistema. L'output dovrebbe essere simile a questo:
 
 ```plain
-sda           8:0    1     0B  0 disk 
-sdb           8:16   1     0B  0 disk 
-nvme0n1     259:0    0 931,5G  0 disk 
+sda           8:0    1     0B  0 disk
+sdb           8:16   1     0B  0 disk
+nvme0n1     259:0    0 931,5G  0 disk
 ├─nvme0n1p1 259:1    0   512M  0 part /boot/efi
 ├─nvme0n1p2 259:2    0   200G  0 part /
-├─nvme0n1p3 259:3    0   100M  0 part 
-├─nvme0n1p4 259:4    0    16M  0 part 
-├─nvme0n1p5 259:5    0 730,3G  0 part 
-└─nvme0n1p6 259:6    0   579M  0 part 
-nvme1n1     259:7    0 931,5G  0 disk 
+├─nvme0n1p3 259:3    0   100M  0 part
+├─nvme0n1p4 259:4    0    16M  0 part
+├─nvme0n1p5 259:5    0 730,3G  0 part
+└─nvme0n1p6 259:6    0   579M  0 part
+nvme1n1     259:7    0 931,5G  0 disk
 └─nvme1n1p1 259:8    0 931,5G  0 part /home
 ```
 

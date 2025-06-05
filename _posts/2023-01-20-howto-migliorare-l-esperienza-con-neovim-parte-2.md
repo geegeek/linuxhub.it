@@ -2,15 +2,15 @@
 class: post
 title: "#howto - Migliorare l'esperienza con Neovim parte 2"
 date: 2023-01-20 09:00
-layout: post 
+layout: post
 author: Floppy
 author_github: raspFloppy
 coauthor: Davide Galati (in arte PsykeDady)
 coauthor_github: PsykeDady
 published: true
-tags:  
-- ubuntu 
-- archlinux 
+tags:
+- ubuntu
+- archlinux
 - fedora
 - bash
 - vim
@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     ...
     use 'neovim/nvim-lspconfig'
-    use 'williamboman/nvim-lsp-installer' 
+    use 'williamboman/nvim-lsp-installer'
 end)
 ```
 
@@ -152,7 +152,7 @@ let g:coq_settings = { 'auto_start': v:true }
 ```
 
 > NOTA BENE
-> 
+>
 > Questa linea va messa prima di ogni altra configurazione di Coq.
 
 `coq` fa utilizzo soprattutto di **Language Server** quindi assicuratevi di averli installati e configurati con `nvim-lspconfig`, in particolare se volete ottenere suggerimenti per più linguaggi dobbiamo aggiungere la seguente linea al nostro `init.vim`:

@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Recuperare i dati di ecryptfs'
+title: "#howto - Recuperare i dati di ecryptfs"
 date: 2023-04-28 08:00
 layout: post
 author: Davide Galati (in arte PsykeDady)

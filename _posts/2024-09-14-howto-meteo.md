@@ -38,11 +38,11 @@ Automaticamente, in base alla localizzazione data dalla propria connessione wifi
 Weather report: Bari, Italy
 
      \  /       Partly cloudy
-   _ /"".-.     +23(25) °C     
-     \_(   ).   ↗ 34 km/h      
-     /(___(__)  10 km          
-                0.0 mm         
-                                      
+   _ /"".-.     +23(25) °C
+     \_(   ).   ↗ 34 km/h
+     /(___(__)  10 km
+                0.0 mm
+
 ```
 
 Tuttavia *la localizzazione può fallire*, tanto meglio quindi indicare direttamente la propria città così:
@@ -63,13 +63,13 @@ Per fare la query, bisogna innanzitutto *conoscere le coordinate della propria c
 
 Tramite la [documentazione offerta sull'apposito sito](https://open-meteo.com/en/docs) è possibile costruire la propria query personalizzata in modo da non perdere troppo tempo.
 
-Ecco qui un esempio per le città di Catanzaro Lido e Rende (si possono selezionare più città) dove si vuole sapere la temperature per i prossimi 3 giorni a 2m dal mare, l'umidità e la probabilità di precipitazioni: 
+Ecco qui un esempio per le città di Catanzaro Lido e Rende (si possono selezionare più città) dove si vuole sapere la temperature per i prossimi 3 giorni a 2m dal mare, l'umidità e la probabilità di precipitazioni:
 
 ```bash
 curl https://api.open-meteo.com/v1/forecast?latitude=38.8303,39.3315&longitude=16.6278,16.1804&hourly=temperature_2m,relative_humidity_2m,precipitation_probability&forecast_days=3
 ```
 
-Il json restituito è tedioso da leggere su una riga sola, se disponiamo del tool `jq` possiamo formattarlo a dovere: 
+Il json restituito è tedioso da leggere su una riga sola, se disponiamo del tool `jq` possiamo formattarlo a dovere:
 
 ```bash
 curl https://api.open-meteo.com/v1/forecast?latitude=38.8303,39.3315&longitude=16.6278,16.1804&hourly=temperature_2m,relative_humidity_2m,precipitation_probability&forecast_days=3 | json
@@ -150,11 +150,11 @@ Per installare su Ubuntu e derivate scrivere:
 ```bash
 apt install metar
 ```
-  
+
 ### Installazione su Fedora
 
 Non c'è purtroppo un metodo ufficiale per installare `metar` su Fedora.
-  
+
 ### Installazione su ArchLinux
 
 Per installare su ArchLinux bisogna utilizzare AUR:
@@ -177,7 +177,7 @@ L'utilizzo richiede più step, innanzitutto bisogna cercare il proprio codice di
 metar set LICA
 ```
 
-È più facile trovare una stazione ufficiale METAR in un aereoporto, tuttavia son presenti piccole stazioni meteo un po' ovunque se si cerca bene. Ecco qualche codice: 
+È più facile trovare una stazione ufficiale METAR in un aereoporto, tuttavia son presenti piccole stazioni meteo un po' ovunque se si cerca bene. Ecco qualche codice:
 
 - Campobasso `LIBS`
 - Lecce `IT-0205`
@@ -252,5 +252,5 @@ ansiweather -l Catanzaro,IT -f 3
 L'output sarà:
 
 ```plain
-Catanzaro forecast: lun set 16: 23/16 °C - mar set 17: 22/15 °C - mer set 18: 26/17 °C - gio set 19: 25/18 °C 
+Catanzaro forecast: lun set 16: 23/16 °C - mar set 17: 22/15 °C - mer set 18: 26/17 °C - gio set 19: 25/18 °C
 ```

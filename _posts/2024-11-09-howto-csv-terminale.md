@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Gestire i CSV da terminale'
+title: "#howto - Gestire i CSV da terminale"
 date: 2024-11-09 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -28,10 +28,10 @@ ad esempio il comando:
 echo "alberto
 giovanni
 giacomo
-aldo  
+aldo
 zurli
 davide
-zio   
+zio
 pera" | sort
 ```
 
@@ -48,8 +48,8 @@ zio
 zurli
 ```
 
-Tuttavia, per applicare il comando ai file CSV, bisogna applicare alcune opzioni al comando.  
-Le principali opzioni di sort da conoscere per manipolare i CSV sono: 
+Tuttavia, per applicare il comando ai file CSV, bisogna applicare alcune opzioni al comando.
+Le principali opzioni di sort da conoscere per manipolare i CSV sono:
 
 - `-t` quest'opzione serve per impostare il separatore, nel caso dei csv se seguono il formato standard, sarà `-t,`.
 - `-k` quest'opzione serve a richiedere uno specifico campo quando c'è un separatore. Usato in coppia con l'opzione `-t` permette di ordinare rispetto ad una determinata cella separata con il carattere indicato da `t`, altrimenti il separatore standard è lo spazio.
@@ -75,7 +75,7 @@ Cioè `nome,cognome,età`.
 Supponendo di dover ordinare per cognome si può scrivere:
 
 ```bash
-sort -t, -k2 nomicognomieta.csv 
+sort -t, -k2 nomicognomieta.csv
 ```
 
 Output:
@@ -130,7 +130,7 @@ zio,pera, 21
 
 ## column
 
-Column serve a mostrare i dati in input in colonne, seguendo una specifica formattazione. Non necessita di troppe opzioni, quelle utili ai CSV sono: 
+Column serve a mostrare i dati in input in colonne, seguendo una specifica formattazione. Non necessita di troppe opzioni, quelle utili ai CSV sono:
 
 - `-s` che imposta il delimitatore dei campi. Ad esempio `-s,` legge la virgola come delimitatore.
 - `-t` che organizza i dati con tabella e allineamento a sinistra.
@@ -168,7 +168,7 @@ giovanni  storti    67
 pera      zio       21
 ```
 
-Ma se il file contiene molti file resta comunque molto scomodo leggerlo senza poterlo navigare. Potrebbe essere utile appendere il comando `less` con le seguenti opzioni: 
+Ma se il file contiene molti file resta comunque molto scomodo leggerlo senza poterlo navigare. Potrebbe essere utile appendere il comando `less` con le seguenti opzioni:
 
 - `-#` che seguito da un numero imposta il numero di spazi tra una cella e un altra. Ad esempio `-#2` mette due spazi.
 - `-N` che serve a mostrare il numero di riga per ogni riga del CSV
@@ -190,7 +190,7 @@ Awk rappresenta anche un ottimo metodo per manipolare i dati su csv. Le cose che
 
 Innanzitutto per leggere un file csv l'unica opzione da utilizzare è `-F` seguita dal delimitatore. Ad esempio con `F ','` leggeremo i csv separati per virgola.
 
-Supponendo il seguente csv: 
+Supponendo il seguente csv:
 
 ```csv
 alberto,alberti, 32
@@ -217,10 +217,10 @@ END{
 }' nomicognomieta.csv
 ```
 
-Per trovare il più anzino: 
+Per trovare il più anzino:
 
 ```bash
-awk -F ',' '       
+awk -F ',' '
 BEGIN {
         max=-1
         maxname=""
@@ -269,7 +269,7 @@ Per installare gnumeric su ArchLinux scrivere
 pacman -S gnumeric
 ```
 
-### Conversione 
+### Conversione
 
 Per convertire un excel in csv scrivere:
 
@@ -285,7 +285,7 @@ Un altro tool utilizzabile è **xlsx2csv**, scritto in python ed installabile tr
 pip install xlsx2csv
 ```
 
-Oppure tramite `pipx` se si è su ArchLinux: 
+Oppure tramite `pipx` se si è su ArchLinux:
 
 ```bash
 pipx install xlsx2csv
@@ -299,7 +299,7 @@ xlsx2csv file_excel.xlsx > file_excel_convertito.csv
 
 ## Considerazioni finali
 
-I file CSV sono talvolta piuttosto ostici da utilizzare, principalmente perché il formato presenta molte varianti.  
+I file CSV sono talvolta piuttosto ostici da utilizzare, principalmente perché il formato presenta molte varianti.
 Per esempio, normalmente contengono un _header_ con i nomi delle colonne nella prima riga del file, oppure utilizzano i doppi apici - spesso opzionali - per raggruppare i caratteri di stringhe che contengono i delimitatori.
 Per esempio:
 
@@ -309,17 +309,17 @@ ID,Nome,Cognome,Indirizzo
 2,Marco,Bianchi,via Marco Polo
 ```
 
-Queste casistiche si possono pensare di trattare con non banali combinazioni di comandi come `sort`, `head`, `tail` e `awk`, oltre a gestire il tutto con `python`.  
+Queste casistiche si possono pensare di trattare con non banali combinazioni di comandi come `sort`, `head`, `tail` e `awk`, oltre a gestire il tutto con `python`.
 Per esempio, in casi semplici, il comando
 
 ```bash
 head -n 1 file.csv
 ```
 
-estrae la prima riga dal file `file.csv`, che potrebbe corrispondere all'header.  
+estrae la prima riga dal file `file.csv`, che potrebbe corrispondere all'header.
 Il condizionale è dovuto al fatto che l'header non è obbligatorio nei file CSV, e potrebbe non essere presente, come nei molti esempi presentati in questo articolo.
 
-Quando il formato di un file CSV si fa complicato, oppure le operazioni da svolgere sono non banali, come ad esempio l'unione di due file diversi utilizzando criteri opportuni, ci si può affidare - sempre dalla linea di comando - a strumenti specifici per i file CSV.  
+Quando il formato di un file CSV si fa complicato, oppure le operazioni da svolgere sono non banali, come ad esempio l'unione di due file diversi utilizzando criteri opportuni, ci si può affidare - sempre dalla linea di comando - a strumenti specifici per i file CSV.
 Alcuni esempi sono i seguenti:
 
 - [csvkit](https://github.com/wireservice/csvkit), una suite di comandi per convertire e manipolare i file CSV.

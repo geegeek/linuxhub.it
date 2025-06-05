@@ -13,8 +13,8 @@ tags:
   - git
 ---
 
-[&larr; Articolo precedente, parte 8: diff e patch](https://linuxhub.it/articles/howto-git-pt8/)  
-[&rarr; Articolo successivo, parte 10: bisect](https://linuxhub.it/articles/howto-git-pt10/)  
+[&larr; Articolo precedente, parte 8: diff e patch](https://linuxhub.it/articles/howto-git-pt8/)
+[&rarr; Articolo successivo, parte 10: bisect](https://linuxhub.it/articles/howto-git-pt10/)
 
 Quando si parla di *software di versioning*, `git` è sicuramente il primo programma che ci viene in mente. Rappresenta l'alternativa più diffusa a sistemi come `svn`, utilizzata anche in ambito enterprise.
 
@@ -58,7 +58,7 @@ Si analizzino meglio le varie opzioni:
 
 ## Blame
 
-Letteralmente "*colpa*", questo comando serve per mostrare, riga per riga, l'ultimo commit che ha modificato o creato quella riga. Insieme al commit son visualizzate informazioni su: 
+Letteralmente "*colpa*", questo comando serve per mostrare, riga per riga, l'ultimo commit che ha modificato o creato quella riga. Insieme al commit son visualizzate informazioni su:
 
 - Nome utente
 - Nome del file (se cambiato nel tempo)
@@ -77,7 +77,7 @@ Tralasciando le battute sulle sorti di chi sporca il codice o introduce bug, ho 
 
 Il `reflog`, o `ref-log`, è un log generico per il repository che tiene traccia delle sue modifiche strutturali (a livello di branch, merge, checkout, reset etc...)
 
-Si usa semplicemente scrivendo: 
+Si usa semplicemente scrivendo:
 
 ```bash
 git reflog nomeremote/nomebranch
@@ -86,18 +86,18 @@ Si può omettere sia il nome del remote (si prende il repository locale) che il 
 
 ## grep
 
-Questo comando ha la stessa funzione del classico `grep` UNIX, ovvero quello di cercare le corrispondenze di una determinata stringa di ricerca tra i vari file del progetto. Si usa semplicemente scrivendo: 
+Questo comando ha la stessa funzione del classico `grep` UNIX, ovvero quello di cercare le corrispondenze di una determinata stringa di ricerca tra i vari file del progetto. Si usa semplicemente scrivendo:
 
 ```bash
 git grep "termine di ricerca"
 ```
 Normalmente `git grep` opera all'interno del proprio albero di working directory, è soggetto alle limitazioni imposte da git sulla lista dei file in cui deve cercare. Per fare un esempio concreto: non cerca in file ignorati da *.gitignore*.
 
-Ci sono diverse opzioni utili, alcune di queste sono: 
+Ci sono diverse opzioni utili, alcune di queste sono:
 
 - `-n` Per mostrare i numeri di riga
 - `-G` Per utilizzare la sintassi delle regex
-- `-E` Per utilizzare la sintassi estesa delle regex 
+- `-E` Per utilizzare la sintassi estesa delle regex
 - `-o` Mostra solo le parole che hanno un match
 - `-i` Ignora il case sensitive
 - `-v` Unverte il match (cerca le cose che non son richieste)
@@ -112,15 +112,15 @@ Il comando `show` serve a mostrare tutte le informazioni riguardanti un commit. 
 git show SHACOMMMIT
 ```
 
-Dopo averlo eseguito si otterranno diverse informazioni come: 
+Dopo averlo eseguito si otterranno diverse informazioni come:
 
 - Dati dell'utente che ha effettuato il commit, con la data ed il branch
-- Messaggio di commit 
+- Messaggio di commit
 - Il diff del commit
 
-È un comando molto utile e spesso sottovalutato, ma con una funzionalità tanto banale quanto essenziale. Si può specificare un file di output eventualmente: 
+È un comando molto utile e spesso sottovalutato, ma con una funzionalità tanto banale quanto essenziale. Si può specificare un file di output eventualmente:
 
-```bash 
+```bash
 git show SHACOMMIT --output /percorso/file/log
 ```
 

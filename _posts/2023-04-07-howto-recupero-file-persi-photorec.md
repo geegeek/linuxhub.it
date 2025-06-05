@@ -1,6 +1,6 @@
 ---
 class: post
-title: '#howto - Recuperare i file persi con photorec'
+title: "#howto - Recuperare i file persi con photorec"
 date: 2023-04-07 08:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -61,7 +61,7 @@ Una volta avviato si aprirà un interfaccia di selezione dell'hard disk, se vien
 
 Si può quindi indicare il disco interessato, e scegliere anche quale partizione analizzare, oppure indicare l'intero disco (cliccando in corrispondenza della dicitura "Whole disk").
 
-Prima però di selezionare la partizione si può notare in basso ulteriori impostazioni da selezionare viaggiando con le frecce direzionali (&larr; e &rarr;). Son disponibili le voci: 
+Prima però di selezionare la partizione si può notare in basso ulteriori impostazioni da selezionare viaggiando con le frecce direzionali (&larr; e &rarr;). Son disponibili le voci:
 
 - Search
 - Options
@@ -101,7 +101,7 @@ Se utilizzate ECryptFS per la vostra home, dovrete selezionare qui l'opzione fil
 Si può quindi avviare la ricerca, con le frecce direzionali selezionare la voce "Search", si verrà indirizzati in un menù in cui si deve selezionare il file system del disco, quindi la cartella dove si vogliono posizionare i risultati (premere Q per uscire, le frecce &uarr; e &darr; per cambiare cartella e le frecce &rarr; e &larr; per entrare o uscire da una cartella).
 
 > **NOTA BENE**:
-> 
+>
 > preferibilmente non scegliete una directory dello stesso disco che state analizzando, avrete altrimenti molti file duplicati.
 
 Attendere il risultato che verrà posizionato nella cartella corrente in varie cartelle.

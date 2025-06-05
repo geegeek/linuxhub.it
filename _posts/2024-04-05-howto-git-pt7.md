@@ -1,6 +1,6 @@
 ---
 class: post
-title: "#howto - Guida all'utilizzo di GIT, parte 7: cherry-pick e squash."
+title: "#howto - Guida all'utilizzo di Git, parte 7: cherry-pick e squash."
 date: 2024-04-05 07:00
 layout: post
 author: Davide Galati (in arte PsykeDady)
@@ -13,8 +13,8 @@ tags:
   - git
 ---
 
-[&larr; Articolo precedente, parte 6: stash, gitkeep e assume-unchanged](https://linuxhub.it/articles/howto-git-pt6/)  
-[&rarr; Articolo successivo, parte 8: diff e patch](https://linuxhub.it/articles/howto-git-pt8/)  
+[&larr; Articolo precedente, parte 6: stash, gitkeep e assume-unchanged](https://linuxhub.it/articles/howto-git-pt6/)
+[&rarr; Articolo successivo, parte 8: diff e patch](https://linuxhub.it/articles/howto-git-pt8/)
 
 Quando si parla di *software di versioning*, `Git` è sicuramente il primo programma che ci viene in mente. Rappresenta l'alternativa più diffusa a sistemi come `svn`, utilizzata anche in ambito enterprise.
 
@@ -33,7 +33,7 @@ Questo articolo affronterà i seguenti argomenti:
 
 Ci si può trovare spesso davanti la necessità di selezionare "singoli commit" e inserirne le modifiche in un branch diverso da quello nel quale si trovano.
 
-Questo procedimento è detto "cherry-picking", ed è un operazione particolarmente semplice su git.  
+Questo procedimento è detto "cherry-picking", ed è un operazione particolarmente semplice su git.
 Innanzitutto bisogna trovare la combinazione SHA del commit, utilizzando git log:
 
 ```bash
@@ -86,7 +86,7 @@ git cherry-pick SHA --ff
 
 ## Squash
 
-Un' operazione decisamente più interessante è quella di squash, che permette di "comprimere" più commit sequenziali in un solo commit.  
+Un' operazione decisamente più interessante è quella di squash, che permette di "comprimere" più commit sequenziali in un solo commit.
 Questa funzionalità è particolarmente adatta per fare merge di features senza sporcare troppo l'albero di git.
 
 Esistono principalmente due modi di fare lo Squash:
@@ -130,17 +130,17 @@ Questa tipologia di *squash* è più soggetta a problematiche, ed *è preferibil
 
 Tramite questa metodologia ci si appresta a "schiacciare" su se stessi *gli ultimi N commit* fatti, **creandone uno nuovo**, somma di questi.
 
-> Attenzione:  
-> 
-> Il numero N è ovviamente a scelta, tuttavia non può essere uguale al numero di commit totali su quel branch dall'inizio del progetto, questo perché il primo commit di GIT rappresenta anche l'inizio della storia di git, e non può essere cancellato.
+> Attenzione:
+>
+> Il numero N è ovviamente a scelta, tuttavia non può essere uguale al numero di commit totali su quel branch dall'inizio del progetto, questo perché il primo commit di Git rappresenta anche l'inizio della storia di git, e non può essere cancellato.
 
 Si supponga di voler fare lo squash **degli ultimi tre commit**, l'istruzione in tal caso è:
 
 ```bash
-git rebase -i HEAD~3 
+git rebase -i HEAD~3
 ```
 
-Per selezionarne più o meno, modificare il numero 3.  
+Per selezionarne più o meno, modificare il numero 3.
 
 Si aprirà l'editor di file dentro cui si dovranno apportare delle modifiche. Il contenuto iniziale sarà simile a questo:
 
@@ -183,7 +183,7 @@ pick 4ddb9b6 commit 3
 
 Le prime tre righe rappresentano i tre commit "schiacciati" in ordine cronologico crescente (il primo è il più vecchio). La prima parola di ogni riga in verità è l'operazione che verrà effettuata in fase di squashing su quello specifico commit, le opzioni possibili son elencate sotto.
 
-Per eliminare quel commit bisogna sostituire "pick" con "squash". **Almeno un commit tuttavia deve restare**.  
+Per eliminare quel commit bisogna sostituire "pick" con "squash". **Almeno un commit tuttavia deve restare**.
 
 Ecco ad esempio una possibile combinazione che fa squash degli ultimi due in ordine cronologico tenendo solo il primo:
 

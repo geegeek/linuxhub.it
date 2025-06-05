@@ -1,25 +1,25 @@
 ---
 class: post
-title: '#howtodev - JavaScript parte 2 - variabili complesse e blocchi' 
+title: "#howtodev - JavaScript parte 2 - variabili complesse e blocchi"
 date: 2023-02-17 07:00
-layout: post 
+layout: post
 author: Davide Galati (in arte PsykeDady)
 author_github: PsykeDady
 coauthor: linuxhubit
 coauthor_github: linuxhubit
 published: true
-tags: 
+tags:
 - javascript
 - nodejs
 ---
 
-[&larr; Articolo precedente: introduzione e variabili](https://linuxhub.it/articles/howtodev-javascript-pt1)  
+[&larr; Articolo precedente: introduzione e variabili](https://linuxhub.it/articles/howtodev-javascript-pt1)
 
-[&rarr; Articolo successivo: indentazione e cicli](https://linuxhub.it/articles/howtodev-javascript-pt3)  
+[&rarr; Articolo successivo: indentazione e cicli](https://linuxhub.it/articles/howtodev-javascript-pt3)
 
-Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e anche ormai molte applicazioni lato desktop.  
+Molto odiato, almeno quanto è usato, JavaScript è alla base dello sviluppo web e anche ormai molte applicazioni lato desktop.
 
-Vediamo ora altre tipologie di variabili creabili in JavaScript e come funzionano i blocchi di codice.  
+Vediamo ora altre tipologie di variabili creabili in JavaScript e come funzionano i blocchi di codice.
 
 ## Obiettivi
 
@@ -50,17 +50,17 @@ Un oggetto si crea ed inizializza racchiudendo le sue "variabili" tra parentesi 
 
 Ogni variabile al suo interno a sua volta viene inizializzato utilizzando il carattere "`:`" per separare l'etichetta dal suo valore.
 
-Facciamo un esempio pratico, creiamo un oggetto che rappresenta una coppia di valori numerici assegnati ad un etichetta alfanumerica (una stringa): 
+Facciamo un esempio pratico, creiamo un oggetto che rappresenta una coppia di valori numerici assegnati ad un etichetta alfanumerica (una stringa):
 
 ```javascript
 let oggetto={
-	etichetta:"Punto 1", 
+	etichetta:"Punto 1",
 	coordinataX:0,
 	coordinataY:3
 }
 ```
 
-Si possono poi richiamare le singole "variabili" che fanno parte dell'oggetto scrivendo dopo la sua etichetta il carattere '`.`' seguito dal nome della variabile.  
+Si possono poi richiamare le singole "variabili" che fanno parte dell'oggetto scrivendo dopo la sua etichetta il carattere '`.`' seguito dal nome della variabile.
 Ad esempio generiamo una stampa a schermo per questo oggetto:
 
 ```javascript
@@ -75,31 +75,31 @@ Le coordinate dell'oggetto 'Punto 1' sono X=0 ed Y=3
 
 ## Blocchi di istruzioni
 
-Il concetto di "blocco di codice" è presente in moltissimi linguaggi, rappresenta *un inseme di istruzioni* che viene visto come *un unica istruzione*. Il suo interno vive un po' *di vita propria* se vogliamo: infatti son disponibili (o **visibili**, più corretto in gergo) tutte le variabili dichiarate al suo esterno, ma ciò che viene dichiarato al suo interno non è a sua volta visibile all'esterno. 
+Il concetto di "blocco di codice" è presente in moltissimi linguaggi, rappresenta *un inseme di istruzioni* che viene visto come *un unica istruzione*. Il suo interno vive un po' *di vita propria* se vogliamo: infatti son disponibili (o **visibili**, più corretto in gergo) tutte le variabili dichiarate al suo esterno, ma ciò che viene dichiarato al suo interno non è a sua volta visibile all'esterno.
 
 Un blocco di codice in JavaScript è delimitato dalle parentesi graffe `{` e `}`:
 
 ```javascript
 {
-	let i = 0; 
+	let i = 0;
 	console.log("qui la i esiste e vale i="+i)
 }
 
-//qui la i ancora non esiste, va re-inizializzata: 
+//qui la i ancora non esiste, va re-inizializzata:
 let i=1
 console.log("valore della i="+i)
 
 ```
 
 > NOTA BENE:
->  
+>
 > Se non ci fosse il blocco, ci sarebbero due "let i" una dopo l'altra, uscirebbe perciò un errore del genere `SyntaxError:` seguito da `Identifier 'i' has already been declared`.
 
-Questo nuovo approccio ci introduce quindi un importante novità: **la visibilità delle variabili**, ovvero una volta che sono dichiarate, *fino a dove una variabile può essere utilizzata* e dove invece, *non esiste più*: dovrebbe quindi essere chiaro che, **in presenza di un blocco di istruzioni**, le variabili dichiarate al suo interno, **sono visibili solo fintanto che le si richiamano al suo interno**. 
+Questo nuovo approccio ci introduce quindi un importante novità: **la visibilità delle variabili**, ovvero una volta che sono dichiarate, *fino a dove una variabile può essere utilizzata* e dove invece, *non esiste più*: dovrebbe quindi essere chiaro che, **in presenza di un blocco di istruzioni**, le variabili dichiarate al suo interno, **sono visibili solo fintanto che le si richiamano al suo interno**.
 
 ## Visibilità delle variabili e var
 
-Per capire meglio il concetto di visibilità delle variabili si può immaginare di scrivere il seguente codice: 
+Per capire meglio il concetto di visibilità delle variabili si può immaginare di scrivere il seguente codice:
 
 ```javascript
 {
@@ -115,8 +115,8 @@ Il risultato di quest'operazione è un errore con scritto:
 ReferenceError: i is not defined
 ```
 
-Ovvero la `i` non esiste. Infatti al di fuori delle parentesi graffe, come già detto, tutto ciò che è stato dichiarato nel blocco (e non che era già esistente) non viene più considerato.  
-Esiste tuttavia un modo di creare le variabili che "*va oltre il concetto di blocco di istruzioni*". Questo metodo consiste nell'utilizzare `var` piuttosto che `let`: 
+Ovvero la `i` non esiste. Infatti al di fuori delle parentesi graffe, come già detto, tutto ciò che è stato dichiarato nel blocco (e non che era già esistente) non viene più considerato.
+Esiste tuttavia un modo di creare le variabili che "*va oltre il concetto di blocco di istruzioni*". Questo metodo consiste nell'utilizzare `var` piuttosto che `let`:
 
 ```javascript
 {
@@ -126,7 +126,7 @@ Esiste tuttavia un modo di creare le variabili che "*va oltre il concetto di blo
 console.log("valore di i="+i)
 ```
 
-Questo codice darà come risultato: 
+Questo codice darà come risultato:
 
 ```plain
 valore di i=0
@@ -149,7 +149,7 @@ Se la condizione incontrata non è un booleano viene convertito in esso, ad esem
 Facciamo ora un esempio con un conteggio di carte:
 
 ```javascript
-let carte=20; 
+let carte=20;
 let condizione = carte!=1;
 
 if(condizione) console.log("Hai "+carte+" carte")
@@ -192,10 +192,10 @@ Come si collega tutto ciò quando si parla di *if*?
 
 Supponiamo di avere due condizioni di cui verificarne l'intersezione, ad esempio se si gioca a scopa con le carte napoletane, il sette d'oro fa guadagnare un punto.
 
-Nota: le condizioni son due, la carta deve essere un **sette** E deve essere di **oro**, questa si chiama intersezione, ovvero una delle due caratteristiche, da sola, non vale. Devono avvenire insieme.  
+Nota: le condizioni son due, la carta deve essere un **sette** E deve essere di **oro**, questa si chiama intersezione, ovvero una delle due caratteristiche, da sola, non vale. Devono avvenire insieme.
 Ora che abbiamo chiaro lo scenario proviamo a scrivere un codice javascript che ci dice se la nostra carta è un sette d'oro o no. Per semplicità avremo due variabili, una memorizza il seme a parole ("oro", "coppe", "spade", "bastoni") l'altra il numero (Da 1 a 10, dove 8,9 e 10 son le figure).
 
-Un metodo per intersecare le due condizioni potrebbe semplicemente essere mettere un if dentro un altro: 
+Un metodo per intersecare le due condizioni potrebbe semplicemente essere mettere un if dentro un altro:
 
 ```javascript
 let carta=7
@@ -213,15 +213,15 @@ let seme="oro"
 if(carta==7 && seme=="oro") console.log("punto!")
 ```
 
-#### OR o unione 
+#### OR o unione
 
-La stessa cosa si può fare con l'unione. Quando si parla di unioni si intendono un'insieme di condizioni per cui, almeno una deve essere considerata vera.  
+La stessa cosa si può fare con l'unione. Quando si parla di unioni si intendono un'insieme di condizioni per cui, almeno una deve essere considerata vera.
 
 Supponiamo ad esempio di voler indicare la condizione inversa del sette d'oro nella scopa di cui sopra.
 
 Il sette d'oro porta un punto, per cui se abbiamo un sette in mano ed è di bastoni, di coppe o di spade, non abbiamo diritto ad un punto.
 
-In questo caso sapendo già che la carta è sette controlleremo solo il seme. Una prima strategia per implementare l'unione è quella di fare tanti if uno di seguito l'altro: 
+In questo caso sapendo già che la carta è sette controlleremo solo il seme. Una prima strategia per implementare l'unione è quella di fare tanti if uno di seguito l'altro:
 
 ```javascript
 let seme="bastoni"
@@ -231,7 +231,7 @@ if (seme=="spade")   console.log("non hai avuto il punto!")
 if (seme=="bastoni") console.log("non hai avuto il punto!")
 ```
 
-Da notare come ci sia molta **duplicazione** del codice. Questa situazione è facilmente descrivibile utilizzando l'or logico (che come già scritto nel precedente articolo si scrive con `||`) che ne riduce i casi duplicati: 
+Da notare come ci sia molta **duplicazione** del codice. Questa situazione è facilmente descrivibile utilizzando l'or logico (che come già scritto nel precedente articolo si scrive con `||`) che ne riduce i casi duplicati:
 
 ```javascript
 let seme="bastoni"
@@ -255,7 +255,7 @@ let seme="oro"
 if(!(carta==7 && seme=="oro")) console.log("Nessun punto!")
 ```
 
-Per utilizzare la disuguaglianza bisogna invertire anche la condizione logica. Una carta non è sette d'oro se non è un sette oppure se non è un oro: 
+Per utilizzare la disuguaglianza bisogna invertire anche la condizione logica. Una carta non è sette d'oro se non è un sette oppure se non è un oro:
 
 ```javascript
 let carta=7
@@ -264,10 +264,10 @@ let seme="oro"
 if(carta!=7 || seme!="oro") console.log("punto!")
 ```
 
-Quest'ultima operazione che si è vista si può generalizzare come regola:  
+Quest'ultima operazione che si è vista si può generalizzare come regola:
 "La negazione di due condizioni logiche in and rappresenta l'or della negazione di ogni singola condizione"
 
-O al contrario: 
+O al contrario:
 "La negazione di due condizioni logiche in or rappresenta l'and della negazione di ogni singola condizione"
 
 ### else
@@ -275,7 +275,7 @@ O al contrario:
 All'if si contrappone l'`else`, una parola chiave che serve ad eseguire un istruzione solo se l'if non è stato eseguito:
 
 ```javascript
-let carte=1; 
+let carte=1;
 let condizione = carte!=1;
 
 if(condizione) console.log("Hai "+carte+" carte")
@@ -290,10 +290,10 @@ Hai 1 carta
 
 ### else if-else
 
-L'if, compreso di else, conta come se fosse una istruzione. Questo lo rende "concatenabile" all'else stesso, consentendo di creare una catena di condizioni che possono dare vita a più diramazioni logiche: 
+L'if, compreso di else, conta come se fosse una istruzione. Questo lo rende "concatenabile" all'else stesso, consentendo di creare una catena di condizioni che possono dare vita a più diramazioni logiche:
 
 ```javascript
-let carte=0; 
+let carte=0;
 
 if(carte>1) console.log("Hai "+carte+" carte")
 else if (carte == 1) console.log("Hai 1 carta")
@@ -320,10 +320,10 @@ Altrimenti mostra il numero carte.
 
 Come già detto l'if, subito dopo, si aspetta un istruzione. Questo potrebbe, in modo apparente, essere un limite. "*E se volessi mettere due istruzioni? dovrei usare due if uguali?*", assolutamente no, i **blocchi di istruzioni** servono a questo infatti.
 
-Tramite blocco di istruzioni, a seguito di un if, è possibile inserire più istruzioni che verranno eseguite se la condizione risulta `true`: 
+Tramite blocco di istruzioni, a seguito di un if, è possibile inserire più istruzioni che verranno eseguite se la condizione risulta `true`:
 
 ```javascript
-let carte=12; 
+let carte=12;
 let maxcarte=40
 
 if(carte>1) {
@@ -340,10 +340,10 @@ Hai 12 carte
 Ti mancano 28 carte
 ```
 
-Ovviamente è possibile applicare lo stesso ragionamento ad else: 
+Ovviamente è possibile applicare lo stesso ragionamento ad else:
 
 ```javascript
-let carte=12; 
+let carte=12;
 let maxcarte=40
 
 if(carte>1) {
@@ -356,10 +356,10 @@ if(carte>1) {
 }
 ```
 
-E quindi ad if-else-if: 
+E quindi ad if-else-if:
 
 ```javascript
-let carte=1; 
+let carte=1;
 let maxcarte=40
 
 if(carte>1) {
@@ -378,9 +378,9 @@ if(carte>1) {
 
 Spesso e volentieri gli if si usano per casi di assegnamento multipli:
 
-```javascript 
+```javascript
 let maxcarte=40
-let carte=-2; 
+let carte=-2;
 
 if(carte>=0) var differenza=maxcarte-carte
 else var differenza=maxcarte
@@ -390,11 +390,11 @@ console.log("Ti mancano "+differenza+ " carte")
 
 Per evitare di scrivere una struttura così lunga e complicata, nel caso di un assegnamento, è possibile usare l'if-ternario.
 
-Questa struttura si scrive mettendo la condizione, il carattere `?`, l'assegnamento in caso che la condizione sia `true`, il carattere `:`, l'assegnamento nel caso contrario: 
+Questa struttura si scrive mettendo la condizione, il carattere `?`, l'assegnamento in caso che la condizione sia `true`, il carattere `:`, l'assegnamento nel caso contrario:
 
 ```javascript
 let maxcarte=40
-let carte=-40; 
+let carte=-40;
 
 let differenza=carte>0?maxcarte-carte:maxcarte;
 
@@ -411,7 +411,7 @@ Ti mancano 40 carte
 È possibile, dopo l'else, concatenare altri if ternari.
 
 ```javascript
-let carte=20; 
+let carte=20;
 let maxcarte=40
 
 let differenza=carte>0?maxcarte-carte:maxcarte;
@@ -434,39 +434,39 @@ Uno switch in JavaScript si costruisce in questo modo:
 
 ```javascript
 switch(nomevariabile){
-	case valore1: 
+	case valore1:
 		//istruzioni da eseguire nel caso in cui la variabile assuma il valore1
-	break; 
-	case valore2: 
+	break;
+	case valore2:
 		//istruzioni da eseguire nel caso in cui la variabile assuma il valore2
-	break; 
-	case valore3: 
+	break;
+	case valore3:
 		//istruzioni da eseguire nel caso in cui la variabile assuma il valore3
-	break; 
-	default: 
+	break;
+	default:
 		//istruzioni da eseguire in tutti gli altri casi non descritti
 }
 ```
 
 Ciò che va scritto dopo il "case" deve essere un valore specifico, in questo caso non è possibile inserirci un confronto generico, questo rende lo switch una struttura molto più limitante rispetto un costrutto if completo.
 
-> **Attenzione**: 
+> **Attenzione**:
 >
 > Dopo che viene selezionato un `case` lo switch esegue **tutte le istruzioni** che seguono fino ad incontrare un `break`. Questo ha fondamentalmente due conseguenze: se ci si dimentica di inserire l'istruzione di `break` vengono eseguite tutte le operazioni che seguono anche se rientrano in altri `case`, inoltre si possono concatenare più `case` per ottenere una condizione multipla che però condivide lo stesso blocco di istruzioni.
 
 Facciamo un paio di esempi che possa aiutare a comprendere.
 
-Ad esempio gestiamo il valore di una carta a briscola. 
+Ad esempio gestiamo il valore di una carta a briscola.
 
-> Nota: 
+> Nota:
 >
 > A briscola l'Asso (detto carico) vale 11 punti, il tre vale 10 punti, il Re vale 4 punti, il Cavallo 3 punti, il Fante 2 punti e le altre carte valgono 0 punti.
 
 ```javascript
-let carta = 1; 
+let carta = 1;
 
 switch(carta){
-	case  1: var punti=11; break; 
+	case  1: var punti=11; break;
 	case  3: punti=10; break;
 	case 10: punti= 4; break;
 	case  9: punti= 3; break;
@@ -477,24 +477,24 @@ switch(carta){
 console.log("la tua carta vale "+punti+" punti");
 ```
 
-In questo caso l'output sarà: 
+In questo caso l'output sarà:
 
 ```plain
 la tua carta vale 11 punti
 ```
 
-Si possono raggruppare più *case* nel caso si voglia lo stesso risultato. L'esempio più semplice è sicuramente quello di scegliere *i giorni in base al mese*: 
+Si possono raggruppare più *case* nel caso si voglia lo stesso risultato. L'esempio più semplice è sicuramente quello di scegliere *i giorni in base al mese*:
 
 ```javascript
-let mese = 7; 
+let mese = 7;
 let anno = 2020; //per la verifica di anno bisestile
 
 switch(mese){
-	case  1: case 3: case  5: 
+	case  1: case 3: case  5:
 	case  7: case 8: case 10:
 	case 12: giorni=31; break;
 
-	case  2: 
+	case  2:
 		giorni= 28; //diamo per scontato che non sia bisestile
 		// ora bisogna verificare se lo è
 		// un anno è bisestile se è divisibile per 4 ma non per 100, o se è divisibile per 400 e per 100
@@ -515,7 +515,7 @@ La risposta è:
 Il mese scelto ha 29 giorni
 ```
 
-Tralasciando il calcolo del bisestile che potrebbe essere complicato (è quello matematicamente parlando), dovrebbe quindi essere chiaro qual'è il vantaggio di aver scritto uno switch al posto di una lunghissima lista di if-else-if in questo caso. 
+Tralasciando il calcolo del bisestile che potrebbe essere complicato (è quello matematicamente parlando), dovrebbe quindi essere chiaro qual'è il vantaggio di aver scritto uno switch al posto di una lunghissima lista di if-else-if in questo caso.
 
 
-[&rarr; Articolo successivo: indentazione e cicli](https://linuxhub.it/articles/howtodev-javascript-pt3)  
+[&rarr; Articolo successivo: indentazione e cicli](https://linuxhub.it/articles/howtodev-javascript-pt3)
