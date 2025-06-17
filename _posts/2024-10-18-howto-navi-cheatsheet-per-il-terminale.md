@@ -19,6 +19,7 @@ Chi lavora molto spesso sul terminale è conscio del fatto che alcuni comandi ha
 
 Navi consente di memorizzare (e addirittura **parametrizzare**) questi comandi in file speciali, chiamati *cheatsheets*, che in un secondo momento possono essere cercati ed eseguiti.
 
+In questa guida scopriamo come installare navi, recuperare o creare cheatsheet personalizzati e integrarlo nelle principali shell.
 Navi ingloba le principali funzioni di [tldr](https://linuxhub.it/articles/howto-tldr-esempi-pratici-per-i-comandi/) e [cheat.sh](https://linuxhub.it/articles/howto-guide-rapide-con-cheat-sh/).
 
 ## Requisiti

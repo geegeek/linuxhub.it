@@ -23,6 +23,7 @@ Ecco una guida sull'utilizzo base.
 
 ## Definizione
 
+In questo primo articolo introduciamo mermaidjs, la sua installazione e la creazione di semplici flow chart.
 MermaidJS consente di creare, tramite un linguaggio di markup, grafici di diverso tipo: UML, di MANAGMENT, flowchart etc...
 
 Essendo un approccio di tipo `WYSIWYM` (Ovvero *What you see is what you mean*) consente facilmente di ottenere risultati ottimali senza quella frustazione tipica dei software GUI in cui si passa il tempo a spostare archi e riquadri fino ad ottenere soluzioni soddisfacenti.

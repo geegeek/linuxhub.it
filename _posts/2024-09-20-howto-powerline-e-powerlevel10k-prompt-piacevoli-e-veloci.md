@@ -22,6 +22,7 @@ Tuttavia, altre volte è una limitazione, a cui negli anni si è cercato di far 
 
 ## Per iniziare
 
+In questo articolo vedremo come configurare un prompt moderno con Powerline e Powerlevel10k, dal download dei font fino alla personalizzazione del tema.
 Powerline è Noto plugin per Vim, anche se negli anni si è evoluto per supportare più piattaforme, Powerline fornisce **statusline** e **prompt** a vari software per terminale: sono supportati bash, zsh, fish, tmux, IPython, Awesome, i3 e Qtile.
 
 ### Cos'è Powerlevel10k?

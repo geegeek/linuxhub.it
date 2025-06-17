@@ -16,6 +16,7 @@ tags:
 
 Esiste una combinazione magica per riavviare in modo forzato il pc su Linux anche se totalmente bloccato. Ecco la combinazione REISUB.
 
+In questo articolo mostreremo come attivare il Magic SysRq e usare la sequenza REISUB per riavviare un sistema bloccato in sicurezza.
 ## Magic Sys Req
 
 Il sistema di richieste di sistema Magic (Magic Sys Req) rappresenta una serie di combinazioni di tasti utilizzabili su Linux che permette di eseguire alcuni comandi di sistema a prescindere dallo stato in cui si trova, bypassando permessi, gui, e altri aspetti.

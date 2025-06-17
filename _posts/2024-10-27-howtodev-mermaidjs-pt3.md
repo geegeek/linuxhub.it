@@ -18,6 +18,7 @@ tags:
 
 MermaidJS è una libreria Javascript per la creazione di diagrammi tramite linguaggio di formattazione. È integrato in alcuni software ed è facile da utilizzare.
 
+In questa terza parte ci concentreremo sui diagrammi delle classi, passando in rassegna la sintassi di Mermaid e le principali relazioni.
 Utilizzo dei Class diagrams
 
 ## Obiettivi

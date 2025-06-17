@@ -15,6 +15,7 @@ tags:
 ---
 
 A lavoro mi capita di gestire sempre una certa quantità di CSV e similari, alle volte anche di una certa dimensione.
+In questo articolo raccogliamo alcuni comandi utili per ordinare, visualizzare e manipolare file CSV direttamente dal terminale.
 
 Spesso e volentieri, decido di farlo tramite terminale per automatizzare e velocizzare alcune operazioni.
 
