@@ -18,6 +18,7 @@ tags:
 ---
 
 KDE Connect è un software open-source che consente di comunicare da e verso altri dispositivi connessi alla stessa rete.
+In questo articolo vedremo come installare e configurare KDE Connect sui principali sistemi operativi, oltre a esaminare la connessione via rete locale e Bluetooth.
 
 Alcune delle sue funzioni sono:
 

@@ -22,6 +22,7 @@ tags:
 ## Introduzione
 
 Nel mondo degli homelab, è comune utilizzare macchine virtuali clonando un template preconfigurato. Questo metodo, sebbene efficiente, può causare problemi di sicurezza, specialmente con le chiavi SSH duplicate. In questa guida, vedremo come utilizzare **cloud-init** su Debian per rigenerare automaticamente le chiavi SSH al primo avvio di una macchina clonata, garantendo un ambiente più sicuro e affidabile.
+Questa guida illustra i passaggi necessari per installare cloud-init, preparare un template e clonare nuove macchine con chiavi SSH uniche.
 
 ## Cos'è `cloud-init`?
 

@@ -18,6 +18,7 @@ tags:
 
 Non capita a tutti di dover controllare il meteo dal proprio pc, essendo ormai presente come funzione di base in quasi tutti gli smartphone.
 
+Questa guida raccoglie i principali comandi da terminale per leggere le previsioni, dall'uso di curl fino a utility dedicate come ansiweather.
 Che servano o meno, esistono diversi metodi da terminale per consultare il meteo.
 
 ## CURL
